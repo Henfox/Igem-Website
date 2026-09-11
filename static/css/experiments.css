@@ -1,0 +1,147 @@
+.MainWrapper{
+  align-items: start;
+}
+/* ========= Typografie ========= */
+.container h1 { font-size: clamp(32pt, 6vw, 48pt); line-height: 1.1; margin: 0.6em 0 0.4em; }
+.container h2 { 
+  font-size: clamp(18pt, 3.5vw, 24pt); 
+  line-height: 1.25; 
+  margin: 0;
+  color: white;
+}
+.container p, .container li, .container td, .container th { font-size: clamp(12pt, 2.2vw, 16pt); line-height: 1.55; }
+
+/* ========= Layout-Wrapper für einheitliche Breite =========
+   -> Alle Details erben die gleiche max. Breite und sind zentriert.
+*/
+.protocols-container {
+  --content-max: 72rem;       /* zentrale Content-Breite (anpassbar) */
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-inline: 1rem;       /* Rand für kleine Screens */
+  box-sizing: border-box;
+}
+
+.MainWrapper figure{
+    color: var(--darkestpurple);
+    background-color: white;
+    border-radius: 1vw;
+    padding-bottom: 10px;
+    text-align: justify;
+}
+
+.MainWrapper figure img{
+    width: 50vw;
+    border-radius: 0;
+}
+
+/* Bilder & Media responsiv */
+img, video, iframe { max-width: 100%; height: auto; display: block; }
+
+/* Tabellen: responsive Scroll statt Layoutbruch */
+table {width: 100%; border-collapse: collapse; }
+table th, table td { padding: .5rem 1.3rem; vertical-align: top; }
+table.generalTable, table.Ecoli, table.chlamyTable { display: block; overflow-x: auto; }
+
+/* ========= Details / Accordion =========
+   -> Keine feste Höhe! Nur Breite über Container gesteuert.
+   -> Offen/geschlossen bleibt die Breite identisch.
+*/
+details {
+  width: 100%;                 /* füllt die Containerbreite */
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin: 1rem 0;
+  background-color: var(--darkpurple);     /* Farbe */
+  box-shadow: 3px 6px 6px rgba(255, 0, 208, 0.387);  /* schatten kontur */
+}
+
+.MainWrapper h2.abstand {
+  margin-top: 3rem;
+}
+
+.sub{
+  width: 95%;
+  margin-left: 5% ;
+}
+
+/* Summary linksbündig + gute Klickfläche */
+summary {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .75rem 3rem;
+  margin: 0;
+  cursor: pointer;
+  text-align: left;            /* explizit linksbündig */
+  list-style: none;
+}
+
+/* Standard-Disclosure-Marker ausblenden */
+summary::-webkit-details-marker { display: none; }
+summary::marker { content: ""; }
+
+/* Optional schlankes Caret ohne Farben */
+summary::before {
+  content: "▸";
+  transform: rotate(0deg);
+  transition: transform .2s ease;
+}
+details[open] > summary::before { transform: rotate(90deg); }
+
+/* Inhalt innerhalb der Details */
+details > *:not(summary) {
+  padding: 2rem; /* Padding auf 0 reduzieren */
+  padding-top: 0;
+}
+
+/* Verschachtelte Details etwas enger */
+details details {
+  margin: .75rem 0;
+  border-radius: 6px;
+}
+
+th {
+  border-bottom: 2px solid white; /* nur unten */
+  padding: 0.5rem 1rem;
+  text-shadow: 1px 2px 6px rgba(255, 0, 208, 0.387);
+}
+
+tr.line {
+  border-bottom: 1px solid white;
+}
+
+/* Animation */
+details > .content-wrapper {
+  overflow: hidden;
+  transform: scaleY(0);
+  transform-origin: top;
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Wenn Details geöffnet ist */
+details[open] > .content-wrapper {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+/* Listen & Links */
+ol, ul { padding-left: 1.2em; }
+.container li { 
+    margin: .25rem 1rem; }
+a { text-underline-offset: .15em; }
+
+/* Kleinere Screens: etwas kompakter */
+@media (max-width: 480px) {
+  summary { padding: .6rem .8rem; }
+  details > *:not(summary) { padding: .75rem; }
+  table th, table td { padding: .4rem .5rem; }
+}
+
+
+.protocols-container img{
+    background-color: white;
+    width: 70%;
+
+}

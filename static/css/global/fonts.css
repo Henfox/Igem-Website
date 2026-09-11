@@ -1,0 +1,16 @@
+@font-face {
+    font-family: roboto-slab;
+    src: url(https://static.igem.wiki/teams/5758/fonts/robotoslab-regular.ttf);
+}
+@font-face {
+    font-family: roboto-slab-semibold;
+    src: url(https://static.igem.wiki/teams/5758/fonts/robotoslab-semibold.ttf);
+}
+@font-face {
+    font-family: roboto;
+    src: url(https://static.igem.wiki/teams/5758/fonts/roboto-regular.ttf);
+}
+@font-face {
+    font-family: cutivemono-regular;
+    src: url(https://static.igem.wiki/teams/5758/fonts/cutivemono-regular.ttf);
+}

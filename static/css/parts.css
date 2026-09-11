@@ -1,0 +1,80 @@
+.MainWrapper figure{
+    color: var(--darkestpurple);
+    background-color: white;
+    border-radius: 1vw;
+    padding-bottom: 10px;
+    text-align: justify;
+}
+
+.MainWrapper figure img{
+    width: 50vw;
+    border-radius: 0;
+}
+
+.tabelle {
+    width: 90vw;
+    table-layout: fixed;
+    /* erzwingt die Colgroup-Breiten */
+    border-collapse: collapse;
+}
+
+.tabelle th,
+.tabelle td {
+    padding: .5rem .6rem;
+    text-align: left;
+    vertical-align: top;
+}
+
+.tabelle thead {}
+
+.tabelle thead th {
+    position: sticky;
+    top: 4vw;
+    background-color: var(--purple);
+    z-index: 1;
+}
+
+/* optional: sticky Kopf */
+.tabelle .section th {
+    text-align: left;
+    font-weight: 600;
+}
+
+.tabelle td {
+    border-right: 1px solid var(--darkerpurple);
+}
+
+.tabelle tr {
+    border-bottom: 1px solid var(--darkerpurple);
+}
+
+.tabelle tr:first-child,
+.tabelle tr:last-child {
+    border: none;
+}
+
+.tabelle th:nth-child(1),
+.tabelle td:nth-child(1) {
+    width: 27%;
+}
+
+.tabelle th:nth-child(2),
+.tabelle td:nth-child(2) {
+    width: 11%;
+}
+
+.tabelle th:nth-child(3),
+.tabelle td:nth-child(3) {
+    width: 10%;
+}
+
+.tabelle th:nth-child(4),
+.tabelle td:nth-child(4) {
+    width: 50%;
+    border-right: none;
+    text-align: left;
+}
+
+.MainWrapper h2{
+    color: var(--lightpurple);
+}

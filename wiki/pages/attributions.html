@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block extra_css %}
+<link href="{{ url_for('static', filename='css/attributions.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}Attributions{% endblock %}
+{% block page_content %}
+<div id="Head">
+  <h1>Attributions</h1>
+  <p>Our project was shaped by the dedication and teamwork of all members. 
+    They contributed to idea development, lab work, data analysis, and outreach 
+    activities. We are deeply grateful to our advisors and principal investigators 
+    for their guidance and feedback, which were essential for overcoming challenges 
+    and refining our approaches. We are also grateful for the valuable input of 
+    our collaborators and the generous support of our sponsors, who provided us with 
+    essential resources. Finally, we thank our families and friends for their 
+    encouragement and patience, which motivated us throughout the entire iGEM season.</p>
+</div>
+<div id="MainWrapper">
+  <!--
+  ======================================================================
+  == VERY IMPORTANT                                                   ==
+  ======================================================================
+  LEAVE THE IFRAME CODE BELOW AS IT IS, THE ATTRIBUTION FORM OF YOUR TEAM
+  WILL BE DISPLAYED ON THIS PAGE. DO NOT REMOVE IT, OTHERWISE YOU RISK OF
+  NOT MEETING BRONZE MEDAL CRITERION #2
+ -->
+  <div id="subWrapper">
+    <script type="text/javascript">
+    // Listen to size change and update form height
+    window.addEventListener("message", function (e) {
+      if (e.origin === "https://teams.igem.org") {
+        const {type, data} = JSON.parse(e.data);
+        if (type === "igem-attribution-form") {
+          const element = document.getElementById("igem-attribution-form");
+          element.style.height = `${data + 100}px`;
+        }
+      }
+    });
+  </script>
+    <iframe
+      style='width: 100%'
+      id="igem-attribution-form"
+      src="https://teams.igem.org/wiki/5758/attributions">
+      >
+    </iframe>
+  </div>
+</div>
+<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+{% endblock %}

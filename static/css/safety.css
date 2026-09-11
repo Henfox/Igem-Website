@@ -1,0 +1,105 @@
+h1{
+    max-width: 60vw;
+}
+
+table{
+    max-width: 80vw;
+    border-collapse: collapse; /* sorgt für durchgehende Linien */
+    border: none;              /* kein Außenrahmen */
+    margin: 1vw;
+}
+th{
+    padding: 1vw;
+    color: var(--purple);
+}
+td{
+    width: 25vw;
+    color: var(--lightpurple);
+}
+
+th, td {
+  padding: .25rem .5rem;     /* etwas Luft; optional */
+  border: none;              /* keine Zellrahmen */
+}
+
+/* horizontale Linien zwischen Zeilen */
+tbody tr:not(:last-child),
+thead tr {
+  border-bottom: 1px solid var(--lightpurple);
+}
+
+/* vertikale Linien zwischen Spalten */
+thead th:not(:last-child),
+tbody td:not(:last-child),
+tbody th:not(:last-child) {
+  border-right: 1px solid var(--lightpurple);
+}
+caption{
+    margin-bottom: 1vw;
+}
+
+
+.MainWrapper h2{
+    margin-top: 4vw;
+    color: var(--lightpurple);
+}
+
+#org div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#org div p{
+    width: 27%;
+    margin: .5%;
+    padding: 1%;
+    text-align: left;
+    border: dashed 4px var(--lightpurple);
+    border-radius: 2vw;
+}
+
+#org #org2{
+  display: flex;
+  flex-direction: column;
+  border: dashed 4px var(--lightpurple);
+  border-radius: 2vw;
+}
+
+#org #org2 h3{
+  margin-left: 2vw;
+}
+
+#org #org2 p{
+  border: solid var(--lightpurple);
+}
+
+
+.check {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.check li {
+  display: grid;
+  grid-template-columns: 1.2em 1fr;
+  align-items: start;                 /* Text oben ausrichten */
+  gap: .4em;
+  margin: 4px;
+}
+.check li p{
+  margin: 0;
+}
+.check li::before {
+  content: "";
+  width: 1em;                         /* Icongröße relativ zur Schrift */
+  height: 1em;
+  background-color: var(--lightpurple);     /* Farbe vom li erben */
+  transform: translateY(10%);         /* ↓ leicht nach unten */
+  /* Maske: bildet die SVG-Form ab */
+  -webkit-mask: no-repeat center / contain url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23000" d="m10 17l-5-5l1.41-1.42L10 14.17l7.59-7.59L19 8m0-5H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg>');
+          mask: no-repeat center / contain url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23000" d="m10 17l-5-5l1.41-1.42L10 14.17l7.59-7.59L19 8m0-5H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg>');
+}
+
+svg{
+  width: 50vw;
+}

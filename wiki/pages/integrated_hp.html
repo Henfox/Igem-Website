@@ -1,0 +1,743 @@
+{% extends "layout.html" %}
+
+{# --- Makro (einmalig über der Stelle) --- #}
+{% macro mensch(item) -%}
+<div class="Mensch" data-content="{{ item.content }}">
+    {{ inline_svg(item.svg) | safe }}
+    <div
+        class="speech-bubble {{ item.bubble_pos or 'right' }} hidden {{ item.bubble_extra or '' }}"
+        role="dialog" aria-hidden="true"></div>
+</div>
+{%- endmacro %}
+
+{% block extra_css %}
+<link href="{{ url_for('static', filename='css/hp.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}Integrated Human Practices{% endblock %}
+
+{% block page_content %}
+{# TEMPLATE: {'content': 'TEXT', 'svg': 'svg/hp_menschen/158.svg', 'bubble_extra': 'mixed', 'bubble_pos': 'left' }, #}
+{% set grid1 = [
+    {'content': "I don't see any risks.", 'svg': 'svg/hp_menschen/163.svg'},
+    {'content': 'Genetic engineering should also be used more in Germany, and bureaucracy should be reduced. However, this should be carefully monitored and controlled.', 'svg': 'svg/hp_menschen/162.svg', 'bubble_pos': 'left'},
+    {'content': 'I see genetic engineering as very useful.', 'svg': 'svg/hp_menschen/161.svg'},
+    {'content': 'I see risks in the uncontrolled spread of modified organisms.', 'svg': 'svg/hp_menschen/121.svg', 'bubble_extra': 'bad'},
+    {'content': 'No animals are used for this. Thumps up.', 'svg': 'svg/hp_menschen/160.svg'},
+    {'content': "I don't have any concerns regarding your project.", 'svg': 'svg/hp_menschen/159.svg', 'bubble_pos': 'left'},
+    {'content': 'A disadvantage of genetic engineering is the dependence on corporations that aim to maximize profit.', 'svg': 'svg/hp_menschen/122.svg', 'bubble_extra': 'bad'},
+    {'content': 'It enables affordable and pure medications that can be tailored more specifically to their function.', 'svg': 'svg/hp_menschen/123.svg', 'bubble_extra': 'mixed'},
+    {'content': 'Greater accessibility and cost-effective production through your project.', 'svg': 'svg/hp_menschen/158.svg'},
+    {'content': 'Great project. Genetic engineering should be further normalized, as it offers countless possibilities. The first steps are the most important ones.', 'svg': 'svg/hp_menschen/138.svg', 'bubble_extra': '', 'bubble_pos': 'right' },
+    {'content': 'Overall, the topic of genetic engineering should be received with more openness by society. I have the impression that many people associate it with something negative.', 'svg': 'svg/hp_menschen/139.svg', 'bubble_extra': '', 'bubble_pos': 'left' },
+    {'content': 'Thanks to the rapid growth potential and the minimal nutrients required, it has excellent conditions for fast and cost-effective production.', 'svg': 'svg/hp_menschen/143.svg', 'bubble_extra': '', 'bubble_pos': 'left' },
+    {'content': 'Explanations for dummies (without scientific jargon, in simple and transparent language) across every medium that can report on and educate about the topic would be wonderful.', 'svg': 'svg/hp_menschen/137.svg', 'bubble_extra': 'mixed', 'bubble_pos': 'left' },
+    {'content': 'Still insufficiently researched for the human body.', 'svg': 'svg/hp_menschen/130.svg', 'bubble_extra': 'bad', 'bubble_pos': 'right' },
+    {'content': 'I see a new form of medication production as an opportunity to discover new ways and possibilities to better fight certain diseases.', 'svg': 'svg/hp_menschen/153.svg', 'bubble_extra': '', 'bubble_pos': 'left' },
+    {'content': 'It is very important to conduct more research in this field in order to drive groundbreaking new developments forward.', 'svg': 'svg/hp_menschen/144.svg', 'bubble_extra': '', 'bubble_pos': 'left' },
+    {'content': 'I think there are many advantages that probably outweigh the disadvantages. Nevertheless, the idea of interfering with something as essential as the genetic code and manipulating it feels a bit unsettling to me, as I am a layperson.', 'svg': 'svg/hp_menschen/126.svg', 'bubble_extra': 'bad', 'bubble_pos': 'right' },
+    {'content': 'Professionally accurate and simply presented articles in the media would provide good education.', 'svg': 'svg/hp_menschen/135.svg', 'bubble_extra': 'mixed', 'bubble_pos': 'left' },
+    {'content': 'Well, most vaccines are genetically engineered, and they work quite well. The only complicated question is about money— which countries can afford them and which cannot.', 'svg': 'svg/hp_menschen/140.svg', 'bubble_extra': '', 'bubble_pos': 'right' },
+    {'content': 'An exciting project that will hopefully succeed!', 'svg': 'svg/hp_menschen/148.svg', 'bubble_extra': '', 'bubble_pos': 'left' },
+    {'content': 'Genetic engineering is the next step toward better therapies.', 'svg': 'svg/hp_menschen/152.svg', 'bubble_extra': '', 'bubble_pos': 'left' },
+    {'content': 'The ethics of genetic engineering in interventions in the human germline raise concerns about how this could exclude people. It would create injustice in society, especially since not all nations have the same resources to apply genetic engineering in medicine or in everyday life. Countries with much larger budgets would gain an advantage, while others would be right behind.', 'svg': 'svg/hp_menschen/120.svg', 'bubble_pos': 'right', 'bubble_extra': 'bad'},
+
+    ] %}
+
+{% set grid2 = [
+  {'content': 'Anyone who is interested can easily find information nowadays. Increasing interest through stronger presence would help to better inform the public.', 'svg': 'svg/hp_menschen/136.svg', 'bubble_extra': 'mixed', 'bubble_pos': 'left' },
+  {'content': 'I see risks in genetic engineering only in the fundamental ethical questions (when are we playing God, and when is it justifiable).', 'svg': 'svg/hp_menschen/124.svg', 'bubble_extra': 'mixed', 'bubble_pos': 'right' },
+  {'content': 'I hope for an affordable and fast option thanks to you.', 'svg': 'svg/hp_menschen/141.svg', 'bubble_extra': '', 'bubble_pos': 'right' },
+  {'content': 'Not receiving proper information is something that worries me.', 'svg': 'svg/hp_menschen/131.svg', 'bubble_extra': 'bad', 'bubble_pos': 'left' },
+  {'content': 'Side effects from contaminations are a concern, but that applies in general.', 'svg': 'svg/hp_menschen/127.svg', 'bubble_extra': 'bad', 'bubble_pos': 'left' },
+  {'content': 'Aside from better costs and sustainability as advantages of your project: increasing openness toward genetic engineering through its life-saving function.', 'svg': 'svg/hp_menschen/142.svg', 'bubble_extra': '', 'bubble_pos': 'left' },
+  {'content': 'As long as the experts are allowed to collect enough statistics and data, I’m totally fine with it.', 'svg': 'svg/hp_menschen/157.svg', 'bubble_extra': '', 'bubble_pos': 'right' },
+  {'content': 'Misuse, uncontrolled spread, and the displacement of native species are concerning aspects of genetic engineering.', 'svg': 'svg/hp_menschen/132.svg', 'bubble_extra': 'bad', 'bubble_pos': 'left' },
+  {'content': 'YouTube documentaries structured like “Kurzgesagt” or TikTok shorts could help improve public education.', 'svg': 'svg/hp_menschen/125.svg', 'bubble_extra': 'mixed', 'bubble_pos': 'left' },
+  {'content': 'Genetic engineering can be offered or used as a helpful alternative in many areas.', 'svg': 'svg/hp_menschen/156.svg', 'bubble_extra': '', 'bubble_pos': 'left' },
+  {'content': 'Concern that the microalgae could escape into the environment and negatively impact or even destroy existing ecosystems.', 'svg': 'svg/hp_menschen/133.svg', 'bubble_extra': 'bad', 'bubble_pos': 'right' },
+  {'content': 'Interesting topic and a good survey for someone as uninformed as me.', 'svg': 'svg/hp_menschen/145.svg', 'bubble_extra': '', 'bubble_pos': 'left' },
+  {'content': 'Involving the young, scientifically trained generation is indispensable for the future acceptance of modern medical products.', 'svg': 'svg/hp_menschen/149.svg', 'bubble_extra': '', 'bubble_pos': 'left' },
+  {'content': 'A large amount of medication in a short time, if scaled up.', 'svg': 'svg/hp_menschen/155.svg', 'bubble_extra': '', 'bubble_pos': 'right' },
+  {'content': 'Curbing scientifically false information is very important.', 'svg': 'svg/hp_menschen/128.svg', 'bubble_extra': 'mixed', 'bubble_pos': 'left' },
+  {'content': 'No concerns about genetically engineered medications, as long as the approval regulations for medicines are strictly followed.', 'svg': 'svg/hp_menschen/150.svg', 'bubble_extra': '', 'bubble_pos': 'left' },
+  {'content': 'Very useful, but to be handled with the utmost caution!', 'svg': 'svg/hp_menschen/154.svg', 'bubble_extra': '', 'bubble_pos': 'right' },
+  {'content': 'Concern that this medication might not be covered by health insurance, which could lead to debt.', 'svg': 'svg/hp_menschen/134.svg', 'bubble_extra': 'bad', 'bubble_pos': 'left' },
+  {'content': 'Thanks for the cool survey and keep it up! The survey gives me hope for an exciting future (I think the algae topic is awesome and I’m totally going to bug Google about it later :) ).', 'svg': 'svg/hp_menschen/146.svg', 'bubble_extra': '', 'bubble_pos': 'left' },
+  {'content': 'Genetic engineering can be beneficial in all areas of life. However, it should be used responsibly and with respect for ethical values.', 'svg': 'svg/hp_menschen/129.svg', 'bubble_extra': 'mixed', 'bubble_pos': 'left' },
+  {'content': 'Since cost-effective production means access for everyone, I’m a huge fan of your project idea.', 'svg': 'svg/hp_menschen/147.svg', 'bubble_extra': '', 'bubble_pos': 'right' },
+  {'content': 'Your survey really made me think and showed me how little I had engaged with the topic so far.', 'svg': 'svg/hp_menschen/151.svg', 'bubble_extra': '', 'bubble_pos': 'left' },
+] %}
+<div class="MainWrapper">
+<div class="mw-fixed">
+    <button class="mw-burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mw-drawer">
+      <span class="mw-bar"></span>
+      <span class="mw-bar"></span>
+      <span class="mw-bar"></span>
+    </button>
+
+    <nav id="mw-drawer" class="mw-drawer" aria-hidden="true">
+      <ul class="mw-list">
+        <li><h2><a class="normal" href="#rbi">Responsible & Beneficial Impact</a></h2></l2>
+        <li><h2><a class="normal" href="#pesi">Public Engagement: Survey Insights</a></h2></li>
+        <li><h2><a class="normal" href="#svsv">School Visits & Student Voices</a></h2></li>
+        <li><h2><a class="normal" href="#sehi">Stakeholder Engagement: Health Insurance</a></h2></li>
+        <li><h2><a class="normal" href="#sco">Science Communication & Outreach</a></h2></li>
+        <li><h2><a class="normal" href="#trt">Team Reflections & Transparency</a></h2></li>
+        <li><h2><a class="normal" href="#rms">Risk Mitigation Strategies </a></h2></li>
+        <li><h2><a class="normal" href="#ihfl">Integrated HP: Feedback Loops & Project Changes</a></h2></li>
+        <li><h2><a class="normal" href="#scl">Summary: Closing the Loop</a></h2></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- Vollbild-Overlay getrennt -->
+  <div class="mw-overlay" hidden></div>
+
+
+
+    <h1>Integrated Human Practices</h1>
+    <p>This illustration presents authentic quotes from our iGEM project surveys.
+     Some were translated from German, but all remain true to the original statements. 
+     They reflect voices from different age groups and varying levels of scientific knowledge. 
+     We chose to include different kinds of opinions—positive, critical, and idea-giving. 
+     They all represent an important part of society and helped us improve our project.</p>
+    <h3 id="klick">Click on them!</h3>
+    <div id="MenschenMenge">
+        <div class="Mgrid" id="Mgrid1">
+            {% for item in grid1 %}
+            {{ mensch(item) }}
+            {% endfor %}
+        </div>
+        <div class="Mgrid" id="Mgrid2">
+            {% for item in grid2 %}
+            {{ mensch(item) }}
+            {% endfor %}
+        </div>
+    </div>
+
+    <hr><h2 id="rbi">How we ensured SUSPACT is Responsible & Beneficial</h2>
+    <p>From the very beginning, we set out to ensure that our project is not
+        only scientifically sound but also socially responsible and beneficial.
+        To determine this, we explicitly combined four complementary approaches,
+        in line with the iGEM Human Practices Maturity Model:</p>
+
+    <div id="customBox">
+        <p>1. Background research into the sustainability challenges of current
+            antibody production.</p>
+        <div>
+            <p>2. Engagement with diverse communities:</p>
+            <ul>
+                <li>Public survey (103 participants, wide demographic
+                    spectrum).</li>
+                <li>School visits to include younger perspectives.</li>
+                <li>Outreach to German health insurance providers, which
+                    participants themselves had highlighted in our survey as
+                    important stakeholders.</li>
+            </ul>
+        </div>
+        <p>3. Open reflections within our own team, where each member responded to
+            fundamental questions such as “Why are we doing SUSPACT?”, “Who
+            benefits?”, and “What could go wrong?”.</p>
+
+        <p>4. Iterative communication experiments (SWR TV, magazines, social media,
+            supermarket booths).</p>
+    </div>
+
+    <p>By combining reflection, community input, and stakeholder feedback, we
+        could test whether SUSPACT is truly “good for the world” and adapt our
+        design and execution accordingly.</p>
+
+    <hr><h2 id="pesi">Public Perceptions: Our General Survey</h2>
+
+    <p>To gain broad insights into public perceptions of genetic engineering, we
+        conducted a survey that was distributed both via social media and at
+        various events. This approach allowed us to reach participants from
+        diverse age groups, educational backgrounds, and even international
+        contexts. The survey was divided into four sections: general questions
+        about the participants, their overall attitude toward genetic
+        engineering, specific questions about genetic engineering in medicine,
+        and an evaluation of our own project. To ensure a shared baseline of
+        understanding, each section was introduced with a short explanatory text
+        providing key information. In addition, participants who had not
+        encountered our project online were personally informed beforehand. Our
+        goal was to explore how people view genetic engineering and to identify
+        areas where we could contribute to improving its acceptance in
+        society.</p>
+
+    <p>With this diverse baseline of participants, we first examined general
+        attitudes toward genetic engineering.</p>
+
+    <h3>Who We Reached: Demographics & Background</h3>
+
+    <p>A total of 103 people took part in the survey, with an average age of
+        32.27 years. The participants represented a wide range of educational
+        backgrounds: 45.6% had completed a university degree, 10.73% had
+        completed vocational training, 33.98% held a high school diploma or
+        equivalent, 5.8% had completed secondary school, and 3.89% had
+        completed middle or lower secondary school.</p>
+
+    <p>Regarding their personal connection to research and science, the
+        responses showed a broad spectrum: 16.5% reported no connection at all,
+        14.56% indicated private interest, and another 14.56% were connected
+        through family or friends. A significant share of 43.69% were engaged
+        in academic or vocational training within a scientific field, while 4.86%
+        worked professionally in research and science. Additionally, 5.83% of
+        respondents were professionally active in the healthcare sector.</p>
+
+    <p>The survey reached a diverse group of people, both in terms of age and
+        education. While some participants had no personal connection to
+        science, many were involved through their studies, profession, or
+        private interest. This variety provides a solid basis for understanding
+        different perspectives on genetic engineering and highlights the
+        importance of addressing both informed and less-informed audiences.</p>
+
+    <div id="graph-slide1" class="graph-slider">
+        <div class="chartWrap"><canvas id="Alter"></canvas></div>
+        <div class="chartWrap"><canvas id="Bildungsstand"></canvas></div>
+        <div class="chartWrap"><canvas
+                id="Bezug-Forschung-Wissenschaft"></canvas></div>
+    </div>
+
+    <h3>Genetic engineering: Baseline Familiarity, Hopes & Concerns</h3>
+
+    <p>On average, participants described themselves as only moderately familiar
+        with genetic engineering. Nevertheless, their overall attitude was
+        clearly positive. An overwhelming majority (93.2%) considered its
+        application particularly useful in medicine and pharmacy but also saw
+        potential in agriculture as well as in environmental and climate
+        protection.</p>
+
+    <p>In the free-text responses, participants raised a variety of risks and
+        concerns. Most frequently mentioned were unknown long-term effects on
+        human health, the environment, and biodiversity. Many pointed to the
+        danger of uncontrolled spread of genetically modified organisms and a
+        possible loss of natural diversity. Ethical questions were a recurring
+        theme, especially regarding genetic modifications in humans, such as
+        “designer babies,” misuse for profit, or the risk of deepening social
+        inequalities. Other concerns focused on lack of transparency, potential
+        misuse in medicine or for harmful purposes, and dependency on large
+        corporations.</p>
+
+    <p>At the same time, many participants stressed the opportunities offered by
+        genetic engineering. They highlighted its potential to improve medical
+        treatments, ensure food security, and address global challenges such as
+        climate change. Several comments emphasized that genetic engineering is
+        ultimately a tool—the outcome depends on how responsibly it is applied.
+        However, respondents also noted that the public often lacks reliable
+        information and that societal debates are shaped by half-knowledge and
+        negative associations. This reinforces the need for accessible science
+        communication and transparent decision-making.</p>
+
+    <p>Overall, participants combined optimism with caution. They see genetic
+        engineering as an important and promising field, but stress that its
+        future impact will depend on careful regulation, ethical boundaries, and
+        responsible communication with society.</p>
+
+    <p>Because 93.2% of respondents highlighted medicine as the most valuable
+        application, we next focused our questions on this specific field.</p>
+
+    <div id="graph-slide2" class="graph-slider">
+        <div class="chartWrap"><canvas id="Vertrauen-Gentechnik"></canvas></div>
+        <div class="chartWrap"><canvas id="Anwendung-Gentechnik"></canvas></div>
+        <div class="chartWrap"><canvas id="Bereiche-Gentechnik"></canvas></div>
+    </div>
+
+    <hr><h2>Genetic engineering in Medicine: Awareness Gaps & Acceptance</h2>
+
+    <p>When focusing specifically on the field of medicine, our survey revealed
+        some striking insights into how people currently perceive and understand
+        genetically engineered products.</p>
+
+    <p>A large proportion of the participants expressed that they do not feel
+        particularly well informed about medications produced using genetic
+        engineering. This impression is also reflected in the corresponding
+        diagram, which shows that only a small number of participants truly felt
+        they had any real understanding of the subject. While many widely used
+        vaccinations are based on genetic engineering—for example the hepatitis
+        B vaccine, the human papillomavirus (HPV) vaccine, and the COVID-19 mRNA
+        vaccines from BioNTech/Pfizer and Moderna—58.25% of respondents stated
+        that they did not know whether they had ever been treated with a
+        genetically engineered medication, 11.66% confidently said no, and only
+        30.09% reported yes. The respective diagram illustrates this
+        uncertainty very clearly, highlighting the large gap between the
+        everyday use of genetic engineering in medicine and the public’s
+        awareness of it.</p>
+
+    <p>Despite these uncertainties, the general attitude towards genetically
+        engineered pharmaceuticals was overwhelmingly positive. Only 4.85% of
+        respondents reported a negative stance, while the vast majority
+        expressed openness or even support for the use of such technologies in
+        medical treatments. This tendency can also be seen in the diagram
+        visualizing participants’ stance towards medicines derived from
+        genetically modified organisms.</p>
+
+    <p>When asked about concerns, respondents on average selected 1.83 points of
+        worry. The most common issues were unknown side effects (59.22%) and
+        doubts about the safety of products (39.81%). By contrast, 14.56% had
+        no concerns at all, showing that for a notable minority such medicines
+        are already perceived as unproblematic.</p>
+
+    <p>The open-text responses add depth to these numbers. Many emphasized the
+        need for better education and communication, suggesting documentaries,
+        school education, or short social media posts. Transparency and clear
+        labeling were frequently mentioned as ways to build trust, while others
+        stressed the importance of highlighting the benefits of genetic
+        engineering instead of focusing only on risks. A few respondents
+        humorously suggested formats such as “cat reels with medical content” to
+        make information more engaging. Overall, the message was clear: people
+        are not opposed to genetic engineering in medicine, but they want
+        accessible, transparent, and trustworthy information to feel more
+        confident about it.</p>
+
+    <p>Taken together, the results reveal a clear pattern: people are not
+        sufficiently informed about how deeply genetic engineering is already
+        embedded in healthcare, yet they remain largely optimistic about its
+        applications. Bridging this gap through transparency, accessible
+        information, and education will be crucial for strengthening public
+        confidence. This feedback directly shaped our next steps, especially our
+        communication strategy and our choice to test scalable cultivation
+        systems in the lab.</p>
+
+    <div id="graph-slide3" class="graph-slider">
+        <div class="chartWrap"><canvas
+                id="Aufklärung-Gentechnik"></canvas></div>
+        <div class="chartWrap"><canvas id="Med-erhalten"></canvas></div>
+        <div class="chartWrap"><canvas id="Med-Gentechnik"></canvas></div>
+        <div class="chartWrap"><canvas id="Bedenken"></canvas></div>
+    </div>
+
+    <h3>Evaluating SUSPACT: Public Support & What It Means for Design</h3>
+
+    <p>In the final section of the survey, we focused on our own project concept
+        and asked participants directly for their assessment. The feedback was
+        strikingly positive: 67.96% of respondents expressed a very positive
+        attitude, while only 1.94% had a rather negative stance.</p>
+
+    <p>Beyond general attitudes, we wanted to understand what people see as the
+        main opportunities of producing medicines with microalgae. The answers
+        were diverse but revealed several recurring themes. Many participants
+        emphasized sustainability and resource efficiency, describing
+        algae-based production as “environmentally friendly, cost-effective, and
+        requiring very few nutrients and space compared to other systems.”
+        Others highlighted the potential for scalability and mass production,
+        noting that “a large amount of medicine could be produced in a short
+        time if upscaled.”</p>
+    <p>Accessibility was another recurring theme. Numerous participants believed
+        that this form of production could lead to cheaper medicines and better
+        access worldwide, including in economically disadvantaged nations: “Cost
+        reduction means higher availability for more people,” as one answer put
+        it. Some even described algae as an “underrated organism” with
+        “excellent conditions for fast and affordable production.”</p>
+
+    <p>At the same time, participants also voiced concerns. Several noted that
+        the efficiency of microalgae-based production may not yet reach the
+        levels achieved with established systems such as CHO cells, and that
+        further development will be needed to close this gap. Transparency was
+        another key point: when asked about labeling requirements, 74.76% of
+        respondents stated that they consider it important for genetically
+        engineered medicines to be clearly labeled, while 7.76% said it was
+        unnecessary, and 17.48% were indifferent.</p>
+
+    <p>Overall, these results not only confirmed public support but also guided
+        us toward concrete improvements in both design (scalability, efficiency)
+        and communication (labeling transparency).</p>
+
+    <div id="graph-slide4" class="graph-slider">
+        <div class="chartWrap"><canvas id="Bewerte-Idee"></canvas></div>
+        <div class="chartWrap"><canvas id="Markiere-Gentechnik"></canvas></div>
+    </div>
+
+    <h3>From Survey to Action: Gaps in Awareness, Opportunities for
+        Communication</h3>
+
+    <p>Our survey results reveal a clear trend: while most participants hold a
+        positive view of genetic engineering—especially in medicine—there are
+        still significant gaps in knowledge and confidence. Many respondents
+        were unaware of the extent to which genetically engineered products are
+        already part of everyday healthcare. Importantly, this lack of knowledge
+        did not automatically translate into rejection. Instead, transparency,
+        clear communication, and accessible information emerged as key factors
+        in building trust and addressing concerns.</p>
+
+    <p>For our project, these insights have two major implications. First, the
+        advantages most frequently highlighted by participants—sustainability,
+        cost reduction, and improved accessibility—directly align with the
+        benefits of our algae-based production system. Second, the findings
+        underline that societal acceptance of new biotechnologies depends
+        heavily on proactive and approachable science communication.</p>
+
+    <p>As a result, we adapted our Human Practices strategy accordingly. Beyond
+        sharing easy-to-understand content through social media, we set
+        up information booths to engage directly with the public and answer
+        questions face-to-face. In addition, we
+        created simplified formats such as newspaper articles
+        to reach audiences outside the scientific community. Our aim was
+        to make complex biotechnological topics understandable, relatable, and
+        accessible for everyone.</p>
+
+    <p>Overall, the survey highlights not only broad openness toward innovation
+        but also the responsibility of research teams to foster transparency and
+        trust. With a focus on dialogue, approachable communication, and clear
+        presentation of the benefits—alongside technical improvements to the
+        production process—our project seeks to contribute to a more informed
+        and positive societal perspective on genetically engineered
+        medicines.</p>
+
+    <hr><h2 id="svsv">Including Younger Voices: School Visits & Student Insights</h2>
+
+    <p>To make sure that our Human Practices work did not only reflect the views
+        of adults and university students, we also reached out to younger
+        audiences by visiting local schools 
+        . During these visits, we introduced students to iGEM,
+        synthetic biology, and genetic engineering/GMOs. At the same time, we
+        presented our project and invited them to share their thoughts.</p>
+
+    <figure>
+        <img src="https://static.igem.wiki/teams/5758/humanpractices/survey-foto.webp">
+        <figcaption>Exemplary survey response provided by an anonymous
+            student.</figcaption>
+    </figure>
+
+    <p>The outcome was overwhelmingly positive. More than 95% of students
+        agreed that organisms can and should be modified if this helps cure
+        human diseases. At the same time, they showed remarkable awareness of
+        broader implications, reminding us that scientific progress must always
+        go hand in hand with responsibility. They emphasized concerns such as
+        side effects and long-term unknowns, misuse or dual-use and ethical
+        issues, loss of biodiversity, environmental/ecosystem impact, and
+        technical errors such as off-targets. We view this as a sign of critical
+        thinking, showing that even young people are able to engage with the
+        ethical dimensions of genetic engineering.</p>
+
+    <p>When discussing research priorities, students were asked whether
+        resources should mainly be invested in established commercial production
+        methods or in innovative alternatives. While opinions were diverse, the
+        majority favored supporting alternative approaches and open research
+        once they had learned more about their potential. At the same time,
+        their answers showed that they also recognize the value of existing
+        production methods and maintain hope in the possibilities these already
+        offer.</p>
+
+    <p>After a deeper introduction to our project, more than 94% of students
+        stated that they would be willing to take algae-produced medicines in
+        the future. They responded enthusiastically to the idea that our project
+        could not only help treat and cure diseases, but also contribute to
+        safer and more sustainable production, improved access to medicine, and
+        even personalized therapies.</p>
+
+    <p>Beyond their opinions on our project, the students expressed a strong
+        desire for greater transparency in science. They felt that more
+        education and outreach, independent studies, practical and visible
+        applications, and earlier integration of biotechnology into school
+        curricula would help reduce prejudice and misinformation. To make this
+        engagement more sustainable, we also collaborated with teachers.
+        Together, we explored how topics such as synthetic biology and genetic
+        engineering could be more effectively integrated into the classroom, for
+        example by inviting experts to share their knowledge and experience.
+        These conversations opened the door for long-term improvements in
+        science education and outreach.</p>
+
+    <p>Overall, our school visits were a great success. These school engagements
+        not only provided education but also gave us new input that directly
+        reinforced our emphasis on transparency and labeling in project design.
+        They allowed us to empower younger audiences with knowledge, encourage
+        critical but constructive reflections, and confirm that our project
+        SUSPACT is seen as both meaningful and inspiring. Most importantly, they
+        showed us that when young people are given the chance to engage directly
+        with science, they not only develop enthusiasm but also a strong sense
+        of responsibility—values that align perfectly with iGEM’s mission 
+        <a href="education#sv" class="normal">(Read more)</a>.</p>
+
+    <div id="graph-slide5" class="graph-slider">
+        <div class="chartWrap"><canvas id="acceptable-modify"></canvas></div>
+        <div class="chartWrap"><canvas id="Comm-vs-Alt"></canvas></div>
+        <div class="chartWrap"><canvas id="would-you"></canvas></div>
+    </div>
+
+    <hr><h2 id="sehi">Healthcare Stakeholder Insights: Reimbursement & Biosimilar Pathway</h2>
+    <p>In our survey, several participants explicitly mentioned health insurance
+        as a key stakeholder for the future acceptance of medicines. In
+        response, we reached out to multiple German health insurance providers
+        to better understand their perspective.</p>
+
+    <p>Although the BARMER, one of the largest statutory health insurers,
+        explained that they were not the direct contact for our questions, their
+        reply still offered valuable insights. They stressed sustainability as
+        an important guiding value, which confirmed that SUSPACT addresses a
+        relevant issue.</p>
+
+    <p>Their feedback also made clear that health insurance funds do not decide
+        independently on the reimbursement of new medicines, as these processes
+        are firmly embedded in Germany’s legal and regulatory framework.
+        Decisions about approval, pricing, and reimbursement involve multiple
+        institutions:</p>
+
+    <ul>
+        <li> The European Medicines Agency (EMA) and the Federal Institute for
+            Drugs and Medical Devices (BfArM) are responsible for approval.</li>
+        <li> The Federal Joint Committee (G-BA) and the Institute for Quality
+            and Efficiency in Healthcare (IQWiG) conduct benefit
+            assessments.</li>
+        <li> The National Association of Statutory Health Insurance Funds
+            (GKV-SV) negotiates prices with pharmaceutical companies.</li>
+    </ul>
+
+    <p>In addition, the response highlighted that antibody therapies are already
+        an established part of oncological care, and that the role of physicians
+        remains central in deciding which therapy is best for each patient.
+        Importantly for us, they pointed out that a product like ours—producing
+        a known antibody in a new system—would likely fall under the biosimilar
+        framework, meaning that existing guidelines for biosimilars would be the
+        main reference for any future market introduction.</p>
+
+    <p>Thus, even though BARMER could not directly answer our questions, their
+        reply provided us with a clearer picture of how tightly regulated the
+        system is, how limited the influence of individual health insurers can
+        be, and where our project might fit within the existing structures. At
+        the same time, their emphasis on sustainability confirmed that we are
+        working on a topic that resonates with both the future generation and
+        institutional stakeholders alike.</p>
+
+    <p>This engagement confirmed to us that our HP work is not only about public
+        dialogue but also about mapping SUSPACT onto existing healthcare
+        structures, ensuring that our design choices remain relevant and
+        responsible.</p>
+
+    <hr><h2 id="sco">Translating Science for the Public: TV, Press & Community Outreach</h2>
+
+    <p>Because Science does not only impact scientists but also the whole
+        society, it was very important to us to address the general public. Our
+        survey showed that a lot of people are still strongly
+        influenced by biases against genetic engineering and wish for accessible
+        information. This strand of Human Practices was directly inspired by
+        survey feedback requesting “simpler and more visual science
+        communication.” To counteract this problem, we made our research easy to
+        understand and presented it in public media. Our aim is not only to
+        counteract biases and concerns but also to create trust and acceptance
+        of synthetic biology through transparent communication. At the same
+        time, we want to inspire people to spark interest in Research and
+        Science by themselves.</p>
+
+    <h3>Feature on SWR television</h3>
+
+    <p>Through Südwestrundfunk (SWR) we had the opportunity to present our
+        project on one of Germany’s largest public broadcasters. Our video aired
+        on August 12th, 2025, during the evening news on SWR Rheinland-Pfalz
+        Aktuell, as part of their science week featuring “outstanding projects”.
+        In 2024 the program reached an average of 700,000 daily viewers,
+        allowing us to share our topic with a broad audience.</p>
+
+    <p>In the video we addressed the core idea of our project: the sustainable
+        production of Antibodies for Head, Throat and Colorectal Cancer through
+        the microalgae Chlamydomonas reinhardtii. We addressed the problems of
+        the current production in mammalian cell cultures and explained in an
+        accessible way how we want to solve these problems.</p>
+
+    <p>Our survey on genetic engineering clearly showed that
+        many people are wishing for scientific content to be presented in a
+        simpler and more understandable way. Because of that we chose to
+        illustrate the principle of Modular Cloning using Lego bricks. We
+        visualized the Integration of individual genetic modules such as
+        promoter, gene, and terminator by assembling Lego pieces in different
+        colors. This made it easy to demonstrate how standardized DNA building
+        blocks can be combined like a construction kit to form larger genetic
+        constructs.</p>
+
+    <p>Especially for people without a background in biology this approach
+        offered an understandable entry point into synthetic biology. It showed
+        that even complex methods like Modular Cloning can be tangible with the
+        right visuals.</p>
+
+    <p>The feedback we received confirmed that our visualization was not only
+        creative but also genuinely contributed to better understanding. At the
+        same time, we ourselves learned how to communicate our research clearly
+        and accessibly to a lay audience.</p>
+
+    <div id="image-slide1" class="image-slider1">
+        <div class="img-wrapper"><img src="https://static.igem.wiki/teams/5758/humanpractices/hp1.webp"></div>
+        <div class="img-wrapper"><img src="https://static.igem.wiki/teams/5758/humanpractices/hp2.webp"></div>
+    </div>
+
+    <h3>Features in Newspapers and Magazines</h3>
+
+    <p>As part of our Human Practices, we actively engaged with the public and
+        scientific communities through media outreach. Our project was featured
+        in more than seven <a class="normal"
+            href="{{ url_for('pages', page='education') }}">magazines and
+            newspapers</a>, both in
+        print and online, giving us the opportunity to reach a wide readership
+        and ensure long-term visibility.</p>
+
+    <p>In our survey, many respondents emphasized that they would like to see
+        scientific topics explained in a clear and simple way. We took this
+        feedback seriously and designed our communication accordingly. Whenever
+        we had the chance to present our project in the media, we focused on
+        making synthetic biology understandable for people without a scientific
+        background and on highlighting the societal relevance of our work.</p>
+
+    <p>One example of our scientific outreach is the June issue of the journal
+        Biospektrum, where we reached an audience of around 11,000 readers with
+        a strong interest in science. In our self-authored article, we
+        highlighted recent developments in cancer cases, which are expected to
+        rise significantly in the coming years, and discussed the risks
+        associated with current cancer therapies. We also presented our own
+        project in a factual and scientific manner, demonstrating our ability to
+        communicate on a professional level.</p>
+
+    <p>Looking ahead, we are also preparing a retrospective article in
+        collaboration with Carl Roth to be published in their magazine Carl.
+        This contribution will allow us to review our project in hindsight,
+        share our outcomes with a broader scientific community, and reflect on
+        the key insights we gained during the iGEM journey.</p>
+
+    <h3>Bag Packing with Information Booth</h3>
+
+    <p>Because we wanted to focus on accessible information, we organized
+        several bag packing activities in local supermarkets, each combined with
+        an information booth. While helping customers with their groceries, we
+        took the opportunity to explain our project in a clear and
+        understandable way. We talked about the basic principles of our work,
+        sustainable biotechnology, and even gave short insights into everyday
+        laboratory practices.</p>
+    <p>This direct interaction created a low-threshold way for people to learn
+        about synthetic biology. Many customers had little or no prior exposure
+        to biotechnology, so we deliberately avoided technical jargon and
+        instead used simple comparisons and everyday examples. In this way, we
+        made sure that the explanations were both comprehensible and
+        relevant.</p>
+
+    <p>The format allowed us to engage with people outside of academia, answer
+        spontaneous questions, and spark conversations about how biotechnology
+        can contribute to solving societal challenges. At the same time, the
+        activity showed us how important it is to adapt our communication style
+        to different audiences.</p>
+
+    <p>In addition, we received voluntary donations from customers, which helped
+        us cover part of our project expenses. Beyond the financial support, the
+        most valuable outcome was the chance to see how people respond to
+        synthetic biology when it is explained in a clear, personal, and
+        approachable manner.</p>
+
+    <div id="image-slide2" class="image-slider1">
+        <div class="img-wrapper"><img src="https://static.igem.wiki/teams/5758/humanpractices/whatsapp-bild-2025-10-07-um-21-33-30-45b557f5.webp"></div>
+        <div class="img-wrapper"><img src="https://static.igem.wiki/teams/5758/humanpractices/whatsapp-bild-2025-10-07-um-21-33-30-a97cf860.webp"></div>
+        <div class="img-wrapper"><img src="https://static.igem.wiki/teams/5758/humanpractices/whatsapp-bild-2025-10-07-um-21-33-30-c746f9e0.webp"></div>
+        <div class="img-wrapper"><img src="https://static.igem.wiki/teams/5758/humanpractices/whatsapp-bild-2025-10-07-um-21-33-31-0c56bcbe.webp"></div>
+        <div class="img-wrapper"><img src="https://static.igem.wiki/teams/5758/humanpractices/whatsapp-bild-2025-10-07-um-21-33-31-5f538f65.webp"></div>
+        <div class="img-wrapper"><img src="https://static.igem.wiki/teams/5758/humanpractices/whatsapp-bild-2025-10-07-um-21-33-31-d91039d7.webp"></div>
+    </div>
+
+    <hr><h2 id="trt">Owning Our Narrative: Instagram & LinkedIn Reflections</h2>
+
+    <p>Beyond gaining insights from institutional stakeholders such as health
+        insurance providers, we also considered it essential to communicate our
+        own reflections and positions to the public. To achieve this, we made
+        extensive use of social media, particularly Instagram and LinkedIn.
+        Unlike the <a class="normal"
+            href="{{ url_for('pages', page='education') }}">education
+            page</a> of our wiki, which focuses on
+        general science communication, here we want to highlight how we used
+        these platforms to critically reflect on our own project.</p>
+
+    <p>From the very beginning, each team member was asked to think deeply about
+        fundamental questions such as “Why are we doing SUSPACT?”, “What do we
+        hope to achieve?”, “Who stands to benefit?”, “What could go wrong?”, and
+        “Who might lose if we succeed?”. The answers formed the foundation of a
+        series of six posts, published twice a week, that openly discussed both
+        the potential benefits and the possible risks of our approach.</p>
+
+    <p>In these posts, we deliberately shared not only our enthusiasm but also
+        our concerns, making our own perspectives and sense of responsibility
+        visible to a wider audience. This allowed us to demonstrate that our
+        commitment goes beyond laboratory work—it reflects our awareness of the
+        broader societal context in which synthetic biology operates.</p>
+
+    <p>The response was remarkable: while our first posts reached around 620
+        views each, by the end of the campaign our last two contributions had
+        engaged over 1,100 viewers, significantly expanding our outreach. This
+        growth confirmed to us that transparent communication and critical
+        self-reflection resonate strongly with the public and are an essential
+        part of responsible science.</p>
+
+    <img id="compare" src="{{ url_for('static', filename='svg/BeforeAfter.svg') }}">
+
+    <p>Our reflections turned into a structured Instagram/LinkedIn campaign,
+        ensuring that our own doubts and values were shared transparently with
+        the public.</p>
+
+    <hr><h2 id="rms">What We Heard vs. What We Did: Key Risks & Mitigations</h2>
+
+    <p><a class="normal" href="{{ url_for('pages', page='safety') }}">Main
+            Risks</a> Identified
+        by Stakeholders and the public and Our Mitigations:</p>
+
+    <ul id="wwwwd">
+        <li><p>Unknown side effects</p>
+            <span>We stressed that rigorous testing is needed and explained the
+                path of validation.</span></li>
+        <li><p>Product safety</p>
+            <span>We communicated our use of closed bioreactor systems and
+                strict sterilization procedures.</span></li>
+        <li><p>Environmental release</p>
+            <span>We highlighted containment measures such as autoclaving and
+                ethanol disinfection.</span></li>
+        <li><p>Monopolization</p>
+            <span>We reflected on this in our public posts and stressed
+                accessibility, positioning SUSPACT as a biosimilar
+                .</span></li>
+        <li><p>Lack of awareness / misinformation</p>
+            <span>We tackled this with creative outreach (Lego demo, social
+                media reels, supermarket talks) 
+                .</span></li>
+    </ul>
+
+    <div class="chat-frame" id="igem-chat"
+        aria-label="Scroll-getriggerter Chat">
+        <div class="chat-header">
+            <span class="dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span></span>
+            iGEM · SUSPACT · Community-Feedback
+        </div>
+        <div class="chat-scroll" id="chat-body" role="log" aria-live="polite"
+            aria-relevant="additions"></div>
+    </div>
+
+    <hr><h2 id="ihfl">Closing the Loop: How Human Practices Reshaped SUSPACT</h2>
+    <p>Our Human Practices activities reveal a clear trend: while most
+        participants hold a positive view of genetic engineering—especially in
+        medicine—there are still significant gaps in knowledge and confidence.
+        Importantly, this lack of knowledge did not translate into rejection.
+        Instead, transparency, clear communication, and accessible information
+        emerged as the key to trust.</p>
+    <p>For SUSPACT, Human Practices insights led to concrete changes:</p>
+
+    <ul>
+        <li>Lab design (<a href="{{ url_for('pages', page='experiments') }}" class="normal">Experiments</a>): Adoption of bioreactors and the CellDeg
+            system to directly address concerns about scalability and
+            efficiency.</li>
+        <li> Communication:
+            Innovative outreach formats (SWR Lego demo, Instagram series,
+            supermarket booths) to make genetic engineering tangible and address
+            awareness gaps.</li>
+        <li> Regulatory strategy: Input from health
+            insurers helped us recognize the biosimilar pathway as the most
+            realistic regulatory route.</li>
+        <li> Education: School visits and teacher
+            collaboration ensured that future generations are included in the
+            dialogue on biotechnology.</li>
+    </ul>
+
+    <p id="scl">By iterating through listen → reflect → change → evaluate 
+        , we aligned with the “Integrated” level of the
+        Human Practices Maturity Model. Our HP work not only gathered opinions
+        but actively reshaped SUSPACT’s direction, ensuring that it remains both
+        scientifically innovative and socially responsible.</p>
+</div>
+
+{% endblock %}
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/modules/chart.js') }}"></script>
+<script src="{{ url_for('static', filename='js/hp.js') }}"></script>
+{% endblock %}

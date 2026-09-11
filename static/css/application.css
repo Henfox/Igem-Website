@@ -1,0 +1,71 @@
+:root { 
+    --gap: 0; 
+    --duration: .35s;
+    --slide-count: 8;
+}
+
+.MainWrapper {
+    position: relative;
+    min-height: 80vh;
+    justify-content: center;
+}
+
+.MainWrapper .slider { position: relative; 
+    width: 90vw;
+    margin: 24px auto; 
+    background: transparent; 
+    border-radius: 16px; 
+    box-shadow: 0 6px 24px rgba(0,0,0,.08); 
+    overflow: hidden; }
+
+
+.MainWrapper .slider-viewport { 
+    overflow: hidden; 
+    width: 100%;
+    position: relative;
+ }
+.MainWrapper .slider-track { 
+    display: flex; 
+    gap: var(--gap); 
+    translate: 0 0; 
+    transition: transform var(--duration) ease; will-change: transform; 
+    position: relative;
+}
+.MainWrapper .slide { 
+    margin: 0;
+    flex: 0 0 calc(100% - 48px);
+    width: 100%; 
+    padding: 20px 24px; 
+    background-color: transparent; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    opacity: 1;
+}
+
+
+
+
+/* einfache Typo */
+h2 { margin: 0 0 8px; }
+p { line-height: 1.5; margin: 0 0 10px; }
+
+
+/* Navigation */
+.MainWrapper .nav { position: absolute; inset: 0; pointer-events: none;}
+.btn { pointer-events: all; position: absolute; top: 50%; translate: 0 -50%; border: 0; background: rgba(0,0,0,.55); color: #fff; width: 40px; height: 40px; border-radius: 999px; display: grid; place-items: center; cursor: pointer; }
+.btn:focus-visible { outline: 2px solid #000; outline-offset: 2px; }
+.btn.prev { left: 10px; }
+.btn.next { right: 10px; }
+
+
+.MainWrapper .dots { display: flex; gap: 8px; justify-content: center; align-items: center; padding: 12px 16px; background: transparent; border-top: 1px solid #eee; }
+.MainWrapper .dot { width: 10px; height: 10px; border-radius: 999px; border: 1px solid #888; background: transparent; opacity: .7; cursor: pointer; }
+.MainWrapper .dot[aria-current="true"] { background: #333; border-color: #333; opacity: 1; }
+
+/* kleine Bildschirme – Buttons etwas raussetzen */
+@media (max-width: 480px) {
+.btn { width: 36px; height: 36px; }
+.btn.prev { left: 6px; }
+.btn.next { right: 6px; }
+}

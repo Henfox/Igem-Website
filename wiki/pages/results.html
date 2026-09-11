@@ -1,0 +1,1013 @@
+{% extends "layout.html" %}
+
+{% block extra_css %}
+<link href="{{ url_for('static', filename='css/results.css') }}"
+  rel="stylesheet">
+{% endblock %}
+
+{% block title %}Results{% endblock %}
+{% block page_content %}
+<div class="MainWrapper">
+
+  <div class="mw-fixed">
+    <button class="mw-burger" aria-label="Menü öffnen" aria-expanded="false"
+      aria-controls="mw-drawer">
+      <span class="mw-bar"></span>
+      <span class="mw-bar"></span>
+      <span class="mw-bar"></span>
+    </button>
+
+    <nav id="mw-drawer" class="mw-drawer" aria-hidden="true">
+      <ul class="mw-list">
+        <li><h2><a class="normal" href="#GettingS">Getting Started</a></h2></li>
+        <li><h2><a class="normal" href="#OptiMeth">Optimization of Methods</a></h2></li>
+        <li><h2><a class="normal" href="#proof">Proof of concept</a></h2></li>
+        <li><h2><a class="normal" href="#outlook">Outlook</a></h2></li>
+        <li><h2><a class="normal" href="#conclusion">Conclusions</a></h2></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- Vollbild-Overlay getrennt -->
+  <div class="mw-overlay" hidden></div>
+
+  <h1>Results</h1>
+  <p>Our goal was to set a new milestone in cancer treatment, by demonstrating
+    that the unicellular
+    microalga <i>Chlamydomonas reinhardtii</i> (<i>Chlamydomonas</i>) is capable
+    of producing
+    functional
+    therapeutic antibodies. As a green alga, <i>Chlamydomonas</i> offers unique
+    sustainability advantages
+    for biopharmaceutical protein production: it harnesses light energy through
+    photosynthesis,
+    eliminating the need for expensive organic carbon sources while actively
+    reducing CO₂ emissions
+    during cultivation. Beyond its ecological benefits, cultivation is
+    straightforward, cost-effective, and
+    potentially scalable when grown in inexpensive media. However, since the use
+    of <i>Chlamydomonas</i>
+    for large-scale protein production is still under active research, we
+    focused our efforts on proving
+    the production and functionality of therapeutic single-chain antibodies in
+    <i>Chlamydomonas</i>.</p>
+
+  <hr><h2 id="GettingS">Getting started</h2>
+
+  <h3>Design &amp; Modular Cloning</h3>
+  <p>In order to design our first constructs, we first had to select the coding
+    sequences. We decided to
+    use the sequence of the single-chain variable fragment (scFv) of the
+    Cetuximab monoclonal
+    antibody provided by the iGEM 2015 team Apollo <a
+      href="https://parts.igem.org/Part:BBa_K1694004">[1]</a> (CetFv), as well
+    as a humanized sequence of
+    the Cetuximab scFv described by Banisadr et al. in 2018 <a
+      href="https://doi.org/10.1080/21645515.2017.1407482">[2]</a> (HumcetFv).
+    We reverse-translated
+    these sequences with optimal <i>Chlamydomonas</i> codon usage and inserted
+    native
+    introns from
+    RBCS2 approximately every 150-200 nucleotides to ensure efficient transgene
+    expression<a href="https://doi.org/10.1093/nar/gky532">[3]</a>.
+    Finally, we added BbsI restriction sites to enable Modular Cloning.</p>
+  <p>After obtaining the two sequences from TWIST, we designed our first Level 2
+    constructs to answer
+    the following questions:</p>
+  <p>1. Can we produce and secrete scFvs in <i>Chlamydomonas</i>?</p>
+  <p>2. Can scFv production and maturation be tracked via fluorescence in
+    <i>Chlamydomonas</i>?</p>
+  <p>We also designed Level 2 constructs containing an 8xHis tag for
+    purification.</p>
+
+  <figure>
+    <img src="https://static.igem.wiki/teams/5758/results/figure1-7.avif">
+    <figcaption><b>Figure 1:</b> Level 2 MoClo constructs for expression in
+      <i>Chlamydomonas</i>, labeled from 1 to 20. All constructs contain a
+      spectinomycin resistance cassette as well as the strong HSP70A-RBCS2 (AR)
+      fusion promoter. Depending on the
+      design, different secretion signals were included (like cCA, ARS2, GLE or
+      none), followed by either CetFv, HumcetFv or
+      a fluorescent protein (mTFP, mVenus). C-terminal tags were incorporated
+      for specific purposes such as Western blot
+      detection (HA) or fluorescence monitoring, glycosylation (SP20) or protein
+      purification (His tag). All constructs were
+      terminated by the RPL23 terminator.</figcaption>
+  </figure>
+
+  <p>The constructs shown in <b>Fig. 1</b> set the groundwork for our research.
+    To
+    address our first question
+    of whether we can produce and secrete scFvs in <i>Chlamydomonas</i>, we
+    transformed
+    Level 2 constructs 9-cCA-CetFv-SP20, 3xHA (SH) and 10-cCA-HumCetFv-SH (<b>see Fig.
+      1</b>)
+    into
+    <i>Chlamydomonas</i>, grew individual transformants in liquid culture,
+    precipitated
+    proteins in the culture
+    medium with acetone and analyzed them by SDS-PAGE and Western blotting using
+    an anti-HA
+    antibody. This demonstrated for the first time the production of scFv in
+    <i>Chlamydomonas</i>, establishing
+    the basis for further experiments.</p>
+
+  <figure>
+    <img src="https://static.igem.wiki/teams/5758/results/figure2.webp">
+    <figcaption><b>Figure 2:</b> Western Blot screening of <i>Chlamydomonas</i>
+      transformants
+      probed with anti-HA primary antibody.
+      Transformants containing construct 9-cCA-CetFv-SH <b>(A)</b> and
+      10-cCA-HumcetFv-SH <b>(B)</b> analyzed for the presence
+      of secreted recombinant proteins in the culture medium. Lane numbers
+      correspond to the individual transformants
+      tested.</figcaption>
+  </figure>
+
+  <p>As shown in <b>Fig. 2</b>, a clear HA-signal at approximately 55 kDa was
+    detected,
+    which corresponds
+    to a larger than predicted molecular mass of 23 kDa. This shift can be
+    explained by glycosylation
+    of the SP20 module during secretion, which increases the apparent molecular
+    mass of the protein
+    and supports efficient secretion. So, we are confident that the detected
+    proteins in <b>Fig. 2</b> indeed
+    are our scFvs, confirming successful scFv production in
+    <i>Chlamydomonas</i>. The
+    bands indicated
+    below could be due to partially glycosylated or degraded scFv.</p>
+
+  <h3>Screening via Fluorescence</h3>
+  <p>While screening for transformants producing our scFvs by Western blotting,
+    we also aimed to detect
+    the humanized Cetuximab scFv fused with mTFP via fluorescence microscopy to
+    address our
+    second question. Successful detection would provide the first visualization
+    of a scFv produced in
+    <i>Chlamydomonas</i>.</p>
+  <p>For this experiment, transformants containing constructs 6-8 (<b>see Fig.
+      1</b>)
+    were grown in a 24-well
+    plate alongside a negative control without expression of any fluorescent
+    protein and positive
+    controls accumulating mTFP in the cytosol or chloroplast.</p>
+
+  <figure>
+    <img src="https://static.igem.wiki/teams/5758/results/figure3.webp">
+    <figcaption><b>Figure 3:</b> Brightfield, mTFP and chlorophyll
+      autofluorescence
+      imaging of <i>Chlamydomonas</i> transformants using an
+      Olympus BX53 epifluorescence microscope at 1000x magnification. Samples
+      include a negative control (recipient
+      strain), two positive controls (either accumulating mTFP in the
+      chloroplast or the cytosol, construct 6), a mTFP secreting
+      transformant (construct 7) and a transformant secreting HumcetFv fused
+      C-terminally with mTFP (construct 8).
+      Chlorophyll autofluorescence was detected at 440 nm, while mTFP
+      fluorescence was recorded at 270 nm. Both mTFP
+      and chlorophyll autofluorescence channels were merged for colocalization
+      analysis.</figcaption>
+  </figure>
+
+  <p>As shown in <b>Fig. 3</b>, only very little fluorescence leaks into the
+    mTFP
+    channel in the negative control.
+    However, chlorophyll autofluorescence was clearly visible at 440 nm. The
+    fluorescence from mTFP
+    in the chloroplast colocalizes well with the chlorophyll autofluorescence.
+    In contrast, the
+    fluorescence of mTFP in the cytosol does not colocalize with chlorophyll
+    autofluorescence.
+    Fluorescence signals from secreted mTFP as well as HumcetFv fused with mTFP
+    were detected in
+    the cytosolic area in structures that could correspond to the ER/Golgi.</p>
+  <p>The results in Fig. 3 confirm, for the first time, successful detection of
+    our scFv fused with mTFP,
+    demonstrating the production of secreted scFv in <i>Chlamydomonas</i>.
+    Although
+    both proteins are
+    secreted, we were able to capture them while in transit through the
+    secretory pathway, most likely
+    within the ER and the Golgi apparatus.</p>
+
+  <h3>Secretion Signals</h3>
+  <p>Lastly, we addressed our third question regarding the efficiency of
+    different secretion signals for our
+    scFvs by directly comparing the secretion signals from carbonic anhydrase
+    (cCA), arylsulfatase
+    (ARS2) and gamete lytic enzyme (GLE) in a single Western blot. In most
+    cases, the cCA secretion
+    signal is reported to function reliably and ensures efficient protein
+    secretion. However, ARS2 and
+    GLE can serve as alternatives if secretion levels with cCA are too low, e.g.
+    MUT-PETase<a
+      href="https://2019.igem.org/Team:TU_Kaiserslautern/Results">[4]</a>.
+    Should
+    secretion efficiency be higher with ARS2 or GLE, it would be necessary to
+    design new Level 2
+    constructs accordingly.</p>
+  <p>We selected positive transformants expressing scFv from constructs 9-14
+    (<b>see Fig. 1</b>). Liquid
+    cultures were grown to a density of 2*10<sup>5</sup> cells/ml for seven days and
+    proteins in the culture medium
+    were then precipitated with acetone and analyzed by SDS-PAGE and Western
+    blotting.</p>
+
+  <figure>
+    <img src="https://static.igem.wiki/teams/5758/results/figure4.webp">
+    <figcaption><b>Figure 4:</b> Comparison of cCA, ARS2 &amp; GLE secretion
+      signals in
+      CetFv and HumcetFv constructs 9-14 probed with anti-HA antibodies. 
+      The recipient strain UVM4 was included as a negative
+      control, and L5 served as a positive control.</figcaption>
+  </figure>
+
+  <p>As shown in <b>Fig. 4</b>, HumcetFv expression coupled with the
+    cCA secretion
+    signal resulted in markedly
+    higher secretion levels compared to its ARS2 and GLE counterparts. In
+    contrast, the CetFv construct
+    displays slightly higher expression with GLE and occasionally with ARS2.
+    Nevertheless, we decided
+    to continue using cCA for CetFv, as the difference is not substantial and
+    maintaining the same
+    secretion signal allows for better comparability with HumcetFv.</p>
+  <p>These data conclude the initial construction and testing of our Cetuximab
+    scFVs. In summary, we
+    successfully showed secretion of scFv both by immunoblotting and by
+    fluorescence microscopy and
+    identified cCA as the most suitable secretion signal. Having laid this
+    groundwork, we next aimed to
+    explore secretion under different parameters such as culture volume or time.
+    In parallel, we sought
+    to refine existing protocols to reduce the workload and minimize potential
+    hazards from vile reagents.</p>
+
+  <hr><h2 id="OptiMeth">Optimization of Methods</h2>
+  <p>After identifying cCA as the most effective secretion signal for our scFv
+    constructs, we began
+    planning the next series of experiments. One of our primary goals was to
+    improve the trichloroacetic
+    acid (TCA) protein precipitation protocol, as TCA is highly hazardous and
+    difficult to handle safely.
+    In addition, we aimed to investigate the secretion of our scFvs by varying
+    parameters such as liquid
+    culture volume and timing of protein harvest.</p>
+
+  <h3>TCA vs Acetone Precipitation</h3>
+  <p>Trichloroacetic acid (TCA) is a highly corrosive and hazardous chemical to
+    work with. While TCA
+    precipitation is routinely used in the Department of Biotechnology and
+    Systems Biology, we were
+    eager to improve the protocol by skipping the highly corrosive TCA-step, and
+    precipitated with the
+    less hazardous acetone, therefore reducing hazards, and saving time.</p>
+  <p><i>Chlamydomonas</i> cultures of HumcetFv were grown at a density of 2*10<sup>5</sup> cell/ml
+    for six days. One
+    batch was precipitated with acetone, the other with TCA. The ratio of
+    protein concentration was
+    adjusted by loading 20 µl of the acetone-precipitated sample onto the SDS
+    gel and 4.1 µl of the
+    TCA-precipitated sample (corresponding to a ratio of ~1:4.29). The remaining
+    steps of SDS-PAGE
+    and Western blotting were conducted as always.</p>
+
+  <figure>
+    <img src="https://static.igem.wiki/teams/5758/results/figure5.webp">
+    <figcaption><b>Figure 5:</b> Comparison of TCA precipitation and acetone
+      precipitation. For both precipitation methods, the
+      <i>Chlamydomonas</i> culture HumcetFv, transformed with the construct 10
+      and UVM4
+      (negative control) were used. Proteins
+      in culture media were precipitated with either TCA or acetone. Samples
+      from the
+      TCA HumcetFv lane sloshed into the lane of
+      the negative control (UVM4), thus explaining the signal visible in the
+      control. L5 served as a positive control.</figcaption>
+  </figure>
+
+  <p>As shown in <b>Fig. 5</b>, both TCA and acetone precipitation of HumcetFv
+    from
+    culture medium yielded
+    comparable signal strengths, indicating that acetone precipitation is as
+    efficient as TCA precipitation.
+    Based on these results, we discontinued TCA protein precipitation and used
+    acetone precipitation
+    instead as the standard protocol.</p>
+
+  <h3>Volume test</h3>
+  <p>Our long-term goal in the iGEM competition was to establish scFv production
+    in large-scale
+    bioreactors. If successful, this would allow for mass production of scFvs
+    without the need for
+    numerous Erlenmeyer flasks, thereby approaching industry standards. To begin
+    with, we needed to
+    analyze the production of our scFvs in different liquid culture volumes to
+    determine whether protein
+    yield changes with culture size.</p>
+  <p>Liquid cultures of strains producing CetFv and HumcetFv, construct 9 and 10, were grown at a
+    density of 2*10<sup>5</sup> cells/ml
+    for six days in the following volumes of media (in mL): 6, 10, 20, 50, 100,
+    200, 400 &amp; 1000. After
+    cultivation, the culture media were precipitated with acetone and analyzed
+    by SDS-PAGE and
+    Western blotting.</p>
+
+  <figure>
+    <img src="https://static.igem.wiki/teams/5758/results/figure6.webp">
+    <figcaption><b>Figure 6:</b> Volume test of cultures transformed with
+      construct 9 and 10. <b>(A)</b> Western blot analysis of the volume
+      test for HumcetFv. (B) Volume test for CetFv. The culture
+      volumes (6-1000 mL) are indicated above the respective lanes.</figcaption>
+  </figure>
+
+  <p>As presented in <b>Fig. 6</b>, the immunoblot signals of CetFv appear to be
+    saturated, yet the signal of
+    the band below appears to reduce in intensity, indicating a diminishing in
+    scFv accumulation. This
+    suggests that CetFv might be well suited for scaling up and could serve as a
+    suitable candidate for
+    bioreactor experiments. In contrast, the HumcetFv signal decreased with
+    increasing culture volume,
+    suggesting lower secretion efficiency in larger cultures. Based on these
+    initial scale-up results, we
+    proceeded by planning and operating several types of photobioreactors (see
+    Outlook).</p>
+
+  <h3>Secretion-Time Test</h3>
+  <p>The secretion-time test provides insights into the temporal dynamics of
+    scFv secretion in
+    <i>Chlamydomonas</i> enabling the secretion time optimization of production
+    protocols. Understanding
+    when and how efficiently our two scFv variants accumulate in the culture
+    medium is essential for
+    maximizing protein yield and establishing standardized harvesting
+    procedures.</p>
+
+  <figure>
+    <img src="https://static.igem.wiki/teams/5758/results/figure7.webp">
+    <figcaption><b>Figure 7:</b> Western Blot analysis of culture supernatants
+      collected daily from day 0 to day 6 post-inoculation at 2 × 10⁵
+      cells/ml. The left panel shows CetFv, construct 9, secretion with gradual
+      accumulation
+      starting from day 2. The right panel
+      demonstrates HumcetFv, construct 10, secretion with early onset and
+      sustained high
+      secretion levels. UVM4 wild-type strain served
+      as negative control. Molecular mass standards are shown in
+      kDa.</figcaption>
+  </figure>
+
+  <p>The Western Blot analysis of CetFv and HumcetFv in <b>Fig. 7</b> reveals
+    distinct
+    secretion profiles for the
+    two scFvs. CetFv shows a gradual increase in protein accumulation starting
+    from day one, with
+    relatively consistent levels maintained through day 6. In contrast, HumcetFv
+    demonstrates secretion
+    beginning on day one, reaching high levels at day 2 that remained stable
+    throughout the entire week.
+    Notably, HumcetFv accumulated to much higher levels compared to CetFv,
+    suggesting superior
+    production/secretion efficiency or enhanced protein stability in the culture
+    medium. The early and
+    sustained secretion of HumcetFv indicates that it can be harvested as early
+    as day 3 without
+    compromising yield, potentially reducing production time. The same applies
+    to CetFv. This time
+    analysis establishes the foundation for optimized production schedules.</p>
+
+  <hr><h2 id="proof">Proof of concept</h2>
+  <p>As we gained experience and confidence in laboratory work, we began to
+    develop ideas on how to
+    move forward. Our primary objective was to demonstrate the interaction
+    between our Cetuximab
+    scFvs and the EGFR (Epidermal Growth Factor Receptor). In addition, the
+    Department of Toxicology
+    offered us the opportunity to test effects of our scFvs on cancer cell
+    lines. To perform this assay, we
+    required large amounts of purified protein and therefore scheduled weekly
+    protein purification
+    sessions to meet this demand. Furthermore, we anticipated designing scFv
+    variants in which the 
+    C-terminal protein tags could be removed by a protease, addressing potential
+    requirements for future
+    commercial applications.</p>
+
+  <h3>HRV Cleavage Site Design</h3>
+  <p>To commercialize our therapeutic scFvs, it is essential that no
+    additional tags such as SP20, His-
+    or HA-tags remain on the final scFv. To achieve that, we designed a new B5
+    part containing a
+    PreScission protease recognition sequence (human rhinovirus (HRV) type 14),
+    which enables the
+    removal of all C-terminal tags. However, due to synthesis problems with the
+    repetitive SP20 tag, we
+    were only able to order the B5 part with mNeonGreen (mNG). In order to
+    obtain the B5 part with the
+    cleavage recognition site but without mNeonGreen, we planned to remove the
+    mNG sequence by
+    PCR.</p>
+
+  <figure>
+    <img src="https://static.igem.wiki/teams/5758/results/figure8-5.avif">
+    <figcaption><b>Figure 8: (A)</b> Amino acid and corresponding DNA sequences
+      of the
+      recognition site of the human rhinovirus type 14 3C
+      protease. <b>(B)</b> Planned Level 2 constructs with a spectinomycin
+      resistance
+      cassette, the AR promotor, the cCA secretion
+      signal, either CetFv or HumcetFv as coding sequences, the RPL23 terminator
+      and the newly designed part with the
+      PreScission recognition site, SP20 for glycosylation and optimal
+      secretion, an 8xHis tag for purification, 1xHA tag for
+      Western blot detection and mNeonGreen for fluorescence
+      detection.</figcaption>
+  </figure>
+
+  <p>After the arrival of the HRV part including mNeonGreen, we assembled Level
+    2 constructs using
+    Modular Cloning, according to the scheme shown in <b>Fig. 8</b>. Following
+    correct
+    assembly, we
+    proceeded with UVM4 <i>Chlamydomonas</i> transformation. After two weeks of
+    growth
+    on TAP agar
+    plates, we picked single colonies for screening of transformants.</p>
+
+  <figure>
+    <img src="https://static.igem.wiki/teams/5758/results/figure9.webp">
+    <figcaption><b>Figure 9:</b> Western Blot screening of transformants
+      producing
+      scFvs with the HRV-cleavage part with mNeonGreen.
+      Numbers above the lanes correspond to the individual transformants picked
+      for analysis. <b>(A)</b>Western Blot analysis of
+      CetFv transformants. <b>(B)</b>Western Blot analysis of HumcetFv
+      transformants.</figcaption>
+  </figure>
+
+  <p>From Western Blot analysis shown in <b>Fig. 9</b>, multiple strong bands
+    were
+    detected for both CetFv
+    and HumcetFv above 70 kDa, which corresponds to the expected molecular mass
+    of ~56.4 kDa
+    including glycosylation. These results confirm the successful expression of
+    both constructs. In
+    addition, we performed fluorescence microscopy with the CetFv strain,
+    analogous to our screening
+    of mTFP fused scFv variants, to assess whether the observed fluorescence
+    signals correlate with
+    our Western Blot results.</p>
+
+  <figure><img src="https://static.igem.wiki/teams/5758/results/figure10.webp">
+    <figcaption><b>Figure 10:</b> Brightfield, mNeonGreen and autofluorescence
+      imaging
+      of CetFv-producing strains containing the HRV and
+      mNeonGreen part using an Olympus BX53 microscope at 1000x magnification.
+      Transformants shown are the same as
+      in <b>Figure 9A</b>. Chlorophyll autofluorescence was detected at 440 nm,
+      while
+      mNeonGreen was visualized at 490 nm. Both
+      mNeonGreen and chlorophyll autofluorescence channels were merged for
+      colocalization analysis.</figcaption>
+  </figure>
+
+  <p>As shown in <b>Fig. 10</b>, both Western Blot (<b>Fig. 9A</b>) and
+    fluorescence
+    microscopy imaging identify the
+    same positive transformants. However, microscopy imaging detected one
+    transformant that did not
+    show a signal in the Western blot, whereas the Western blot revealed
+    transformants 6 and 9, which
+    were not detected by fluorescence microscopy. These discrepancies may result
+    from gene
+    silencing/activation events.</p>
+  <p>Simultaneously, we removed the mNeonGreen sequence from the B5 part by 
+    site-directed
+    mutagenesis. For this purpose, primers were designed to anneal directly
+    adjacent to the mNG
+    sequence, thereby excluding it from the PCR product. After amplification,
+    the PCR product was
+    purified, and the original plasmid was digested with DpnI to eliminate
+    template DNA.</p>
+
+  <figure>
+    <img src="https://static.igem.wiki/teams/5758/results/figure11.webp">
+    <figcaption><b>Figure 11:</b> Primer sequences and agarose gel after PCR
+      <b>(A)</b> Forward and reverse primer sequences. The forward primer
+      anneals to
+      the His tag coding sequence and the reverse
+      primer to the SP20 tag coding sequence, thereby removing the mNeonGreen
+      sequence located between them. For
+      each primer, two variants were designed to ensure functionality of PCR in
+      case one fails.
+      <b>(B)</b> Agarose gel electrophoresis showing PCR products. Numbers 69 to
+      78
+      indicate the annealing temperature used
+      during PCR. “PH” refers to Phire Plant polymerase, which was tested as an
+      alternative to Q5. PH1 corresponds to the
+      primer combination of reverse short and forward short, while PH4
+      represents reverse long and forward short. The
+      expected plasmid size is 2464 bp.</figcaption>
+  </figure>
+
+  <p>As shown in <b>Fig. 11</b>, we successfully amplified DNA at the ~2.5 kb
+    mark,
+    matching the size of 2464
+    bp plasmid lacking the mNG coding sequence. Following Sanger sequencing
+    confirmation of the
+    Level 0 B5 part lacking the mNeonGreen coding sequence, we proceeded to
+    assemble new HRV
+    constructs and transformed them into <i>Chlamydomonas</i> UVM4. However,
+    because of
+    time
+    limitations, we were unable to screen the new HRV transformants.</p>
+
+  <h3>Protein Yield Estimation and Concentration</h3>
+  <p>As mentioned before, the Department of Toxicology invited us to test our
+    scFvs on cancer cell lines.
+    For this, however, we required sufficient amounts of purified protein.
+    Therefore, we established a
+    routine of weekly protein purifications using the strain harboring
+    construct 16, which produce
+    and secrete the HumcetFv scFv with a C-terminal 8xHis tag. This process relied on immobilized metal
+    affinity
+    chromatography (IMAC), in which the liquid culture supernatant containing our scFv was applied to
+    a column loaded with Nickel-NTA resin. Histidine residues of the 8xHis tag
+    specifically bind to the nickel, while
+    protein lacking the histidine repeats are washed away. Elution of the bound
+    protein is then achieved
+    by applying a high concentration of imidazole, which competes with histidine
+    for nickel binding,
+    thereby releasing the protein. Purification also opened the opportunity to
+    calculate protein yield, an
+    important metric when evaluating the potential of <i>Chlamydomonas</i> for
+    future
+    commercialization.</p>
+  <p>Approximately 1-3 L of liquid culture of cells producing HumcetFv, construct
+    10, were grown
+    for seven days. After
+    harvesting, proteins in the culture medium were precipitated with ammonium
+    sulfate and subjected
+    to dialysis for buffer exchange. Following one day after dialysis, the
+    proteins were centrifuged at
+    25,000 g for 20 min to remove larger particles, to prevent clogging the
+    column. Each eluate was
+    mixed with 4xSDS and DTT buffer and then analyzed by an SDS-PAGE along with a
+    BSA-standard
+    for yield estimation. SDS-gels were then stained with Coomassie.</p>
+
+  <figure>
+    <img src="https://static.igem.wiki/teams/5758/results/results-figure9-1.webp">
+    <figcaption><b>Figure 12:</b> Coomassie stained gel &amp; Western blot
+      analysis of
+      purified HumcetFv, construct 16.
+      <b>(A)</b> SDS-PAGE after Coomassie staining. Shown are Input (Inp), four
+      elution
+      fractions and BSA standards (0.5, 0.25,
+      0.125, 0.0625 µg) used to generate a calibration curve for protein yield
+      estimation.
+      <b>(B)</b> Western blot analysis of the same purification for quality
+      control.
+      After one day of dialysis (D), samples were
+      centrifuged at 25,000 g for 20 min. Supernatant (Inp) was loaded into the
+      Nickel-NTA column, while a pellet fraction was
+      resuspended and sampled. Flow through samples were collected at the
+      beginning (FT1) and the end of loading (FT2).
+      Wash samples were collected the same manner as flow through fractions.
+      After collecting the elution samples, all
+      samples were precipitated with acetone and analyzed by SDS-PAGE followed
+      by immunoblotting. Strong signal bands
+      in E1-E4 confirm successful purification of HumcetFv.</figcaption>
+  </figure>
+
+  <p>After Coomassie staining, the gel in <b>Fig. 12A</b> was analyzed with
+    ImageJ to
+    generate a calibration
+    curve with the BSA standard to calculate protein yield. The highest yield
+    obtained was ~49 µg/L,
+    while the average across multiple purifications was ~32 µg/L. These values
+    are in line with typical
+    yields obtained with <i>Chlamydomonas</i>. Although these yields appear low
+    compared to industrial
+    expression systems, it should be noted that UVM4 strain cultures in TAP
+    medium can only reach
+    cell densities of approximately 2*10<sup>7</sup> cells/ml. This intrinsic limitation is
+    the reason why we routinely required liters of <i>Chlamydomonas</i> culture every
+    week to provide sufficient protein for toxicology
+    assays. Elution fractions containing our scFvs were concentrated using
+    Amicon filters, resulting in
+    higher protein concentrations suitable for downstream applications.</p>
+
+  <hr><h2>Pulldown Interaction-Assay</h2>
+
+  <p>Demonstrating the activity of our
+    Cetuximab scFvs towards the EGFR was our primary goal. Proving its
+    interaction would not only validate our scFvs functionality but also
+    highlight the potential of <i>Chlamydomonas</i> as a future contender for
+    biopharmaceutical protein production. For this, we went for a pulldown
+    interaction assay inspired by the work of Kiefer et al., 2022 where the
+    authors proved the interactions between recombinant hACE2 to the SARS-CoV-2
+    spike protein produced in <i>Chlamydomonas</i>. In their experiment, hACE2,
+    containing a deca-histidine tag, was immobilized on Nickel-NTA beads,
+    enabling the spike protein to bind hACE2. Since the spike protein had no
+    direct affinity for the Nickel beads, it remained bound through its
+    interaction with hACE2 during washing steps.</p>
+
+  <p>In our experiment, we
+    incubated purchased recombinant EGFR harboring a C-terminal histidine tag
+    with ammonium sulfate concentrated <i>Chlamydomonas</i> culture supernatant
+    containing Cetuximab scFv (without His tag, construct 9 and 10). 66 µl
+    Nickel-NTA were
+    equilibrated with PBS before adding the protein mixture. After incubation
+    under constant inversion, the supernatant was removed and the beads washed
+    with PBS and 5 mM imidazole. Elution of bound proteins was then conducted
+    with PBS and 500 mM imidazole, all samples were precipitated with acetone
+    prior to SDS-PAGE and Western blot analysis.</p>
+
+  <figure>
+    <img src="https://static.igem.wiki/teams/5758/results/figure13.webp">
+    <figcaption><b>Figure 13:</b> Western Blot
+      analysis of pulldown interaction assay between EGFR and
+      <i>Chlamydomonas</i> scFv.
+      Recombinant EGFR carrying a C-terminal His tag was incubated with
+      supernatant containing only SP20 and HA tagged scFv or negative controls.
+      Samples of Input (Inp), Supernatant after incubation (S), wash (W) and
+      elution (E) were analyzed. EGFR was detected using anti-His antibodies,
+      while scFv, Luciferase, and PETase were detected using anti-HA antibodies.
+      The His-Hum construct served as positive control.
+      <b>(A)</b> CetFv with and
+      without EGFR <b>(B)</b> HumcetFv with and without EGFR <b>(C)</b>
+      Luciferase negative
+      control with and without EGFR <b>(D)</b> PETase negative control with and
+      without
+      EGFR</figcaption>
+  </figure>
+
+  <p>As shown in <b>Fig.
+      13</b>, both CetFv and HumcetFv displayed weak signals in supernatant and
+    washing fractions, while strong bands for EGFR and the respective scFv were
+    detected in elution fractions. In control samples without EGFR, no HA signal
+    was detected in the elution fractions, clearly demonstrating that our scFv
+    specifically binds to EGFR.</p>
+
+  <p>Although Luciferase should not bind EGFR,
+    a very weak signal was detected for luciferase in the elution fractions.
+    This effect is most likely caused by unspecific binding of luciferase to the
+    nickel-NTA matrix, as it was also seen in the EGFR-free control in <b>Fig.
+      13</b>.
+    The second negative control, PETase, showed as expected no signal in wash
+    and elution fractions with or without EGFR.</p>
+
+  <p>This result provides
+    proof of the interaction of <i>Chlamydomonas</i>-made Cetuximab scFVs with
+    its
+    target protein EGFR and marks a major success of our project!</p>
+
+  <hr><h2>Resazurin-Assay</h2>
+  <p>After confirming the binding capacity of the scFv
+    to the EGFR in the pulldown assay, we wanted to test if the scFvs can bind
+    the EGFR of cancer cells in vitro. This assay is designed to evaluate the
+    cytotoxic effects of various treatments on cell viability using a
+    resazurin-based metabolic activity indicator. Resazurin, a deep blue
+    compound, undergoes reduction to pink resorufin in the presence of
+    metabolically active cells, providing a quantitative measure of cellular
+    viability. The colorectal cancer cell lines HT29 and SW48 were treated with
+    the isolated scFv (HumcetFv) and commercial Cetuximab, which serves as a
+    positive control to enable comparison with an established inhibitor. Cell
+    culture media and PBS + imidazol function as negative controls to establish
+    baseline viability, while saponin (10%) and 5-fluorouracil (5-FU) at 7.5 nM
+    serve as additional positive controls, representing known cytotoxic agents.
+    This experimental design allows for direct assessment of the isolated scFv's
+    efficacy against established inhibitors while ensuring proper validation
+    through appropriate positive and negative controls.</p>
+
+  <figure>
+    <img src="https://static.igem.wiki/teams/5758/results/figure14.webp">
+    <figcaption><b>Figure 14:</b> Resazurin reduction assay schematic.
+      96-well plate layout for the resazurin assay treatment with
+      cetuximab, scFv, and positive and negative controls, with incubation
+      periods
+      of 24h and 72h. The experimental design anticipated that cells treated
+      with
+      the negative controls would maintain high viability (pink), while cells
+      treated with the positive controls (saponin and 5-FU) would exhibit
+      significant cytotoxicity (blue). It was hypothesized that both cetuximab
+      and
+      the isolated scFvs would have comparable anti-proliferative effects on the
+      cancer cell lines.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <img src="https://static.igem.wiki/teams/5758/results/figure15.webp">
+    <figcaption><b>Figure 15:</b> Resazurin reduction assay results (72h)
+      for SW48 and HT29 colorectal cancer cell lines. <br><b>(A) SW48 cells:</b>
+      The
+      leftmost blue column (column 1) represents the blank (resazurin without
+      cells). Negative controls (PBS + Imidazol, Medium) show high viability
+      (pink). Positive controls demonstrate expected cytotoxicity, 5-FU shows a
+      partial effect (purple/blue), while saponin shows strong cytotoxicity
+      (blue). Cetuximab treatments (left columns) display minimal to no
+      cytotoxic
+      effect with pink coloration similar to the negative controls. scFv
+      treatments (right columns) also maintain predominantly pink coloration,
+      indicating maintained cell viability across all tested concentrations.
+      <b>(B)
+        HT29 cells:</b> A similar pattern was observed with the negative
+      controls
+      (pink). The positive controls validate the assay conditions: 5-FU shows
+      partial cytotoxicity (purple/blue), saponin demonstrates strong
+      cytotoxicity
+      (blue). Both cetuximab and scFv treatments show no cytotoxic effects, with
+      most wells displaying pink coloration indicating cell viability,
+      comparable
+      to negative controls across all concentration tested ranges.</figcaption>
+  </figure>
+
+  <p>The results of the resazurin
+    reduction assay indicate that the therapeutic scFvs purified and isolated
+    from <i>Chlamydomonas</i> culture media did not demonstrate the expected
+    inhibitory
+    effects on cell viability in the tested cancer cell lines. While the
+    positive and negative controls functioned as expected, validating the
+    assay's reliability, neither the isolated scFv nor the commercial Cetuximab
+    exhibited cytotoxic activity under the tested concentrations. These findings
+    prevent definitive conclusions regarding the scFv's therapeutic efficacy on
+    the cancer cell lines, as the lack of activity observed with cetuximab
+    suggests that the concentrations used may have been insufficient to elicit
+    measurable cytotoxic responses.</p>
+
+  <hr><h2 id="outlook">Outlook</h2>
+
+  <h3>More single chain
+    Fragments</h3>
+
+  <p>After sufficient testing of the scFv of Cetuximab, we
+    initiated a new iteration of construct design and testing of newly
+    engineered scFvs from Matuzumab, Panitumumab and Trastuzumab. The aim was to
+    evaluate both their production and their interaction with the respective
+    target receptors, thereby establishing <i>Chlamydomonas</i> as a suitable
+    host for
+    the production of various scFvs.</p>
+
+  <p>Both Matuzumab and Panitumumab also
+    target EGFR<a href="https://doi.org/10.1016/j.ccr.2008.02.019">[5]</a>
+    <a href="https://doi.org/10.1371/journal.pone.0163366">[6]</a>, making them highly suitable candidates for our study.
+    Trastuzumab was included, due to its well-established role in breast cancer
+    therapy. However, it targets the HER2 receptor.</p>
+
+  <p>For each antibody,
+    the sequences of the heavy and light variable chains were adopted<a href="https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/therasabdab/therasummary/?INN=matuzumab">[7]</a> 
+    <a href="https://gsrs.ncats.nih.gov/ginas/app/ui/substances/6A901E312A">[8]</a> 
+    <a href="https://gsrs.ncats.nih.gov/ginas/app/ui/substances/88162617-7817-4caa-bfbe-bdf2c33bf1b0">[9]</a> and
+    connected by a flexible linker (GGGS<sub>3</sub>)<a href="https://doi.org/10.1038/s41598-022-09324-4">[10]</a>. Codon usage, intron insertion
+    and inclusion of BbsI restriction sites were performed in the same manner as
+    for the Cetuximab scFvs.</p>
+
+  <p>The following Level 2 constructs were
+    designed:</p>
+
+  <figure>
+    <img src="https://static.igem.wiki/teams/5758/results/figure-16-2.webp">
+    <figcaption><b>Figure 16:</b> Designed level 2 constructs for
+      <i>Chlamydomonas</i>
+      transformation. All constructs contain a spectinomycin resistance
+      cassette,
+      as well as the AR promotor. For secretion into the medium, the secretion
+      signal cCA was added, followed by either Matuzumab, Panitumumab or
+      Trastuzumab protein sequences. C-terminal tags were incorporated for
+      glycosylation (SP20), purification (His tag), Western blot detection (HA)
+      and cleavage site for the PreScission protease. Lastly, all constructs are
+      terminated by the RPL23 terminator.</figcaption>
+  </figure>
+
+  <p>However, due to time constraints, we could not test the
+    interaction with their respective receptor. This is something we look
+    forward to addressing in the future. Nonetheless, we can confirm production
+    of Trastuzumab single-chain fragments derived from <i>Chlamydomonas</i>, as
+    shown
+    in <b>Fig. 16.</b></p>
+
+  <figure>
+    <img src="https://static.igem.wiki/teams/5758/results/figure17.webp">
+    <figcaption><b>Figure 17:</b> Western Blot analysis of Trastuzumab
+      scFv-producing transformants. Lane numbers correspond to the individual
+      colonies tested. UVM4 Nit was used as a negative control, and L5 served as
+      a
+      positive control.</figcaption>
+  </figure>
+
+  <h3>Scale Up</h3>
+
+  <p>In our efforts to produce enough scFv so that <i>Chlamydomonas</i> could
+    be used as a viable alternative platform to produce therapeutic antibodies,
+    we conducted research into bioreactors as systems for the growth and harvest
+    of therapeutic proteins. One such system is a 10 L fermenter shown in
+    <b>Fig.
+      18</b>, previously used for the fermentation of filamentous fungi. This
+    bioreactor had not previously been known to be capable of growing
+    <i>Chlamydomonas</i>, especially strains such as UVM4 that we used, which
+    lacks a
+    cell wall and is therefore more susceptible to cell damage. The bioreactor
+    showed potential in growing <i>Chlamydomonas</i> to stationary phase in
+    tests with
+    the wild-type strain. Unfortunately, constant contamination that occurred
+    during inoculation of the bioreactor, coupled with technical difficulties
+    with the automatic water-cooling system, prevented further
+    experimentation.</p>
+
+  <figure>
+    <img src="https://static.igem.wiki/teams/5758/results/figure18-1.webp"
+      style="width: 40%; height: auto" class="radius">
+    <figcaption><b>Figure 18:</b> 10 liters fermenter</figcaption>
+  </figure>
+
+  <p>The initial positive results of the
+    10L bioreactor prompted us to go for more sophisticated bioreactor systems
+    such as the BIOSTREAM 2 – Benchtop flatpanel bioreactor for 1.8 L. This
+    specialized bioreactor was our first planned approach into using a
+    bioreactor designed to be used with <i>Chlamydomonas</i>. This bioreactor
+    features
+    several advantages specifically tailored for photosynthetic microorganisms,
+    including optimized light distribution through its flat-panel design,
+    precise pH and dissolved oxygen control, and gentle mixing that minimizes
+    shear stress on fragile cell wall-deficient strains like UVM4.</p>
+
+  <figure>
+    <img src="https://static.igem.wiki/teams/5758/results/figure19-1.webp"
+      style="width: 50%; height: auto" class="radius">
+    <figcaption><b>Figure 19:</b> BIOSTREAM 2 – Benchtop flat-panel bioreactor
+      1.8 L assembly</figcaption>
+
+  </figure>
+
+  <p>The BIOSTREAM 2 system addresses many
+    of the limitations encountered with the conventional 10 L fermenter. Its
+    transparent flat-panel design ensures uniform light penetration throughout
+    the culture media, critical for maintaining photosynthetic activity and
+    optimal growth conditions. Additionally, the system's sterile sampling ports
+    and automated monitoring capabilities significantly reduce contamination
+    risks that plagued our previous experiments. We allowed the cultures to grow
+    for six days before beginning sample collection on days 7-9 to test whether
+    scFv accumulation occurs in the 1.8L bioreactor system. Both TAP
+    (Tris-Acetate-Phosphate) and HMP (High Magnesium Phosphate) media were
+    evaluated to assess scFv production under different nutritional conditions
+    at this larger scale. This sampling strategy was designed to capture the
+    accumulation phase when sufficient biomass and protein expression would be
+    expected based on our previous small-scale experiments.</p>
+
+  <figure>
+    <img src="https://static.igem.wiki/teams/5758/results/figure20.webp">
+    <figcaption><b>Figure 20:</b> Western Blot analysis of supernatants of
+      cultures grown in the
+      BIOSTREAM 2 –
+      Benchtop flatpanel bioreactor. The strain used harbored construct 10 shown
+      in
+      <b>Fig. 1</b>, producing HumcetFv. Both TAP and HMP bioreactors were run
+      for six
+      days before the start of sample collection from day seven to nine for
+      protein precipitation. For each day, three technical samples were loaded
+      into the SDS gel. UVM4 served as the negative control, while L5 served as
+      the positive control.</figcaption>
+  </figure>
+
+  <p>Western blot analysis of culture supernatants revealed successful scFv
+    production in both media conditions, with cells grown in TAP medium showing
+    consistently higher scFv production compared to cells grown in HMP medium
+    across all time points (<b>Fig. 20</b>). These results could be due to the
+    slower
+    growth rate in the minimal medium HMP coupled with the bigger cell size when
+    <i>Chlamydomonas</i> grows in HMP. The results demonstrate that the
+    specialized
+    bioreactor system can maintain stable protein production while scaling up
+    culture volumes, bringing us closer to achieving therapeutically relevant
+    quantities of scFv antibodies from <i>Chlamydomonas</i> expression
+    systems.</p>
+
+  <p>In our final weeks of the iGEM competition, we had the opportunity to make one
+    last attempt to increase cell density and protein yield by using the promising 
+    CellDEG membrane bioreactor. According to the manufacturer, this cultivation 
+    system enables high biomass accumulation by continuously enriching photoautotrophic 
+    cultures bubble-free CO<sub>2</sub> supply up to 10%, thereby reducing oxygen stress. 
+    Besides constant CO<sub>2</sub> supply, the system also supports high light intensities 
+    of over 1000 µmol photons m<sup>-2</sup>s<sup>-1</sup>, ensuring that the entire cultures receive 
+    sufficient illumination.</p>
+
+    <figure>
+    <img src="https://static.igem.wiki/teams/5758/results/figurecelldeg3.webp" class="radius">
+    <figcaption><b>Figure 21:</b>
+       Inside view of the CellDEG HDC 4.100 | 9.100 system showing the nine HD100 cultivators used for the cultivation 
+       of CetFv, HumcetFv, and the wild-type cc1960 under continuous CO₂ and high light supply.</figcaption>
+  </figure>
+
+  <p>We acclimated <i>Chlamydomonas</i> cultures of 9-cCA-CetFv-SH, 10-cCA-HumCetFv-SH (<b>see Fig. 1</b>)
+     and the wild-type strain cc1690 (used as a control) in optimized phototrophic production
+     medium (6xP) for four days <a href="https://doi.org/10.1016/j.biortech.2020.124542" class="normal">(Freudenberg <i>et al.</i> 2021)</a>. 
+     After incubation, eight HD100 Cultivators
+     were each filled with 100 ml of either strain 9 or 10, while the last cultivator was filled
+     with the cc1690 strain. All cultures were adjusted to an optical density (OD) of 0.3 at 680, 720, and 750 nm.
+     Samples from each of the three strains were collected daily for Western Blot analysis and for determination 
+     of cell density for eight days.</p>
+
+    <figure>
+    <img src="https://static.igem.wiki/teams/5758/results/results-celldeg2-2.webp">
+    <figcaption><b>Figure 22:</b>
+       Growth curve of CetFv, HumcetFv and wild-type (cc1690) strains cultivated in the CellDEG membrane bioreactor.
+       The orange line indicates the maximum cell density that can be reached under standard conditions in TAP medium.
+       Cultures were incubated for approximately 187 hours, and samples were collected daily. 
+       The cc1690 culture was diluted after 69 hours of incubation to an OD of 0,3  at 680, 720, and 750 nm. </figcaption>
+  </figure>
+
+  <p>As shown in <b>Fig. 22</b>, despite a slower initial growth phase, the CetFv & HumcetFv strains surpassed the maximum cell density
+   typically achieved with TAP medium after approximately 80 hours of cultivation. 
+   Following this point, cultures exhibited a rapid increase in biomass, reaching a maximum cell density of 1,44*10<sup>8</sup> cells per mL.
+   After eight days, the cell density obtained in the CellDEG system was almost <u>ten times</u> higher than the maximum density
+   typically observed under standard TAP cultivation. This increase in biomass raised our expectations for a corresponding improvement
+   in protein yield. </p>
+
+   <figure>
+    <img src="https://static.igem.wiki/teams/5758/results/results-celldeg1-2.webp">
+    <figcaption><b>Figure 23:</b>
+       Western Blot analysis of <b>(A)</b> CetFv and <b>(B)</b> HumcetFv expression in the CellDEG bioreactor.
+        Samples were collected daily during incubation, precipitated with acetone, and analyzed
+       by SDS-PAGE followed by immunoblotting. For day 8, additional half and quarter
+        sample volumes were loaded to visualize signal strength. To compare with standard culture conditions, 
+        Samples previously grown in TAP medium under optimal conditions were loaded after day 4 and 7. The wild-type strain 
+        cc1960 served as a negative control, while L5 sample was used as a positive control. </figcaption>
+  </figure>
+
+  <p>As shown in <b>Fig 23</b>, protein yield is noticeably higher in cultures grown in the CellDEG bioreactor, even 
+    after three days of incubation. This demonstrates that the system is an effective tool for increasing 
+    both biomass and protein production. Although the exact fold increase in protein yield could not be 
+    quantified due to time constraints, these results strongly suggest that the CellDEG bioreactor holds great potential 
+    for future commercialization of therapeutic single-chain fragment production in <i>Chlamydomonas</i>.</p>
+
+
+  <p>In addition to developing new methods and systems to increase the yield of
+    therapeutic scFvs, we also conducted research into patent landscapes and
+    commercialization pathways for translating our experimental results into a
+    market-ready product. Our patent research revealed that the
+    <i>Chlamydomonas</i>
+    strain UVM4 is subject to intellectual property restrictions. We identified
+    an alternative strain carrying the same gene knockout that enables high
+    transient expression of recombinant proteins from the <i>Chlamydomonas</i>
+    CLiP
+    library, designated CLiPUVM. This strain allows continued production of high
+    amounts of recombinant protein without patent restrictions. As a proof of
+    concept, we transformed this alternative strain with our cetFv and humcetFv
+    constructs to assess whether comparable levels of recombinant protein
+    accumulation could be achieved.</p>
+
+  <p>The Western blot analysis
+    demonstrates successful scFv production in the CLiPUVM strain for both
+    constructs enabling the production of cetFv and HumcetFv.</p>
+
+  <figure>
+    <img src="https://static.igem.wiki/teams/5758/results/figure21.webp">
+    <figcaption><b>Figure 24:</b>
+      Western Blot analysis of HumcetFv and CetFv expression in the CLiPUVM
+      strain
+      as a patent-free alternative to UVM4. The constructs used were 10 for
+      HumcetFv and 9 for CetFv (<b>Fig. 1</b>) for the production of HumcetFv
+      and
+      CetFv.</figcaption>
+  </figure>
+
+  <hr><h2 id="conclusion">Conclusions</h2>
+  <p>This leads us to the final conclusion of our iGEM project. In summary, we
+    were not only able to demonstrate the production, secretion and purification
+    of pharmaceutical Cetuximab scFvs in <i>Chlamydomonas</i>, but also proved
+    their
+    functionality, as shown in <b>Fig. 13</b>, through interaction with the
+    epidermal
+    growth factor receptor (EGFR). Additionally, we conceptualized the use
+    PreScission protease for cleavage of C-terminal protein tags with
+    successfully produced scFvs such as Trastuzumab (<b>Fig. 17</b>), and
+    operated
+    various types of bioreactors for scale up purposes (<b>Figs. 19,
+      20</b>).</p>
+  <p>We
+    believe that our results represent noteworthy progress in research and an
+    important step toward the sustainable and cost-effective production of
+    biopharmaceuticals using microalgae. While we are very satisfied with the
+    outcomes, many questions remain unanswered. For example: Does our Cetuximab
+    scFv have anti-cancer effects resembling those of the original monoclonal
+    Cetuximab antibody? Do all scFvs coming from <i>Chlamydomonas</i> function
+    effectively? These are just a few of the many questions that need to be
+    addressed in future studies.</p>
+
+  <p>For most of us, this marks the end of
+    our iGEM journey. We are extremely grateful for the opportunity to engage in
+    actual scientific research as young and ambitious students. We would also
+    like to sincerely thank the Department of Toxicology and the Department of
+    Molecular Biotechnology and Systems Biology for allowing us to work
+    alongside them and for their continuous support. Finally, we are deeply
+    grateful to everyone, including sponsors, who supported us throughout the
+    iGEM project.</p>
+
+</div>
+{% endblock %}
+{% block extra_js %}
+<!--<script src="{{ url_for('static', filename='js/some.js') }}"></script>-->
+{% endblock %}

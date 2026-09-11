@@ -1,0 +1,60 @@
+#ContentWrapper {
+    height: 1400vh;
+    background-color: transparent;
+}
+
+#Stickydiv {
+    background-color: var(--darkpurple);
+    border-radius: 50px;
+    color: white;
+
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: grid;
+    grid-template-columns: 33% calc(66% - 1rem);
+    gap: 1rem;
+    align-items: start;
+    width: 90vw;
+}
+
+#Kreis {
+    width: 100%;
+    left: 0;
+    
+}
+
+#content {
+    width: 100%;
+}
+
+#content{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#content * {
+    width: 100%;
+}
+#content li ,#content p{
+    width: 90%;
+}
+
+#content img{
+    width: 50%;
+    display: block;
+}
+
+#Kreis1, #Kreis2, #Kreis3, #Kreis4 {
+    transition: 1s ease-in-out;
+}
+
+#Kreis1.aus, #Kreis2.aus, #Kreis3.aus, #Kreis4.aus {
+     fill: var(--lightgreen);
+    }  /* grau */
+#Kreis1.aktiv, #Kreis2.aktiv, #Kreis3.aktiv, #Kreis4.aktiv {
+    fill: var(--darkgreen); 
+} 
+

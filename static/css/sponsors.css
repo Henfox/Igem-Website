@@ -1,0 +1,23 @@
+#sponsor_grid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+.box{
+    background-color: white;
+    aspect-ratio: 1;
+    border-radius: 25px;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer #upperFooter .image-slider-container{
+    display: none;
+}
+#sponsor_grid img{
+    border-radius: 0;
+}

@@ -1,0 +1,85 @@
+/* linker, fixer Container */
+.MainWrapper .mw-fixed {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: fit-content;           /* nimmt keinen sichtbaren Platz ein */
+  z-index: 9999;     /* Basis für Button + Drawer */
+  --textcolor: white;
+  --buttoncolor: var(--darkerpurple)
+
+}
+.mw-fixed h2{
+    margin: 0;
+}
+/* Button */
+.MainWrapper .mw-burger {
+  pointer-events: all;
+  background-color: var(--buttoncolor);
+  padding: 2px;
+  border-radius: 5px;
+  position: sticky;
+  top: 5vw;
+  left: 16px;
+  width: 40px; height: 40px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 4px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 14px rgba(0,0,0,.15);
+  z-index: 2;
+}
+.MainWrapper .mw-bar { 
+    width: 20px; 
+    height: 2px; 
+    background:#111; 
+    border-radius:2px; }
+
+/* Drawer */
+.MainWrapper .mw-drawer {
+  position: sticky;   /* relativ zu .mw-fixed (links fix) */
+  top: 7vw; 
+  left: 0;
+  height: 100dvh;
+  width: fit-content;
+  background: var(--purple);
+  box-shadow: 4px 0 24px rgba(0,0,0,.18);
+  transform: translateX(-200%) translateY(-16vw);
+  transition: transform .28s ease;
+  padding-top: 16vw;
+  z-index: 1;
+}
+.MainWrapper .mw-drawer.open { transform: translateX(0) translateY(-16vw); }
+
+.MainWrapper .mw-list { 
+    list-style:none; 
+    margin:0; 
+    padding:0 18px; 
+    width: fit-content;
+}
+.MainWrapper .mw-list li { 
+    margin: 8px 0; 
+    width: fit-content;
+}
+.MainWrapper .mw-list a {
+  pointer-events: all;
+  display:block; padding:12px 10px; border-radius:10px;
+  text-decoration:none; 
+  color: var(--textcolor);
+}
+.MainWrapper .mw-list a:hover { background: var(--darkerpurple); }
+
+/* Overlay bleibt vollflächig und getrennt */
+.MainWrapper .mw-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.36);
+  backdrop-filter: blur(2px);
+  z-index: 9998;
+}
+
+/* Burger -> X */
+.MainWrapper .mw-burger.is-open .mw-bar:nth-child(1){ transform: rotate(90deg); transition: transform .2s; }
+.MainWrapper .mw-burger.is-open .mw-bar:nth-child(2){ opacity:0; transition: opacity .2s; }
+.MainWrapper .mw-burger.is-open .mw-bar:nth-child(3){ transform:  rotate(-90deg); transition: transform .2s; }
+
+@media (prefers-reduced-motion: reduce){ .MainWrapper .mw-drawer{ transition:none; } }

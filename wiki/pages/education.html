@@ -1,0 +1,512 @@
+{% extends "layout.html" %}
+
+{% block extra_css %}
+<link href="{{ url_for('static', filename='css/education.css') }}"
+  rel="stylesheet">
+{% endblock %}
+
+{% block title %}Education{% endblock %}
+
+{% block page_content %}
+
+<div class="MainWrapper">
+<div class="mw-fixed">
+    <button class="mw-burger" aria-label="Menü öffnen" aria-expanded="false"
+      aria-controls="mw-drawer">
+      <span class="mw-bar"></span>
+      <span class="mw-bar"></span>
+      <span class="mw-bar"></span>
+    </button>
+
+    <nav id="mw-drawer" class="mw-drawer" aria-hidden="true">
+      <ul class="mw-list">
+        <li><h2><a class="normal" href="#ndws">Nacht, die Wissen schafft</a></h2></li>
+        <li><h2><a class="normal" href="#sv">School Visits</a></h2></li>
+        <li><h2><a class="normal" href="#work">Workshops</a></h2></li>
+        <li><h2><a class="normal" href="#sm">Social Media</a></h2></li>
+        <li><h2><a class="normal" href="#feat">Features</a></h2></li>
+        <li><h2><a class="normal" href="#collab">Collaborations</a></h2></li>
+        <li><h2><a class="normal" href="#ee">Education & Engagement</a></h2></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- Vollbild-Overlay getrennt -->
+  <div class="mw-overlay" hidden></div>
+  <!-- Introduction -->
+  <div class="cardbox" id="intro">
+    <h1>Education</h1>
+    <p>Education and outreach are central
+      to our iGEM project. Our goal is to make
+      synthetic biology accessible to a wide
+      range of audiences, from students to the
+      general public, and to inspire curiosity
+      about science and biotechnology <br>(<a class="normal"
+        href="{{ url_for('pages', page='integrated_hp') }}">Read more</a>).</p>
+    <p>Our educational activities cover a broad spectrum: </p>
+    <ul>
+      <li><span>Public Events:</span> <br> from "Nacht, die Wissen schafft" to
+        TV and magazine
+        features, reaching diverse audiences.</li>
+      <li><span>School visits:</span><br> Inspiring the next generation through
+        discussions,
+        presentations, and interactive quizzes.</li>
+      <li><span>Workshops:</span><br>Teaching protein purification techniques
+        directly
+        connected to our project.</li>
+      <li><span>Social Media & Collaborations:</span><br>spreading knowledge
+        globally and
+        supporting other iGEM teams.</li>
+      <li><span>Self-education:</span><br>strengthening our own skills through
+        summits, summer
+        schools, and meetups.</li>
+    </ul>
+
+    <p>Together, these initiatives reflect our commitment to education in all
+      its forms, from classrooms and labs
+      to local communities and international networks. </p>
+  </div>
+
+  <!-- Nacht, die Wissen schafft -->
+  <div class="cardbox">
+    <h1 id="ndws">"Nacht, die Wissen schafft"</h1>
+    <p>We made our first public appearance as a team at
+      "Nacht, die Wissen schafft" in Kaiserslautern on May 9, 2025. This
+      annual science fair attracts a diverse audience, providing the perfect
+      opportunity to introduce synthetic biology to a non-academic crowd.</p>
+    <p>At our booth, we presented two posters: one explaining iGEM and its
+      global collaborations and another focusing on our project. We also
+      showcased <i>Chlamydomonas reinhardtii</i> cultures for visitors to
+      observe
+      under a microscope or in flasks. This hands-on element sparked curiosity
+      and demonstrated how synthetic biology applies to real organisms.</p>
+    <p>Our goals were to raise awareness of synthetic biology, highlight the
+      relevance of our project, and practice communicating science to a broad
+      audience. The response exceeded our expectations. Visitors of all ages
+      asked insightful questions and engaged enthusiastically. They were
+      excited to see live algae in action. The event confirmed that complex
+      topics can be made approachable through clear explanations and
+      interactive demonstrations. This validates our outreach approach and
+      shows the potential of synthetic biology to inspire people beyond the
+      lab.</p>
+    <div class="slider-wrapper">
+      <div id="nacht_die_wissen_schafft"
+        class="edu-image-slider edu-image-slider1">
+      </div>
+    </div>
+  </div>
+
+  <!-- School Visits -->
+  <div class="cardbox">
+    <h1 id="sv">School Visits</h1>
+    <p>Our team visited schools to introduce students to synthetic biology and
+      the iGEM competition. We explained the purpose and collaborative nature
+      of iGEM, as well as the competition's goals and key concepts in
+      biotechnology and genetic engineering.</p>
+    <p>The visits were highly interactive. Students engaged in discussions
+      about ethical questions related to genetic engineering, and we presented
+      our project in an engaging and approachable way. We encouraged active
+      participation using Kahoot quizzes and made complex concepts more
+      memorable.</p>
+    <p>To give students a deeper insight into studying biology, we shared our
+      personal experiences in the Molecular Biology program and showed them
+      what university-level studies in the field entail. This combination of
+      hands-on interaction, real-life examples, and stimulating discussion
+      helped students see the scientific and educational pathways in
+      biotechnology, inspiring their curiosity and interest in pursuing
+      science beyond the classroom.</p>
+    <p>We also gained valuable insights into science communication. Presenting
+      our project and sharing our experiences gave us the opportunity to
+      translate complex scientific concepts into clear, understandable
+      language. Feedback confirmed that interactive explanations, real-life
+      examples, and visual aids make synthetic biology accessible and
+      engaging. This reinforces the potential of effective outreach to inspire
+      interest in the field beyond the classroom.</p>
+    <div class="slider-wrapper">
+      <div id="school-visits" class="edu-image-slider edu-image-slider2">
+        <!-- Slideshow: Für Henry > Wiki > Education > School Visits -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Workshop: MI(N)Tmachwelt -->
+  <div class="cardbox">
+    <h1 id="work">Workshops — MI(N)Tmachwelt</h1>
+    <img id="mintBanner"
+      src="https://static.igem.wiki/teams/5758/education/mi-n-tmachwelt/banner-mintmachwelt2.webp"
+      alt>
+    <p>As part of our educational outreach, our team participated in a
+      workshop organized by the ZukunftsRegion Westpfalz at the MI(N)Tmachwelt
+      in Kaiserslautern. Together with students from ages 15 to 19, we
+      explored the fascinating world of modern biology and gave them a
+      first-hand look into how research in synthetic biology is carried out.
+      To make the topic as engaging as possible, we brought an experiment that
+      is usually part of university-level teaching: the purification of a
+      fluorescent protein. Using green fluorescent protein (GFP) as an
+      example, we showed how proteins can be isolated from cell lysates
+      through immobilized metal affinity chromatography (IMAC). The students
+      were able to follow each step of the process, from binding the
+      histidine-tagged protein to the column, to the washing away impurities, and
+      finally observing the bright green fluorescence of the purified GFP.</p>
+    <p>Alongside the practical experiment, we introduced the students the
+      fundamentals of genetic engineering and synthetic biology, explaining
+      how genes can be modified and used to create new functions. We also
+      discussed what it is like to study biology today, what career paths are
+      possible in biotechnology, and how young researchers can already gain
+      experience through initiatives such as the iGEM competition. This
+      naturally led to a presentation of our own project, where we shared our
+      motivation, our goals, and why we believe synthetic biology can provide
+      solutions to some pressing challenges of our time.</p>
+    <p>The workshop sparked many questions and lively discussions, ranging
+      from the future of synthetic biology to the ethical considerations of
+      engineering life. It was rewarding to see how quickly the students
+      connected theoretical knowledge from school with practical applications
+      in the lab. For us as a team, the experience highlighted the importance
+      of communicating science in an accessible way, and we hope that our
+      workshop inspired some of the participants to continue exploring biology
+      in their future studies.</p>
+    <div class="download">
+      <!-- PDF: Instructions for eGFP Workshop -->
+    </div>
+    <div class="slider-wrapper">
+      <div id="mi_n_tmachwelt" class="edu-image-slider edu-image-slider3"></div>
+    </div>
+  </div>
+
+  <!-- Workshop: MINT 4 YOU -->
+  <div class="cardbox">
+    <h1>MINT 4 YOU</h1>
+    <h2> – Girls just wanna have Science</h2>
+    <img id="min4ubanner"
+      src="https://static.igem.wiki/teams/5758/education/mint4u/banner-mint4u2.webp"
+      alt>
+    <p>At the MINT 4 YOU – Girls just wanna have Science congress, organized
+      by Hochschule Kaiserslautern, our team joined over a hundred students
+      for a day dedicated entirely to showing young women the wide range of
+      possibilities in science and technology. Unlike a typical classroom
+      setting, the event was designed to give female students an open space to
+      try out experiments, meet role models, and discover subjects that they
+      might not otherwise encounter during school.</p>
+    <p>We contributed by hosting a workshop where participants from ages 16 to
+      19 could step into the role of researchers. Working together, the
+      students learned how laboratory methods are used to investigate
+      proteins, with green fluorescent protein (GFP) serving as their model.
+      They were able to follow the principle of immobilized metal affinity
+      chromatography (IMAC) and see how a protein can be separated from a
+      complex mixture, a memorable moment when the purified GFP glowed under UV
+      light. Rather than only focusing on technical details, we used the
+      workshop as a platform to talk about how exciting and creative
+      scientific work can be, and how synthetic biology opens doors to solving
+      real problems in medicine, sustainability, and beyond.</p>
+    <p>We discussed what it is like to study biology and biotechnology, what
+      opportunities lie in competitions like iGEM, and why diversity and new
+      perspectives are essential in science. The atmosphere of curiosity and
+      enthusiasm reminded us how important it is to create spaces where
+      students, especially young women, can see themselves as future
+      scientists.</p>
+    <div class="download">
+      <a class="normal"
+        href="https://static.igem.wiki/teams/5758/education/mint4u/instructions-for-egfp-workshop.pdf"
+        target="_blank" download class="btn">
+        Download PDF
+      </a>
+    </div>
+    <div class="slider-wrapper">
+      <div id="mint4u" class="edu-image-slider edu-image-slider4"></div>
+    </div>
+  </div>
+
+  <!-- Education Through Social Media -->
+  <div class="cardbox">
+    <h1 id="sm">Education Through Social Media</h1>
+    <p>In addition to our public events, we used social media to make
+      synthetic biology more accessible. On Instagram, for example, we created
+      a series of posts that combined eye-catching graphics with clear
+      explanations. The content covered general scientific topics, such as
+      genetics and enzymes, as well as information directly related to our
+      project <a href="{{ url_for('pages', page='integrated_hp') }}" class="normal" >(Read
+        more)</a> and the organisms involved, including
+      Escherichia coli and <i>Chlamydomonas reinhardtii</i>.</p>
+    <p>These posts aimed to reach people who might not encounter synthetic
+      biology in a lecture hall or at a science fair. By presenting complex
+      topics in a simple and visually appealing way, we sparked curiosity and
+      showed that anyone can understand biology.</p>
+    <p>The feedback was very positive, individual posts received up to 1,146
+      views. This experience highlighted how social media can serve as an
+      effective educational platform when scientific content is communicated
+      clearly and engagingly.</p>
+    <p>Through this approach, we also improved our ability to distill our
+      project into concise, understandable messages. This strengthened our
+      capacity to communicate synthetic biology in an approachable and
+      responsible way for future outreach activities.</p>
+    <div class="slider-wrapper">
+      <div id="education_through_social_media"
+        class="edu-image-slider edu-image-slider5"></div>
+    </div>
+  </div>
+
+  <!-- Features in Newspapers and Magazines -->
+  <div class="cardbox">
+    <h1 id="feat">Features</h1>
+    <h2>in Newspapers and Magazines</h2>
+    <p>Our project was featured in more than seven magazines and newspapers,
+      making it accessible to a wide readership and ensuring long-term
+      visibility. </p>
+    <p>One example is the June issue of the scientific journal Biospektrum,
+      through which we reached an audience of 11,000 readers with a strong
+      interest in science. In our self-authored article, we highlighted recent
+      developments in cancer cases, which are expected to rise significantly
+      in the coming years and discussed the risks associated with current
+      cancer therapies. We also presented our own project in a factual and
+      scientific manner. More details can be found on our Human practice page
+      (<a class="normal"
+        href="{{ url_for('pages', page='integrated_hp') }}">Read more</a>).</p>
+    <p>In addition, after the completion of our project, we will publish a
+      retrospective article in collaboration with Carl Roth in their magazine
+      Carl. This article will provide an opportunity to look back on our work,
+      share our results and reflect on the lessons learned throughout the iGEM
+      experience.</p>
+    <p>In contrast, the article about our project in the Süddeutsche Zeitung
+      was designed to be easily understood by a broader audience without a
+      scientific background. There, we explained the fundamentals of our
+      project in simple language and focused on its core idea and societal
+      relevance. This allowed us to engage readers who might otherwise have
+      little exposure to synthetic biology.</p>
+    <p>Through the diversity of publications, we reached very different target
+      groups and learned to communicate our project on the one hand, in a
+      detailed, factual and scientific way and on the other in a clear and
+      accessible manner.</p>
+    <div class="slider-wrapper">
+      <div id="features_in_newspapers_and_magazines"
+        class="edu-image-slider edu-image-slider6"></div>
+    </div>
+  </div>
+
+  <!-- Personal insights in the RPTU Interview -->
+  <div class="cardbox">
+    <h1>Personal insights</h1>
+    <h2>in the RPTU Interview</h2>
+    <p>In April 2025, an article about our iGEM team was published on the
+      official website of RPTU, following an interview with a science
+      journalist. The article not only provided a brief introduction to our
+      project and its scientific background, but also gave readers insight
+      into the human side of our journey. We shared our personal experiences
+      with iGEM – what it means to actively participate in a research project
+      during our studies, the unique challenges we faced in the lab, and the
+      valuable lessons we took with us along the way.</p>
+    <p>The interview allowed us to highlight how iGEM goes far beyond pure
+      science. We spoke about how much we had to learn in terms of time
+      management, communication, and interdisciplinary collaboration. Many of
+      us had never worked so closely in such a diverse team before, and it was
+      both rewarding and demanding to bring together different academic
+      perspectives and skills. By reflecting on these experiences, we realized
+      how much the project had shaped us personally and academically.</p>
+    <p>The article gave us the opportunity not only to showcase the scientific
+      aspects of the competition, but also to emphasize the importance of
+      teamwork and personal growth. At the same time, we wanted to inspire
+      other students to step out of their academic routine, get involved in
+      extracurricular initiatives, and gain hands-on research experience. For
+      us, iGEM was not just about advancing synthetic biology, but also about
+      proving to ourselves what is possible when motivated students come
+      together to work on a shared vision.</p>
+
+    <div class="slider-wrapper">
+      <div id="personal-insights-in-the-rptu"
+        class="edu-image-slider edu-image-slider7"></div>
+    </div>
+  </div>
+
+  <!-- Collaboration UTokyo -->
+  <div class="cardbox">
+    <h1 id="collab">Collaboration — UTokyo</h1>
+    <img id="utokiobanner"
+      src="https://static.igem.wiki/teams/5758/education/utokyo/screenshop-utokyo-meeting2.webp"
+      alt>
+    <p>In addition to our local outreach, we also engaged in international
+      exchange. We were invited by the UTokyo iGEM team to take part in an
+      online session where they interviewed one of our team leaders about the
+      process of founding a new iGEM team. The conversation focused on the
+      typical challenges that arise during this stage, from recruiting
+      motivated students and finding supervisors, to securing funding and
+      organizing lab access and especially on strategies to overcome these
+      hurdles. Drawing on our own experience, we shared obstacles we had faced
+      and the solutions that proved effective for us.</p>
+    <p>UTokyo’s vision was to compile these insights into a comprehensive
+      document that summarizes common challenges and solutions. This resource
+      is intended to support future iGEM teams around the world and lower the
+      entry barriers to participation.</p>
+    <p>We are pleased to include the final version of this document as a
+      downloadable PDF in this section of our Wiki, making it accessible to
+      anyone who is interested in starting their own iGEM journey. For us, the
+      exchange was a valuable reminder of the collaborative spirit of iGEM,
+      sharing experiences across continents not only helps individual teams
+      but strengthens the global community as a whole.</p>
+    <div class="download">
+      <a class="normal"
+        href="https://static.igem.wiki/teams/5758/education/utokyo/education-material-for-new-igem-teams.pdf"
+        target="_blank" download class="btn">
+        Download PDF
+      </a>
+    </div>
+    <img id="utokioLogo"
+      src="https://static.igem.wiki/teams/5758/education/utokyo/utokyo-logo2.webp"
+      alt>
+  </div>
+
+  <!-- Collaboration Islamabad -->
+  <div class="cardbox">
+    <h1>Collaboration — Islamabad</h1>
+    <p>Another important part of our educational efforts was our exchange with
+      the iGEM team from Islamabad, a group of enthusiastic high school
+      students preparing to take part in the competition. From the very
+      beginning, they reached out to us with many questions about how iGEM
+      works, what to expect during the season, and how to manage the many
+      challenges that come with organizing a team. One of their main concerns
+      was fundraising, since securing financial support is essential for any
+      team but can be particularly difficult for new or smaller groups.</p>
+    <p>To support them, we arranged several online meetings in which we shared
+      our own experience with fundraising and sponsorship. We explained how we
+      approach potential sponsors, how we present our project, and how to
+      build lasting partnerships with local organizations and companies. Based
+      on these conversations, we prepared a guide in PDF format that
+      summarizes our strategy and provides practical tips for acquiring
+      financial support. This document was written with the Islamabad team in
+      mind but is equally useful for any team facing similar challenges.</p>
+    <p>Sadly, due to the uncertain political situation in their country, the
+      Islamabad team was unable to participate in this year’s iGEM
+      competition. Nevertheless, we deeply valued the collaboration, as it
+      underlined the importance of supporting one another across borders. By
+      sharing knowledge and resources, we hope to make it easier for teams
+      everywhere to realize their ideas and become part of the iGEM
+      community.</p>
+    <p>The fundraising guide we created can be found below as a downloadable
+      PDF.</p>
+    <div class="download">
+      <a class="normal"
+        href="https://static.igem.wiki/teams/5758/education/islamabad/igem-sponsoring-guide.pdf"
+        target="_blank" download class="btn">
+        Download PDF
+      </a>
+    </div>
+    <div class="slider-wrapper">
+      <div id="islamabad" class="edu-image-slider edu-image-slider9"></div>
+    </div>
+  </div>
+
+  <!-- Self-Education and Personal Development -->
+  <div class="cardbox">
+    <h1 id="ee">Self-Education</h1>
+    <h2>and Personal Development</h2>
+    <p>In addition to public outreach, our team emphasized self-education to
+      expand our skills and knowledge. We participated in events such as the
+      iGEM Summer School, the Rheinland-Pfalz Founder Summit, the BFH European
+      Meetup, and a Heidelberg panel discussion titled "The State of Cell and
+      Gene Therapy: Ethics & Regulation.”</p>
+    <p>The Summer School offered workshops and discussions on
+      entrepreneurship, start-ups, and innovation in the biotech field. These
+      sessions provided the tools necessary to transform ideas into feasible
+      projects. The Gründerinnen-Summit focused on supporting women
+      entrepreneurs through networking, mentorship, and insights into business
+      planning and scaling start-ups. The BFH European Meetup provided an
+      opportunity to improve our scientific communication skills by delivering
+      presentations, participating in poster sessions, and attending
+      workshops, all while exchanging ideas with teams from across Europe.
+      During the panel discussion, experts spoke about the ethical and
+      regulatory challenges in cell and gene therapies.</p>
+    <p>These experiences allowed us to reflect on the long-term potential of
+      our project. By learning from experts and engaging with peers in science
+      and entrepreneurship, we developed practical strategies for planning,
+      managing, and scaling our project beyond the laboratory. These
+      experiences strengthened our understanding of the intersection of
+      scientific innovation and entrepreneurship, preparing us to shape the
+      future of our work responsibly and sustainably.</p>
+    <div class="slider-wrapper">
+      <div id="self-education"
+        class="edu-image-slider edu-image-slider10"></div>
+    </div>
+  </div>
+
+  <!-- Public Education & Engagement -->
+  <div class="cardbox">
+    <h1>Public Education & Engagement</h1>
+    <p>Most of our outreach activities were organized as fundraising events to
+      support our iGEM project. While the main goal was to collect donations,
+      we also used these opportunities to briefly introduce our work to the
+      public and raise awareness for sustainable biotechnology and the
+      potential of our approach in cancer research and therapy.</p>
+    <h2>Waffle Sale</h2>
+    <p>At local events, we baked and sold waffles. The donations contributed
+      directly to our project budget. While selling, we explained in simple
+      terms why antibody therapies are often expensive and how our sustainable
+      production platform could help make future cancer treatments more
+      accessible.</p>
+    <div class="slider-wrapper">
+      <div id="waffle-sale"
+        class="edu-image-slider edu-image-slider8"></div>
+    </div>
+    <h2>Participation in Scientific and Industry Events</h2>
+    <p>In addition to our public fundraising activities, we also took part in
+      professional events to present our project idea and connect with
+      potential supporters. We visited the Lab Supply fair and attended the
+      Boehringer Ingelheim “Post-Transforming Science Day.”</p>
+    <p>During these events, we practiced cold outreach to companies and
+      institutions, explained the vision of our project, and discussed its
+      potential impact. While the main motivation was to seek sponsorship and
+      collaboration opportunities, these activities also served as an
+      important form of science communication, as we shared our sustainable
+      biotechnology approach with experts from industry and research. We also
+      had the chance to meet other iGEM teams, exchange ideas, and present our
+      project to them in person.</p>
+  </div>
+
+  <!-- Educational Legacy — Card Game -->
+  <div class="cardbox">
+    <h1>Educational Legacy</h1>
+    <h2> — Card Game</h2>
+    <p>As part of our Education efforts, we designed a scientific card game
+      that can be used in classrooms and by future iGEM teams. The deck
+      features laboratory equipment and model organisms, each card containing
+      a short description and five scoring categories: Sustainability,
+      Relevance, Safety, Cost, and Vibes.</p>
+    <p>The game can be played in multiple formats:</p>
+    <ul>
+      <li>Quartet/Top-Trumps style: <br> Players compare scores across
+        categories
+        and try to win cards from their opponents.</li>
+      <li>Memory style: <br> Cards can also be laid out face down and matched in
+        pairs to train recall of scientific terms.</li>
+    </ul>
+    <p>By using playful mechanics, the card game turns laboratory basics into
+      an accessible and fun learning experience. It helps students familiarize
+      themselves with different tools and organisms, while also encouraging
+      discussions about how they compare in practice.</p>
+    <p>We also brought the card game to our school outreach sessions. Students
+      played the Quartet version, where they competed by comparing the scores
+      of laboratory devices and organisms. This playful competition sparked
+      curiosity, led to questions about laboratory work, and created an
+      interactive way to talk about biotechnology.</p>
+
+    <div id="karten">
+    </div>
+
+    <div class="slider-wrapper">
+      <div id="card_game_hsg"
+        class="edu-image-slider edu-image-slider11"></div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/education.js') }}"></script>
+{% endblock %}
+
+<!--
+Mintmachwelt 
+Colab UTokyo 
+Islamabad
+PDFS!
+
+
+Word bei
+Mint
+-->

@@ -1,0 +1,185 @@
+{% extends "layout.html" %}
+
+{% block extra_css %}
+<link href="{{ url_for('static', filename='css/application.css') }}"
+    rel="stylesheet">
+{% endblock %}
+
+{% block title %}Application{% endblock %}
+
+{% block page_content %}
+<div class="MainWrapper">
+    <div class="slider" aria-roledescription="carousel">
+        <div class="slider-viewport">
+            <div class="slider-track" id="track"
+                style="transform: translateX(0%)">
+                <!-- 8 Slides: Deine bestehenden Divs jeweils als Slide verpackt -->
+                <section class="slide" aria-label="Slide 1">
+                    <div class="MainWrapper1">
+                        <div>
+                            <h2>Applications</h2>
+                            <p>Building on the Modular Cloning (MoClo) framework
+                                for <i>Chlamydomonas
+                                    reinhardtii</i>, we demonstrated that this
+                                photosynthetic chassis can be
+                                used as a flexible host for recombinant protein
+                                production. Using MoClo,
+                                we successfully expressed and secreted
+                                single-chain variable fragment
+                                (scFv) derived from Cetuximab and others like
+                                Trastuzumab, showing that
+                                <i>Chlamydomonas</i> is a sustainable
+                                alternative to mammalian cell cultures.
+                                <a class="normal"
+                                    href="{{ url_for('pages', page='description') }}#Moclo">Read
+                                    more</a></p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="slide" aria-label="Slide 2">
+                    <div>
+                        <h2>Applications</h2>
+                        <p>This approach enables rapid exchange of secretion
+                            signals, affinity
+                            tags, and other functional modules, allowing
+                            tailored production of
+                            proteins for research, diagnostics, and industry.
+                            Beyond antibodies, the
+                            same strategy can be applied to enzymes, reporter
+                            proteins, or metabolic
+                            regulators. Importantly, our work also showed that
+                            non-patented
+                            Chlamydomonas strains are transformable and capable
+                            of secretion,
+                            ensuring accessibility without licensing
+                            restrictions.</p>
+                    </div>
+                </section>
+
+                <section class="slide" aria-label="Slide 3">
+                    <div>
+                        <h2>Applications</h2>
+                        <p>In practical terms, this system offers applications
+                            on several levels:
+                            <li>Laboratory reagents: Tailored proteins with tags or
+                            modifications for
+                            diagnostics and molecular biology</li>
+                            <li>Industrial
+                            enzymes: Green production
+                            of catalysts and bioactive proteins</li>
+                            <li>Biopharmaceutical precursors:
+                            Antibody fragments and therapeutic proteins produced
+                            more
+                            cost-efficiently and sustainably</li></p>
+                    </div>
+                </section>
+
+                <section class="slide" aria-label="Slide 4">
+                    <div>
+                        <h2>Applications</h2>
+                        <p>Ultimately, our goal is to establish
+                            <i>Chlamydomonas</i> MoClo as a
+                            universal, modular platform for recombinant protein
+                            production,
+                            providing a greener, open, and scalable alternative
+                            to conventional cell
+                            factories.
+                            <a class="normal"
+                                href="{{ url_for('pages', page='results') }}">Read
+                                more</a></p>
+                    </div>
+                </section>
+
+                <section class="slide" aria-label="Slide 5">
+                    <div>
+                        <h2>Future Vision</h2>
+                        <p>While our current results highlight the immediate
+                            applications of
+                            <i>Chlamydomonas</i> MoClo for recombinant protein
+                            production, our long-term
+                            vision is to expand this system into a widely
+                            adopted and industrially
+                            relevant platform. Building on our proof of concept
+                            and functionality,
+                            future work will focus on improving secretion
+                            efficiency, scaling up
+                            cultivation processes, and extending the portfolio
+                            of proteins produced.</p>
+                    </div>
+                </section>
+
+                <section class="slide" aria-label="Slide 6">
+                    <div>
+                        <h2>Future Vision</h2>
+                        <p>We do not limit this approach to scFvs from
+                            Cetuximab. Our goal is to
+                            establish a system that can flexibly produce a wide
+                            range of proteins,
+                            from additional antibody fragments to enzymes and
+                            other high-value
+                            biomolecules. By integrating optimized secretion
+                            signals, regulatory
+                            modules, and modular genetic parts,
+                            <i>Chlamydomonas</i> can evolve into a
+                            truly customizable and predictable expression
+                            system.</p>
+                    </div>
+                </section>
+
+                <section class="slide" aria-label="Slide 7">
+                    <div>
+                        <h2>Future Vision</h2>
+                        <p>In the broader perspective, we envision
+                            <i>Chlamydomonas</i> being adopted by
+                            research facilities and industries striving for
+                            sustainability. As
+                            laboratories increasingly seek Green Lab
+                            certifications, the use of a
+                            photosynthetic host that grows with CO₂, light, and
+                            simple nutrients
+                            provides a measurable step toward environmentally
+                            responsible
+                            biotechnology.</p>
+                    </div>
+                </section>
+
+                <section class="slide" aria-label="Slide 8">
+                    <div>
+                        <h2>Future Vision</h2>
+                        <p>Ultimately, our future vision is a biotechnology
+                            landscape where
+                            <i>Chlamydomonas reinhardtii</i> stands alongside
+                            established expression
+                            systems as a green, cost-efficient, and accessible
+                            platform, enabling
+                            the production of diverse recombinant proteins that
+                            are not only
+                            innovative but also aligned with global
+                            sustainability goals.
+                            <a class="normal"
+                                href="{{ url_for('pages', page='results') }}">Read
+                                more</a></p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Pfeile -->
+        <div class="nav" aria-hidden="true">
+            <button class="btn prev" type="button" aria-label="Zurück"
+                title="Zurück">&#8249;</button>
+            <button class="btn next" type="button" aria-label="Weiter"
+                title="Weiter">&#8250;</button>
+        </div>
+
+        <!-- Punkte -->
+        <div class="dots" role="tablist" aria-label="Slides wechseln"></div>
+    </div>
+</div>
+
+{% endblock %}
+{% block extra_js %}
+<script
+    src="{{ url_for('static', filename='js/application.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,79 @@
+<div class="navbar">
+  <!-- TEAM NAME -->
+  <a class="navbar-brand" href="#">RPTU-Kaiserslautern</a>
+
+  <!-- NAVIGATION -->
+  <div class="navbar-nav-container">
+    <ul class="navbar-nav">
+
+      <!-- HOME -->
+      <li class="nav-item">
+        <a href="{{ url_for('home') }}">Home</a>
+      </li>
+
+      <!-- PROJECT -->
+      <li class="nav-item">
+        <a href="#">Project</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item"
+              href="{{ url_for('pages', page='description') }}">Description</a></li>
+          <li><a class="dropdown-item"
+              href="{{ url_for('pages', page='application') }}">Applications</a></li>
+          <li><a class="dropdown-item"
+              href="{{ url_for('pages', page='engineering-success') }}">Engineering
+              Success</a></li>
+          <li><a class="dropdown-item"
+              href="{{ url_for('pages', page='judging') }}">Judging</a></li>
+          <li><a class="dropdown-item"
+              href="{{ url_for('pages', page='safety') }}">Safety</a></li>
+        </ul>
+      </li>
+
+      <!-- LAB -->
+      <li class="nav-item">
+        <a href="#">Lab</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item"
+              href="{{ url_for('pages', page='best-plant-synthetic-biology') }}">Best
+              Plant Synthetic Biology</a></li>
+          <li><a class="dropdown-item"
+              href="{{ url_for('pages', page='experiments') }}">Experiments</a></li>
+          <li><a class="dropdown-item"
+              href="{{ url_for('pages', page='notebook') }}">Notebook</a></li>
+          <li><a class="dropdown-item"
+              href="{{ url_for('pages', page='results') }}">Results</a></li>
+          <li><a class="dropdown-item"
+              href="{{ url_for('pages', page='parts') }}">Parts</a></li>
+        </ul>
+      </li>
+
+      <!-- HUMAN PRACTICES -->
+      <li class="nav-item">
+        <a href="#">Human Practices</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item"
+              href="{{ url_for('pages', page='education') }}">Education</a></li>
+          <li><a class="dropdown-item"
+              href="{{ url_for('pages', page='integrated_hp') }}">Human
+              Practices (Integrated)</a></li>
+          <li><a class="dropdown-item"
+              href="{{ url_for('pages', page='contribution') }}">Contribution</a></li>
+        </ul>
+      </li>
+
+      <!-- TEAM -->
+      <li class="nav-item">
+        <a href="#">Team</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item"
+              href="{{ url_for('pages', page='members') }}">Members</a></li>
+          <li><a class="dropdown-item"
+              href="{{ url_for('pages', page='attributions') }}">Attributions</a></li>
+          <li><a class="dropdown-item"
+              href="{{ url_for('pages', page='sponsors') }}">Sponsors</a></li>
+        </ul>
+      </li>
+
+    </ul>
+  </div>
+</div>

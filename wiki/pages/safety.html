@@ -1,0 +1,675 @@
+{% extends "layout.html" %}
+
+{% block extra_css %}
+<link href="{{ url_for('static', filename='css/safety.css') }}"
+    rel="stylesheet">
+{% endblock %}
+
+{% block title %}Safety{% endblock %}
+
+{% block page_content %}
+<div class="MainWrapper">
+    <h1>From Risk to Responsibility: Introduction to Safety and Security</h1>
+    <p>Working to make a difference in this world also means paying attention to
+        biosafety and biosecurity. Safety is not only about protecting ourselves
+        as scientists but also about ensuring the well-being of the people who
+        may one day use the products of our research, as well as the responsible
+        use of our work by other scientists. Every researcher carries the
+        responsibility to consider these aspects before even starting their
+        experiments – to prevent accidents, safeguard public health, and reduce
+        the risk of misuse.</p>
+    <p>Synthetic biology is a rapidly developing field, and with innovation
+        comes responsibility. Ensuring that safety considerations are integrated
+        from the very beginning is essential to protect both people and the
+        environment and to maintain public trust in science.</p>
+
+    <table>
+        <caption>Biosafety vs. Biosecurity</caption>
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Biosafety</th>
+                <th scope="col">Biosecurity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Focus</th>
+                <td>Preventing accidents and unintentional risks</td>
+                <td>Preventing misuse and intentional risks</td>
+            </tr>
+            <tr>
+                <th scope="row">Protection</th>
+                <td>People, environment, and materials from unintended
+                    exposure</td>
+                <td>Biological materials, data, and technologies from theft or
+                    abuse</td>
+            </tr>
+            <tr>
+                <th scope="row">Examples</th>
+                <td>Lab coats, gloves, proper waste disposal, safe lab
+                    practices</td>
+                <td>Restricted lab access, careful data handling, DNA sequence
+                    screening</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Unfortunately, public opinion towards science is not always positive.
+        Real risks are not only present inside the lab but also in how the
+        public perceives scientific work. Negative attitudes toward genetic
+        engineering and biotechnology can lead to petitions, resistance, or even
+        rejection of important technologies such as GMOs. Addressing these
+        concerns and engaging with society is therefore just as important as
+        technical safety measures.</p>
+    <p>As a team, we do not see safety as a formality but as a mindset that
+        guides our daily work. We aim to contribute not only to the safe
+        progress of our own project, but also to the wider iGEM community and
+        society. This is why we fully align with iGEM’s values: safety must
+        remain at the heart of all research.</p>
+
+    <h2 style="color: var(--darkerpurple);">Safe, responsible, and justifiable science</h2>
+
+    <p>should never be treated as an afterthought but rather as the foundation
+        of everything we do.</p>
+
+    <hr><h2>Team Practices for Safe Research</h2>
+
+    <p>Ensuring that our work is both safe and responsible requires more than
+        just acknowledging the importance of biosafety and biosecurity – it
+        demanded concrete action. From the very start of the project, we
+        established clear safety practices through structured training,
+        consistent laboratory routines, and careful risk assessment. These
+        measures formed the foundation for all of our experimental work.</p>
+    <h3>Safety Training</h3>
+    <p>Before entering the lab, every team member studied iGEM’s Safety Rules
+        and Policies and discussed together how we could ensure the safest
+        possible working environment. We not only reflected on the rules but
+        also shared ideas on how to support each other in day-to-day work.</p>
+    <p>Our training was guided by our supervisor and experienced doctoral
+        researchers, who introduced us to:</p>
+    <ul>
+        <li>safe handling of laboratory equipment (e.g., working under a sterile
+            hood or with a Bunsen burner),</li>
+        <li>hygiene measures such as disinfection and maintaining a clean
+            workspace,</li>
+        <li>handling hazardous chemicals and understanding their risks,</li>
+        <li>emergency procedures in case of accidents or hazardous
+            situations,</li>
+        <li>as well as other measures regarding safety in the laboratory.</li>
+    </ul>
+
+    <p>In addition, we were given the contact details of our institutional
+        biosafety officer as well as our designated first aiders, so that clear
+        responsibilities were defined from the start.</p>
+    <hr><h2>Safe Laboratory Work</h2>
+    <p>To maintain a safe environment, we consistently followed the principle of
+        never working alone in the lab and always wearing the required
+        protective equipment (lab coats, gloves, safety glasses). All
+        experiments were performed under biosafety Level 1 (BSL-1) conditions,
+        ensuring that our work environment matched the risk profile of our
+        organisms.</p>
+    <hr><h2>Specific measures included:</h2>
+
+    <div id="org">
+        <div id="org2">
+            <h3>Organism handling:</h3>
+            <div>
+                <p><i>Chlamydomonas reinhardtii</i>: chosen because it is
+                    non-pathogenic,
+                    lacks a
+                    cell wall in our strain, and cannot survive outside highly
+                    specific
+                    laboratory conditions.</p>
+                <p><i>E. coli</i>: a standard White List organism widely used in
+                    teaching
+                    and
+                    research.</p>
+                <p>Human cell lines: used only for antibody functionality
+                    testing.
+                    These
+                    were kept in a separate laboratory building and handled by
+                    two
+                    specialized team members to minimize risks such as
+                    cross-contamination.</p>
+            </div>
+        </div>
+        <div>
+            <p>Chemical safety: Hazardous substances such as acrylamide, EtBr,
+                or
+                β-mercaptoethanol were handled with particular care, following
+                institutional guidelines for personal protection and chemical
+                storage.</p>
+            <p>Waste management: Both biological and chemical waste were
+                carefully
+                segregated, treated (e.g., autoclaving), and disposed of
+                according to
+                institutional and legal standards.</p>
+            <p>Laboratory infrastructure: We worked in facilities equipped with
+                biosafety cabinets, autoclaves, eyewash stations, fire
+                extinguishers,
+                and first aid kits, ensuring rapid response in case of
+                emergencies. We
+                also considered physical risks in the laboratory, such as the
+                use of
+                high-voltage equipment during gel electrophoresis and
+                high-pressure
+                autoclaves. Team members were trained to use this equipment
+                correctly,
+                and appropriate safety devices were in place to minimize hazards.</p>
+        </div>
+    </div>
+
+    <hr><h2>Risk Management</h2>
+    <p>Before the start of our experiments, we carried out a project-specific
+        risk assessment. We considered not only laboratory safety but also the
+        possibility of misuse outside the lab. While we acknowledge that it is
+        impossible to fully control how scientific results might be applied in
+        the future, we implemented safeguards such as:</p>
+    <ul class="check">
+        <li>using only organisms listed on the iGEM White List,</lil>
+        <li>avoiding any work with pathogenic organisms,</li>
+        <li><p>relying on the inherent biological safeguards of <i>Chlamydomonas
+                    reinhardtii</i> UVM4, which is non-pathogenic, non-motile,
+                lacks a cell
+                wall, and cannot survive outside controlled laboratory
+                conditions
+                (removing the need for a kill-switch mechanism),</p></li>
+        <li>adhering to iGEM’s “Do Not Release” policy, ensuring no GMOs or
+            products leave the lab,</li>
+        <li>consulting our institutional biosafety officer for guidance on risk
+            evaluation,</li>
+        <li>only authorized and trained team members having access to sensitive
+            materials such as human cell lines,</li>
+        <li>storing sensitive materials in secured laboratory spaces with
+            restricted access.</li>
+    </ul>
+
+    <p>In addition, we deliberately avoided the use of animal models for
+        antibody testing. This decision reduced complexity, aligned with the <a
+            class="normal"
+            href="#before3r">3R principle (Replacement, Reduction,
+            Refinement)</a>
+        , and allowed us to focus
+        on ethical and safe alternatives such as cell culture models. To build
+        trust, we engaged in open dialogue with the public to address
+        misconceptions and highlight the benefits of algae-based medicines.
+        Transparent labeling and clear communication of both risks and
+        advantages were essential to foster acceptance and responsible use.
+        Through these measures, our team ensured that every aspect of our
+        project – from planning to execution – was carried out in a safe,
+        responsible, and ethically aware manner. This approach allowed us to
+        focus on safe and responsible strategies such as cell culture
+        models.</p>
+
+    <hr><h2>Building on Existing Knowledge: Biosafety and Biosecurity</h2>
+    <p>While our team did not develop a new tool or framework in biosafety or
+        biosecurity, we actively built upon established knowledge, guidelines,
+        and best practices to ensure that our project was carried out in a safe
+        and responsible way. For us, contributing to safety means showing how
+        existing frameworks can be consistently applied within synthetic biology
+        research and education. To guide our work, we relied on a wide range of established safety
+        resources:</p>
+    <h3>iGEM White List:</h3>
+    <p>All organisms and genetic parts we used are explicitly listed on the iGEM
+        White List, which identifies components considered safe for use in
+        student projects. By relying only on these approved organisms –
+        <i>Chlamydomonas reinhardtii</i>, <i>E. coli</i>, and human cell lines
+        HT29, SW48,
+        HCEC, CaCo-2, and HCT116 – we ensured that our work complied with iGEM’s
+        community standards. This also meant that no additional Check-In
+        procedures were required. The White List served as a practical framework
+        for project design, helping us avoid unnecessary risks from the very
+        beginning.</p>
+    <h3>German and EU Biosafety Laws:</h3>
+    <p>Our experiments were conducted under biosafety Level 1 (S1) conditions,
+        in accordance with the German Genetic Engineering Act (Gentechnikgesetz,
+        GenTG) and related EU directives. These regulations outline how
+        genetically modified organisms must be handled, contained, and
+        documented.</p>
+    <hp>Key aspects included:</hp>
+
+    <ul>
+        <li>working exclusively in authorized laboratory spaces,</li>
+        <li>clear labeling and containment of all cultures,</li>
+        <li>documentation of genetic modifications and laboratory
+            activities,</li>
+        <li>proper inactivation of waste before disposal.</li>
+    </ul>
+    <p>By following these legal frameworks, we ensured that our work was not
+        only safe within iGEM standards but also fully compliant with national
+        and European law.</p>
+    <h3>Institutional Guidelines and Biosafety Officer:</h3>
+    <p>At RPTU Kaiserslautern, all laboratory work is embedded in a strong
+        institutional safety framework. Our team was supervised by our
+        institutional biosafety officer, Prof. Gerhard Erkel, who provided
+        guidance on risk evaluation and safety procedures. In addition, we
+        followed the internal safety policies of our faculty, which cover topics
+        such as:</p>
+    <ul>
+        <li>training requirements for new laboratory members,</li>
+        <li>protocols for handling hazardous chemicals (e.g., acrylamide, EtBr,
+            β-mercaptoethanol),</li>
+        <li>rules for emergency procedures,</li>
+        <li>access restrictions to specialized laboratories (e.g., human cell
+            line facilities).</li>
+    </ul>
+    <p>This institutional support gave us a clear structure for safe daily work
+        and defined points of contact in case of uncertainty.</p>
+    <h3>International Standards (WHO and OECD):</h3>
+    <p>Beyond local regulations, we considered international guidelines such as
+        those developed by the World Health Organization (WHO) and the OECD for
+        laboratory biosafety and biosecurity. These frameworks emphasize the
+        importance of:</p>
+    <ul>
+        <li>clear separation of workspaces depending on risk group,</li>
+        <li>minimizing dual-use risks by restricting access to biological
+            materials,</li>
+        <li>promoting a culture of responsibility among researchers.</li>
+    </ul>
+    <p id="before3r">While we did not directly adopt new policies from these
+        organizations, we
+        ensured that our practices align with their broader principles,
+        reinforcing the idea that our work is consistent with international
+        safety culture.</p>
+
+    <h3>3R Principle (Replacement, Reduction, Refinement):</h3>
+    <p>Our project design reflects the 3R principle, which is widely recognized
+        in scientific ethics. Instead of relying on animal models for antibody
+        testing, we used human cell lines and algae-based expression systems
+        (<i>Chlamydomonas reinhardtii</i>). In doing so, we:</p>
+    <ul>
+        <li>Replaced animal experiments with alternative model systems,</li>
+        <li>Reduced unnecessary complexity and ethical concerns,</li>
+        <li>Refined our approach to make it safer, more ethical, and more
+            sustainable.</li>
+    </ul>
+    <svg id="r3ill" xmlns="http://www.w3.org/2000/svg" version="1.1"
+        viewBox="0 0 1571.43 754.55">
+        <!-- Generator: Adobe Illustrator 29.8.2, SVG Export Plug-In . SVG Version: 2.1.1 Build 3)  -->
+        <defs>
+            <style>
+      #r3ill .st0, #r3ill .st1 {
+        fill: #fff;
+      }
+
+      #r3ill .st1 {
+        stroke: #30a680;
+      }
+
+      #r3ill .st1, #r3ill .st2 {
+        stroke-miterlimit: 10;
+        stroke-width: 10px;
+      }
+
+      #r3ill .st3 {
+        fill: #197b5c;
+      }
+
+      #r3ill .st4, #r3ill .st2 {
+        fill: #30a680;
+      }
+
+      #r3ill .st2 {
+        stroke: #fff;
+      }
+    </style>
+        </defs>
+        <path class="st4"
+            d="M464.92,64.51h643.39c1.22,0,2.22-.99,2.23-2.21l.06-5.53c.01-1.24-.99-2.26-2.23-2.26H464.87c-1.24,0-2.24,1.01-2.23,2.25l.05,5.53c.01,1.23,1.01,2.21,2.23,2.21Z" />
+        <path class="st4"
+            d="M911.02,546.4l322.21-337.8c1.27-1.33.32-3.54-1.52-3.53l-10.17.05c-.57,0-1.11.24-1.51.65l-320.08,337.75c-1.26,1.33-.32,3.53,1.52,3.53h8.04c.57,0,1.12-.23,1.51-.65Z" />
+        <path class="st3"
+            d="M836.04,609.97l-50.29,52.9-47.38-49.84c-4.55.07-9.11.12-13.66.15l57.42,60.4,3.62,3.81,64.62-67.97c-4.78.19-9.56.37-14.33.56Z" />
+        <path class="st4"
+            d="M671.85,543.05L351.21,205.78c-.45-.47-1.07-.74-1.71-.74h-7.28c-2.08,0-3.14,2.49-1.71,3.99l320.64,337.27c.45.47,1.07.74,1.71.74h7.28c2.08,0,3.14-2.49,1.71-3.99Z" />
+        <rect class="st1" x="5.26" y="5.18" width="400" height="157.97"
+            rx="78.99" ry="78.99" />
+        <rect class="st1" x="1166.26" y="5.18" width="400" height="157.97"
+            rx="78.99" ry="78.99" />
+        <rect class="st2" x="585.76" y="591.14" width="400" height="157.97"
+            rx="78.99" ry="78.99" />
+        <g>
+            <path class="st4"
+                d="M42.15,97.26v-3.44l3.3-.63v-22.4l-3.3-.63v-3.46h14.32c2.31,0,4.29.36,5.95,1.07,1.66.71,2.93,1.74,3.8,3.09.88,1.34,1.31,2.95,1.31,4.83s-.43,3.37-1.3,4.75c-.87,1.37-2.08,2.45-3.64,3.22-1.56.78-3.37,1.17-5.43,1.19l-6,.02v8.34l3.3.63v3.44h-12.3ZM51.15,80.45h5.12c1.89,0,3.29-.39,4.2-1.17.91-.78,1.36-1.91,1.36-3.39s-.45-2.62-1.34-3.49c-.9-.87-2.24-1.3-4.03-1.3h-5.31v9.34ZM61.93,97.26l-5.5-13.65,5.25-1.07,4.7,10.69,2.5.55v3.49h-6.95Z" />
+            <path class="st4"
+                d="M71.6,97.26v-3.44l3.3-.63v-22.4l-3.3-.63v-3.46h23.49v8.06h-4.41l-.31-3.67h-9.76v8.17h10.54v4.43h-10.54v9.22h10.31l.31-3.76h4.37v8.13h-24Z" />
+            <path class="st4"
+                d="M99.05,97.26v-3.44l3.3-.63v-22.4l-3.3-.63v-3.46h14.45c2.31,0,4.29.4,5.95,1.21,1.66.81,2.94,1.93,3.83,3.38.9,1.45,1.34,3.13,1.34,5.05s-.45,3.61-1.34,5.05c-.9,1.44-2.17,2.55-3.83,3.35-1.66.8-3.64,1.2-5.95,1.2h-5.44v7.26l3.3.63v3.44h-12.3ZM108.05,81.52h5.44c1.79,0,3.14-.48,4.05-1.45.91-.97,1.36-2.2,1.36-3.7s-.46-2.77-1.36-3.77c-.91-1-2.26-1.5-4.05-1.5h-5.44v10.41Z" />
+            <path class="st4"
+                d="M126.74,97.26v-3.44l3.3-.63v-22.4l-3.3-.63v-3.46h12.64v3.46l-3.63.63v22.11h9.09l.34-4.56h4.37v8.92h-22.8Z" />
+            <path class="st4"
+                d="M151.77,97.26v-3.44l2.2-.31,9.93-26.81h5.69l9.85,26.81,2.18.31v3.44h-10.06v-3.44l2.16-.4-1.49-4.49h-11.06l-1.49,4.49,2.14.4v3.44h-10.06ZM162.58,84.63h8.25l-3.76-10.88-.29-.88h-.13l-.31.92-3.76,10.83Z" />
+            <path class="st4"
+                d="M196.99,97.71c-3,0-5.57-.63-7.74-1.89-2.16-1.26-3.83-3.03-4.99-5.32-1.16-2.29-1.74-4.97-1.74-8.05v-.9c0-2.97.57-5.6,1.7-7.89,1.13-2.3,2.76-4.1,4.87-5.42,2.11-1.32,4.63-1.97,7.56-1.97,2.06,0,3.98.3,5.75.89,1.78.6,3.35,1.47,4.7,2.61v7.22h-4.3l-.59-4.68c-.46-.34-.97-.62-1.52-.86-.55-.24-1.15-.42-1.81-.55-.65-.13-1.35-.19-2.11-.19-1.79,0-3.32.44-4.6,1.33-1.27.89-2.25,2.14-2.93,3.75-.68,1.61-1.02,3.51-1.02,5.71v.94c0,2.23.36,4.15,1.07,5.77.71,1.62,1.73,2.87,3.06,3.75,1.32.88,2.9,1.31,4.73,1.31.91,0,1.81-.1,2.71-.3.9-.2,1.69-.47,2.39-.81l.61-4.3h4.26v7.16c-1.18.77-2.63,1.41-4.37,1.92-1.74.51-3.64.77-5.71.77Z" />
+            <path class="st4"
+                d="M210.18,97.26v-3.44l3.3-.63v-22.4l-3.3-.63v-3.46h23.49v8.06h-4.41l-.31-3.67h-9.76v8.17h10.54v4.43h-10.54v9.22h10.31l.31-3.76h4.37v8.13h-24Z" />
+            <path class="st4"
+                d="M237.68,97.26v-3.44l3.28-.63v-22.4l-3.28-.63v-3.46h11.61l8.65,21.71h.13l8.38-21.71h11.67v3.46l-3.3.63v22.4l3.3.63v3.44h-12.3v-3.44l3.46-.63v-6.49l.08-13.58-.1-.02-9.32,23.6h-4.22l-9.55-23.45-.13.02.34,12.93v6.99l3.61.63v3.44h-12.3Z" />
+            <path class="st4"
+                d="M280.62,97.26v-3.44l3.3-.63v-22.4l-3.3-.63v-3.46h23.49v8.06h-4.41l-.31-3.67h-9.76v8.17h10.54v4.43h-10.54v9.22h10.31l.31-3.76h4.37v8.13h-24Z" />
+            <path class="st4"
+                d="M308.08,97.26v-3.44l3.28-.63v-22.4l-3.28-.63v-3.46h9.07l13.67,21.75.13-.02v-17.64l-3.88-.63v-3.46h12.3v3.46l-3.3.63v26.48h-5.48l-13.96-21.6-.13.02v17.51l3.88.63v3.44h-12.3Z" />
+            <path class="st4"
+                d="M348.84,97.26v-3.44l3.3-.63v-22.11h-5.86l-.4,3.78h-4.3v-8.17h26.88v8.17h-4.33l-.4-3.78h-5.88v22.11l3.32.63v3.44h-12.32Z" />
+        </g>
+        <g>
+            <path class="st4"
+                d="M1240.69,97.33v-3.44l3.3-.63v-22.4l-3.3-.63v-3.46h14.32c2.31,0,4.29.36,5.95,1.07,1.66.71,2.92,1.74,3.8,3.09s1.31,2.95,1.31,4.83-.43,3.37-1.3,4.75c-.87,1.37-2.08,2.45-3.64,3.22-1.56.78-3.37,1.17-5.43,1.19l-6,.02v8.34l3.3.63v3.44h-12.3ZM1249.7,80.51h5.12c1.89,0,3.29-.39,4.2-1.17.91-.78,1.36-1.91,1.36-3.39s-.45-2.62-1.34-3.49c-.9-.87-2.24-1.3-4.03-1.3h-5.31v9.34ZM1260.47,97.33l-5.5-13.65,5.25-1.07,4.7,10.69,2.5.55v3.49h-6.95Z" />
+            <path class="st4"
+                d="M1270.15,97.33v-3.44l3.3-.63v-22.4l-3.3-.63v-3.46h23.49v8.06h-4.41l-.31-3.67h-9.76v8.17h10.54v4.43h-10.54v9.22h10.31l.31-3.76h4.37v8.13h-24Z" />
+            <path class="st4"
+                d="M1297.59,97.33v-3.44l3.32-.69v-22.28l-3.32-.69v-3.46h13.12c2.73,0,5.13.64,7.19,1.93,2.06,1.29,3.68,3.06,4.84,5.31,1.16,2.25,1.74,4.84,1.74,7.77v.57c0,2.88-.57,5.46-1.71,7.72-1.14,2.26-2.74,4.04-4.79,5.33-2.05,1.29-4.44,1.94-7.17,1.94h-13.23ZM1306.62,92.94h3.91c1.75,0,3.23-.46,4.45-1.39s2.15-2.18,2.8-3.78c.65-1.6.98-3.41.98-5.44v-.61c0-2.06-.33-3.88-.98-5.47-.65-1.59-1.59-2.83-2.8-3.74-1.22-.9-2.7-1.35-4.45-1.35h-3.91v21.77Z" />
+            <path class="st4"
+                d="M1342.16,97.77c-2.37,0-4.45-.42-6.25-1.25-1.8-.83-3.2-2.04-4.21-3.63-1.01-1.59-1.51-3.51-1.51-5.76v-16.27l-3.28-.63v-3.46h12.28v3.46l-3.3.63v16.27c0,1.39.25,2.54.77,3.46.51.92,1.23,1.62,2.17,2.08.94.46,2.04.69,3.32.69s2.43-.23,3.38-.68c.95-.46,1.68-1.14,2.19-2.07s.77-2.09.77-3.49v-16.27l-3.3-.63v-3.46h12.3v3.46l-3.3.63v16.27c0,2.27-.5,4.2-1.51,5.78-1.01,1.59-2.42,2.8-4.22,3.62s-3.91,1.24-6.32,1.24Z" />
+            <path class="st4"
+                d="M1374.14,97.77c-3,0-5.57-.63-7.74-1.89-2.16-1.26-3.83-3.03-4.99-5.32-1.16-2.29-1.74-4.97-1.74-8.05v-.9c0-2.97.57-5.6,1.7-7.89,1.13-2.3,2.76-4.1,4.87-5.42,2.11-1.32,4.63-1.97,7.56-1.97,2.06,0,3.98.3,5.75.89,1.78.6,3.35,1.47,4.7,2.61v7.22h-4.3l-.59-4.68c-.46-.34-.97-.62-1.52-.86-.55-.24-1.15-.42-1.81-.55-.65-.13-1.35-.19-2.11-.19-1.79,0-3.32.44-4.6,1.33-1.27.89-2.25,2.14-2.93,3.75-.68,1.61-1.02,3.51-1.02,5.71v.94c0,2.23.36,4.15,1.07,5.77.71,1.62,1.73,2.87,3.06,3.75,1.32.88,2.9,1.31,4.73,1.31.91,0,1.81-.1,2.71-.3.9-.2,1.69-.47,2.39-.81l.61-4.3h4.26v7.16c-1.18.77-2.63,1.41-4.37,1.92-1.74.51-3.64.77-5.71.77Z" />
+            <path class="st4"
+                d="M1393.88,97.33v-3.44l3.3-.63v-22.11h-5.86l-.4,3.78h-4.3v-8.17h26.88v8.17h-4.33l-.4-3.78h-5.88v22.11l3.32.63v3.44h-12.33Z" />
+            <path class="st4"
+                d="M1415.96,97.33v-3.44l3.3-.63v-22.4l-3.3-.63v-3.46h12.3v3.46l-3.3.63v22.4l3.3.63v3.44h-12.3Z" />
+            <path class="st4"
+                d="M1444.52,97.77c-2.04,0-3.9-.38-5.56-1.14-1.67-.76-3.1-1.84-4.29-3.23-1.2-1.39-2.12-3.03-2.76-4.91-.64-1.88-.97-3.95-.97-6.2v-.46c0-2.24.32-4.3.97-6.18.64-1.88,1.56-3.52,2.76-4.91,1.2-1.39,2.62-2.47,4.28-3.24,1.66-.77,3.51-1.15,5.55-1.15s3.96.39,5.64,1.15c1.67.77,3.11,1.85,4.31,3.24,1.2,1.39,2.12,3.03,2.76,4.91.64,1.88.96,3.94.96,6.18v.46c0,2.25-.32,4.32-.96,6.2-.64,1.88-1.55,3.52-2.75,4.91-1.2,1.39-2.64,2.47-4.32,3.23-1.68.76-3.56,1.14-5.63,1.14ZM1444.52,93.28c1.79,0,3.28-.46,4.45-1.38,1.18-.92,2.05-2.2,2.64-3.85.58-1.65.87-3.58.87-5.77v-.5c0-2.17-.29-4.07-.88-5.71s-1.47-2.92-2.66-3.84-2.66-1.39-4.44-1.39-3.18.46-4.35,1.38c-1.16.92-2.03,2.19-2.61,3.83-.58,1.64-.87,3.55-.87,5.73v.5c0,2.18.29,4.1.87,5.76.58,1.66,1.46,2.95,2.62,3.86,1.17.92,2.62,1.38,4.36,1.38Z" />
+            <path class="st4"
+                d="M1460.79,97.33v-3.44l3.28-.63v-22.4l-3.28-.63v-3.46h9.07l13.67,21.75.13-.02v-17.64l-3.88-.63v-3.46h12.3v3.46l-3.3.63v26.48h-5.48l-13.96-21.6-.13.02v17.51l3.88.63v3.44h-12.3Z" />
+        </g>
+        <g>
+            <path class="st0"
+                d="M642.5,687.48v-3.44l3.3-.63v-22.4l-3.3-.63v-3.46h14.32c2.31,0,4.29.36,5.95,1.07,1.66.71,2.93,1.74,3.8,3.09.88,1.34,1.31,2.95,1.31,4.83s-.43,3.37-1.3,4.75c-.87,1.37-2.08,2.45-3.64,3.22-1.56.78-3.37,1.17-5.43,1.19l-6,.02v8.33l3.3.63v3.44h-12.3ZM651.51,670.66h5.12c1.89,0,3.29-.39,4.2-1.17.91-.78,1.36-1.91,1.36-3.39s-.45-2.62-1.34-3.49c-.9-.87-2.24-1.3-4.03-1.3h-5.31v9.34ZM662.28,687.48l-5.5-13.65,5.25-1.07,4.7,10.69,2.5.55v3.49h-6.95Z" />
+            <path class="st0"
+                d="M671.96,687.48v-3.44l3.3-.63v-22.4l-3.3-.63v-3.46h23.49v8.06h-4.41l-.31-3.67h-9.76v8.17h10.54v4.43h-10.54v9.22h10.31l.31-3.76h4.37v8.12h-24Z" />
+            <path class="st0"
+                d="M699.4,687.48v-3.44l3.3-.63v-22.4l-3.3-.63v-3.46h24.06v8.15h-4.41l-.31-3.74h-10.33v8.88h10.81v4.41h-10.81v8.8l3.3.63v3.44h-12.3Z" />
+            <path class="st0"
+                d="M725.92,687.48v-3.44l3.3-.63v-22.4l-3.3-.63v-3.46h12.3v3.46l-3.3.63v22.4l3.3.63v3.44h-12.3Z" />
+            <path class="st0"
+                d="M740.81,687.48v-3.44l3.28-.63v-22.4l-3.28-.63v-3.46h9.07l13.67,21.75.13-.02v-17.64l-3.88-.63v-3.46h12.3v3.46l-3.3.63v26.48h-5.48l-13.96-21.6-.13.02v17.51l3.88.63v3.44h-12.3Z" />
+            <path class="st0"
+                d="M774.4,687.48v-3.44l3.3-.63v-22.4l-3.3-.63v-3.46h23.49v8.06h-4.41l-.31-3.67h-9.76v8.17h10.54v4.43h-10.54v9.22h10.31l.31-3.76h4.37v8.12h-24Z" />
+            <path class="st0"
+                d="M801.91,687.48v-3.44l3.28-.63v-22.4l-3.28-.63v-3.46h11.61l8.65,21.71h.13l8.38-21.71h11.67v3.46l-3.3.63v22.4l3.3.63v3.44h-12.3v-3.44l3.46-.63v-6.49l.08-13.58-.1-.02-9.32,23.6h-4.22l-9.55-23.45-.13.02.34,12.93v6.99l3.61.63v3.44h-12.3Z" />
+            <path class="st0"
+                d="M844.84,687.48v-3.44l3.3-.63v-22.4l-3.3-.63v-3.46h23.5v8.06h-4.41l-.32-3.67h-9.76v8.17h10.54v4.43h-10.54v9.22h10.31l.32-3.76h4.37v8.12h-24Z" />
+            <path class="st0"
+                d="M872.31,687.48v-3.44l3.28-.63v-22.4l-3.28-.63v-3.46h9.07l13.67,21.75.13-.02v-17.64l-3.88-.63v-3.46h12.3v3.46l-3.3.63v26.48h-5.48l-13.96-21.6-.13.02v17.51l3.88.63v3.44h-12.3Z" />
+            <path class="st0"
+                d="M913.06,687.48v-3.44l3.3-.63v-22.11h-5.86l-.4,3.78h-4.3v-8.17h26.88v8.17h-4.33l-.4-3.78h-5.88v22.11l3.32.63v3.44h-12.32Z" />
+        </g>
+        <g>
+            <path class="st0"
+                d="M491.42,210.99c-3.77,0-7.21-.42-10.3-1.27s-6.14-2.31-9.14-4.39v-12.38h7.95l1.09,7.28c1.05.89,2.51,1.61,4.36,2.16,1.85.55,3.87.83,6.05.83,1.85,0,3.42-.26,4.69-.77,1.28-.52,2.25-1.25,2.92-2.2s1-2.07,1-3.36c0-1.22-.3-2.3-.9-3.25s-1.58-1.82-2.95-2.6c-1.37-.79-3.23-1.54-5.57-2.27-4.06-1.2-7.41-2.5-10.07-3.92-2.66-1.42-4.65-3.12-5.98-5.1-1.32-1.98-1.99-4.36-1.99-7.15s.77-5.21,2.3-7.33c1.53-2.12,3.66-3.79,6.38-5.01,2.72-1.22,5.86-1.85,9.42-1.9,3.94-.05,7.42.42,10.46,1.41,3.04.98,5.65,2.36,7.86,4.11v11.53h-7.7l-1.34-7.03c-.89-.56-2.09-1.05-3.6-1.48s-3.23-.63-5.15-.63c-1.64,0-3.09.25-4.34.74-1.25.49-2.24,1.21-2.97,2.14-.73.94-1.09,2.07-1.09,3.41,0,1.15.32,2.15.95,3.01.63.86,1.69,1.66,3.18,2.43,1.49.76,3.54,1.58,6.17,2.44,5.65,1.57,9.93,3.64,12.85,6.22,2.92,2.58,4.38,5.96,4.38,10.16,0,2.91-.79,5.42-2.36,7.54-1.57,2.12-3.77,3.76-6.61,4.9-2.84,1.15-6.15,1.72-9.95,1.72Z" />
+            <path class="st0"
+                d="M513.85,210.25v-6.15l3.66-.53,16.28-44.51h10.51l16.17,44.51,3.66.53v6.15h-17.44v-6.15l3.55-.63-2.25-7.03h-18l-2.25,7.03,3.55.63v6.15h-17.44ZM532.42,188.88h13.15l-5.98-17.54-.49-1.55h-.21l-.53,1.65-5.94,17.44Z" />
+            <path class="st0"
+                d="M567.54,210.25v-6.15l5.45-1.05v-36.74l-5.45-1.05v-6.19h40.75v14.03h-7.88l-.46-6.12h-16.7v14.1h17.93v7.91h-17.93v14.06l5.48,1.05v6.15h-21.2Z" />
+            <path class="st0"
+                d="M612.01,210.25v-6.15l5.45-1.05v-36.74l-5.45-1.05v-6.19h39.73v13.82h-7.88l-.46-5.91h-15.68v12.87h17.33v7.91h-17.33v14.62h16.52l.46-6.12h7.8v13.99h-40.5Z" />
+            <path class="st0"
+                d="M670.47,210.25v-6.15l5.48-1.05v-36.07h-9.32l-.56,6.12h-7.77v-14.03h45.67v14.03h-7.8l-.56-6.12h-9.39v36.07l5.52,1.05v6.15h-21.27Z" />
+            <path class="st0"
+                d="M722.01,210.25v-6.15l5.48-1.05v-10.34l-15.19-26.75-4.92-.7v-6.19h20.43v6.19l-4.18.6,8.51,16.35.77,1.65.21-.04.77-1.55,9.46-16.42-5.62-.6v-6.19h20.04v6.19l-5.06.7-14.98,25.95v11.14l5.48,1.05v6.15h-21.2Z" />
+            <path class="st0"
+                d="M795.1,210.99c-3.4,0-6.35-.61-8.86-1.83s-4.45-2.92-5.82-5.1-2.06-4.71-2.06-7.59c0-2.65.7-4.95,2.11-6.91,1.41-1.96,3.54-3.96,6.4-5.99.12-.09.24-.19.37-.28.13-.09.25-.18.37-.25-1.59-2.16-2.78-4.12-3.57-5.91-.79-1.78-1.18-3.6-1.18-5.45,0-2.72.57-5.07,1.72-7.07,1.15-1.99,2.77-3.54,4.87-4.64,2.1-1.1,4.55-1.65,7.37-1.65,2.48,0,4.67.53,6.56,1.6,1.89,1.07,3.36,2.49,4.43,4.27,1.07,1.78,1.6,3.77,1.6,5.98s-.57,4.39-1.72,6.29-2.72,3.56-4.71,4.99l-3.27,2.32,9.7,11.32c.84-1.41,1.5-2.93,1.97-4.57.47-1.64.7-3.38.7-5.2h7.66c0,3.23-.4,6.21-1.2,8.93-.8,2.72-2.02,5.13-3.66,7.24l7.31,8.58-.07.18h-11.39l-2.71-3.13c-1.99,1.29-4.04,2.26-6.15,2.9s-4.37.97-6.79.97ZM795.63,203.12c1.24,0,2.48-.16,3.73-.47s2.44-.79,3.59-1.42l-10.55-12.23-.67.46c-1.2,1.12-2.01,2.22-2.44,3.29-.43,1.07-.65,2.14-.65,3.22,0,2.09.64,3.8,1.93,5.15,1.29,1.35,2.98,2.02,5.06,2.02ZM795.07,178.23l3.02-1.97c1.31-.84,2.2-1.71,2.65-2.6.46-.89.69-1.86.69-2.92,0-1.17-.43-2.21-1.28-3.13s-1.97-1.37-3.36-1.37c-1.52,0-2.7.51-3.52,1.53s-1.23,2.29-1.23,3.81c0,1.01.25,2.04.76,3.11.5,1.07,1.26,2.24,2.27,3.53Z" />
+            <path class="st0"
+                d="M841.33,210.25v-6.15l5.45-1.05v-36.74l-5.45-1.05v-6.19h39.73v13.82h-7.88l-.46-5.91h-15.68v12.87h17.33v7.91h-17.33v14.62h16.52l.46-6.12h7.8v13.99h-40.5Z" />
+            <path class="st0"
+                d="M899.8,210.25v-6.15l5.48-1.05v-36.07h-9.32l-.56,6.12h-7.77v-14.03h45.67v14.03h-7.8l-.56-6.12h-9.39v36.07l5.52,1.05v6.15h-21.27Z" />
+            <path class="st0"
+                d="M936.85,210.25v-6.15l5.45-1.05v-36.74l-5.45-1.05v-6.19h21.2v6.19l-5.48,1.05v14.77h20.88v-14.77l-5.48-1.05v-6.19h21.2v6.19l-5.48,1.05v36.74l5.48,1.05v6.15h-21.2v-6.15l5.48-1.05v-14.06h-20.88v14.06l5.48,1.05v6.15h-21.2Z" />
+            <path class="st0"
+                d="M993.1,210.25v-6.15l5.45-1.05v-36.74l-5.45-1.05v-6.19h21.16v6.19l-5.45,1.05v36.74l5.45,1.05v6.15h-21.16Z" />
+            <path class="st0"
+                d="M1042.57,210.99c-4.97,0-9.29-1.04-12.97-3.11s-6.52-5.02-8.53-8.82c-2-3.81-3.01-8.31-3.01-13.52v-1.72c0-4.97.97-9.37,2.9-13.2s4.69-6.84,8.28-9.02,7.85-3.27,12.8-3.27c3.47,0,6.72.49,9.76,1.48s5.75,2.48,8.14,4.5v12.38h-7.63l-1.05-7.77c-.77-.56-1.62-1.04-2.53-1.44-.91-.4-1.9-.7-2.97-.91s-2.22-.32-3.46-.32c-2.91,0-5.4.72-7.49,2.14-2.09,1.43-3.69,3.45-4.8,6.06-1.11,2.61-1.67,5.71-1.67,9.3v1.79c0,3.59.59,6.69,1.76,9.32,1.17,2.62,2.84,4.66,4.99,6.1s4.71,2.16,7.66,2.16c1.48,0,2.96-.17,4.45-.51,1.49-.34,2.84-.78,4.06-1.32l1.05-7.21h7.63v12.23c-1.99,1.31-4.48,2.42-7.45,3.32s-6.28,1.35-9.91,1.35Z" />
+            <path class="st0"
+                d="M1085.53,210.99c-3.77,0-7.21-.42-10.3-1.27s-6.14-2.31-9.14-4.39v-12.38h7.95l1.09,7.28c1.05.89,2.51,1.61,4.36,2.16,1.85.55,3.87.83,6.05.83,1.85,0,3.42-.26,4.69-.77,1.28-.52,2.25-1.25,2.92-2.2s1-2.07,1-3.36c0-1.22-.3-2.3-.9-3.25s-1.58-1.82-2.95-2.6c-1.37-.79-3.23-1.54-5.57-2.27-4.05-1.2-7.41-2.5-10.07-3.92-2.66-1.42-4.65-3.12-5.98-5.1-1.32-1.98-1.99-4.36-1.99-7.15s.77-5.21,2.3-7.33c1.54-2.12,3.66-3.79,6.38-5.01,2.72-1.22,5.86-1.85,9.42-1.9,3.94-.05,7.42.42,10.46,1.41s5.65,2.36,7.86,4.11v11.53h-7.7l-1.34-7.03c-.89-.56-2.09-1.05-3.6-1.48s-3.23-.63-5.15-.63c-1.64,0-3.09.25-4.34.74s-2.24,1.21-2.97,2.14c-.73.94-1.09,2.07-1.09,3.41,0,1.15.32,2.15.95,3.01.63.86,1.69,1.66,3.18,2.43,1.49.76,3.54,1.58,6.17,2.44,5.65,1.57,9.93,3.64,12.85,6.22,2.92,2.58,4.38,5.96,4.38,10.16,0,2.91-.79,5.42-2.36,7.54-1.57,2.12-3.77,3.76-6.61,4.9s-6.15,1.72-9.95,1.72Z" />
+        </g>
+        <path class="st0"
+            d="M785.58,442.31c-2.19,0-4.12-.75-5.78-2.24-1.66-1.48-2.49-3.44-2.49-5.86,0-1.16.25-2.45.76-3.86.51-1.41,1.27-2.62,2.28-3.63l33.03-33.02-4.95-4.95-32.97,33.02c-1.02,1.02-2.16,1.78-3.43,2.28-1.27.51-2.57.76-3.88.76-2.31,0-4.27-.8-5.87-2.41-1.61-1.61-2.41-3.56-2.4-5.86,0-1.38.28-2.73.84-4.04.57-1.32,1.28-2.41,2.14-3.27l33.03-33.02-4.9-4.9-33.02,32.98c-.9.9-2.01,1.63-3.34,2.2s-2.67.85-4.02.84c-2.28,0-4.23-.81-5.85-2.43-1.62-1.62-2.43-3.57-2.43-5.85,0-1.32.25-2.61.75-3.88.5-1.27,1.26-2.42,2.28-3.43l30.95-30.95-4.95-4.9-30.9,30.95c-.86.86-1.96,1.58-3.29,2.14-1.34.56-2.7.84-4.07.84-2.43,0-4.41-.77-5.96-2.32-1.54-1.54-2.31-3.53-2.31-5.95,0-1.32.25-2.61.75-3.88.51-1.27,1.27-2.42,2.28-3.43l44.3-44.3,19.31,19.37c1.64,1.64,3.5,2.81,5.57,3.49,2.07.69,4.17,1.03,6.29,1.03,4.32,0,7.93-1.42,10.83-4.27s4.35-6.48,4.35-10.91c0-2.09-.4-4.2-1.21-6.33-.81-2.12-2.07-4.04-3.78-5.76l-23.74-23.74,8.79-8.79c1.97-1.94,4.35-3.45,7.15-4.55,2.79-1.1,5.58-1.65,8.38-1.65,2.97,0,5.87.55,8.7,1.65,2.83,1.09,5.24,2.64,7.24,4.64l38.41,38.43c1.88,1.89,3.37,4.19,4.47,6.9,1.1,2.71,1.65,5.71,1.65,9.01,0,2.99-.56,5.81-1.68,8.47-1.11,2.66-2.59,4.92-4.45,6.77l-75.51,75.57c-.97.97-2.1,1.72-3.41,2.24-1.29.53-2.59.8-3.91.8M717.49,374.7l-9.28-9.28c-2.54-2.5-4.45-5.51-5.74-9.03-1.29-3.52-1.93-6.96-1.93-10.31,0-3.54.57-6.75,1.72-9.64,1.15-2.89,2.61-5.22,4.39-7l35.3-35.35c1.93-1.93,4.08-3.46,6.46-4.6,2.36-1.14,4.94-1.7,7.74-1.7,3,0,5.75.54,8.25,1.61,2.51,1.06,4.8,2.63,6.87,4.7l37.34,37.33c.9.9,1.63,2.01,2.19,3.34.56,1.33.84,2.6.84,3.79,0,2.39-.78,4.4-2.34,6.03-1.57,1.61-3.54,2.42-5.94,2.42-1.35,0-2.64-.24-3.88-.73-1.24-.49-2.38-1.26-3.43-2.3l-23.98-23.86-54.59,54.59Z" />
+    </svg>
+
+    <p>This decision demonstrates that safety and ethics go hand in hand with
+        scientific progress and that student teams can adopt the same high
+        standards as professional research laboratories.</p>
+
+    <h3>Our Perspective</h3>
+    <p>Even without introducing a novel biosafety contribution, we believe that
+        our careful implementation of existing safety principles can serve as an
+        example for future iGEM teams. Responsible science is not only about
+        developing new tools but also about respecting and consistently
+        applying the frameworks that already exist. By demonstrating how these
+        principles can be integrated into a student-led project, we hope to
+        encourage others to approach their own work with the same mindset.</p>
+
+    <hr><h2>Case Studies and Public Perception</h2>
+    <p>Risks in research are not only created by real dangers such as the misuse
+        of samples and materials, but also by the way science is perceived by
+        the public. The spread of misinformation, especially in the early stages
+        of research, as well as large-scale media coverage of failed experiments
+        and the uncertainty that arises when people lack scientific education or
+        still hold outdated views, can make it difficult to convince the general
+        population of progress. Often, the necessary knowledge to fully
+        understand advances is simply missing.</p>
+
+    <p>An example of this was the broadcast of our project on German television.
+        While our project itself was presented in a positive way, the
+        introductory sentence to the research topic was phrased as follows
+        (translated word-for-word from German): “Science is often not quite so
+        simple, sometimes things seem rather abstract, but in the best case
+        science helps us very concretely against diseases, against environmental
+        problems, etc.” This reminded us once again that it is more important
+        than ever to show society that science is something wonderful—provided
+        it is conducted safely and responsibly.</p>
+    <p>To better understand public attitudes, we developed an online survey to
+        reach as many people as possible and to collect opinions not only from
+        students and young adults but also from the older generation. In
+        addition, we included younger perspectives by asking high school
+        students to complete written surveys during our school visits.</p>
+    <p>Our goal was to convince more people that science, when done correctly,
+        is not inherently negative, and that research often brings great
+        benefits, even if negative stories are heard more frequently.</p>
+    <p>This raises the question: What can be done in general to foster a more
+        positive image of science in society? Education begins at an early age.
+        Unfortunately, in German schools—although attendance is mandatory and
+        therefore an ideal opportunity to spread knowledge—scientific literacy
+        is often not given enough space. To address this, we reached out to
+        teachers to organize our school visits as a first step. Together, we
+        also discussed how this could be implemented more broadly in the future,
+        for example by regularly inviting scientists to share their personal
+        experiences and promote scientific knowledge. Additional suggestions
+        collected through our surveys will be presented in our Human Practices.</p>
+    <p>Building trust in science requires both transparency and education. By
+        listening to concerns, engaging in dialogue, and creating opportunities
+        for early scientific education, we can help shape a society in which
+        science is not seen as a threat, but as a driver of solutions to the
+        world’s most pressing problems. Public perception is therefore a key
+        factor in determining whether scientific advances can be successfully
+        implemented in society. However, ensuring acceptance is only one part of
+        the equation—equally important is guaranteeing that these advances are
+        safe once they move from the laboratory into the real world. This raises
+        the question of how projects like ours would be handled if scaled up for
+        industrial and clinical use.</p>
+
+    <hr><h2>From Lab to Market: Safety in the Real World</h2>
+    <p>Our project envisions the production of the monoclonal antibody Cetuximab
+        using genetically engineered <i>Chlamydomonas reinhardtii</i> as a
+        sustainable
+        alternative to current mammalian cell culture systems. In the real
+        world, this algae-based production system could be scaled up in
+        bioreactors, and the purified antibody could be used in clinical
+        applications for cancer therapy, particularly in the treatment of
+        colorectal cancer. The final product would be highly purified and
+        applied directly in the human body as part of standard medical
+        treatment.</p>
+    <p>To evaluate the safety of such an approach, we considered not only our
+        current laboratory practices but also the implications of future
+        large-scale production, clinical use, and societal acceptance.</p>
+
+    <hr><h2>Applications and Risks in Real-World Use</h2>
+    <p>If our system were translated into industrial and medical contexts,
+        several potential risks would need to be addressed:</p>
+
+    <ul>
+        <li>Scale-up in bioreactors: Large-scale cultivation of genetically
+            engineered algae could raise concerns about accidental release, even
+            though the strain is non-pathogenic and cannot survive outside
+            controlled conditions.</li>
+        <li>Product purity and safety: Therapeutic proteins used in humans must
+            meet the highest standards of purity, stability, and
+            reproducibility. Any contaminants from the production process must
+            be rigorously excluded.</li>
+        <li>Patient safety and immunogenicity: As with all therapeutic proteins,
+            it is essential to ensure that the antibody does not trigger
+            unintended immune responses. Comprehensive preclinical and clinical
+            testing would confirm safety and tolerability across diverse patient
+            groups.</li>
+        <li>Clinical risks: As Cetuximab is directly administered to patients,
+            extensive clinical testing would be required to ensure efficacy,
+            minimize side effects, and evaluate long-term safety.</li>
+        <li>Ethical and societal acceptance: Public skepticism toward GMOs and
+            biotechnological medicines could hinder acceptance, especially if
+            communication and transparency are lacking.</li>
+        <li>Supply chain and equity: While algae-based production may reduce
+            costs, distribution, pricing, and access to treatment remain
+            critical questions for ensuring global equity.</li>
+    </ul>
+
+    <hr><h2>Mitigation Beyond the Laboratory</h2>
+    <p>To ensure safety when applied in the real world, multiple layers of
+        mitigation would be necessary:</p>
+
+    <ol>
+        <li>Industrial containment
+            <ul>
+                <li>Production facilities would be equipped with closed-system
+                    bioreactors, preventing environmental exposure.</li>
+                <li>Standard operating procedures would include sterilization,
+                    waste treatment, and validated containment checks.</li>
+            </ul></li>
+        <li>
+            Downstream processing and purification
+            <ul>
+                <li>The antibody would undergo Good Manufacturing Practice
+                    (GMP)-compliant purification, removing algal proteins, DNA
+                    residues, and other impurities.</li>
+                <li>Extensive quality control tests (e.g., HPLC, mass
+                    spectrometry, endotoxin testing) would confirm product
+                    safety.</li>
+            </ul>
+        </li>
+        <li>
+            Preclinical and clinical testing
+            <ul>
+                <li>Prior to approval, the antibody must pass through rigorous
+                    toxicology studies, preclinical testing in vitro, and
+                    clinical trials (Phase I–III) in humans.</li>
+                <li>These steps ensure that the therapy is not only effective
+                    but also safe across diverse patient populations.</li>
+            </ul>
+        </li>
+        <li>
+            Ethical and communication measures
+            <ul>
+                <li>Open communication with the public would help address
+                    misconceptions and promote trust in algae-based
+                    medicines.</li>
+                <li>Clear labeling and transparent reporting of risks and
+                    benefits would help strengthen acceptance.</li>
+            </ul>
+        </li>
+        <li>
+            Global access considerations
+            <ul>
+                <li>By reducing costs compared to mammalian systems, algae-based
+                    production could help make cancer therapy more
+                    accessible.</li>
+                <li>To realize this benefit, collaborations with healthcare
+                    systems and regulatory agencies would be essential to ensure
+                    fair pricing and global distribution.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <hr><h2>Guidelines and Laws for Real-World Applications</h2>
+    <p>If scaled to clinical use, our project would fall under multiple legal
+        and regulatory frameworks:</p>
+
+    <ul>
+        <li>European Medicines Agency (EMA) and U.S. Food and Drug
+            Administration (FDA) would regulate the approval of the antibody as
+            a biopharmaceutical.</li>
+        <li>Good Manufacturing Practice (GMP) standards would govern production
+            and purification, ensuring consistent product quality.</li>
+        <li>Pharmacovigilance frameworks would monitor side effects and
+            long-term safety once the therapy is on the market.</li>
+        <li>Environmental regulations would oversee industrial cultivation,
+            ensuring no release of genetically modified algae into the
+            environment.</li>
+        <li>Ethics committees and clinical trial regulations would ensure
+            patient safety during testing phases.</li>
+    </ul>
+
+    <p>Looking beyond our laboratory work, the real-world application of our
+        project would demand rigorous containment, purification, testing, and
+        regulatory oversight. While algae-based production offers clear
+        advantages in cost, sustainability, and accessibility, its successful
+        integration into medicine depends on strict adherence to clinical and
+        industrial standards as well as transparent dialogue with society. By
+        addressing these challenges, synthetic biology can deliver not only
+        innovative solutions, but also safe, equitable, and trustworthy
+        therapies for patients worldwide.</p>
+
+    <hr><h2>Safety as a Mindset</h2>
+    <p>Safety in research is often thought of as a checklist of rules. For us,
+        however, it was much more: a guiding principle that shaped both our
+        laboratory work and the way we interacted with society. We treated
+        safety not as a formality, but as an integral part of responsible
+        science and as a value we want to pass on to others.</p>
+    <p>We approached every step of our work with the awareness that safety,
+        responsibility, and ethics are inseparable from science. From our first
+        training sessions to our project design choices, we continuously asked
+        ourselves: How can we do this in the safest way possible? This culture
+        of responsibility not only protected our team, but also ensured that our
+        project developed on a solid ethical foundation.</p>
+
+    <h3>Educational Outreach and Safety Awareness</h3>
+    <p>Our commitment to safety also extended beyond our own laboratory work.
+        Through workshops, surveys, talks with professionals, and school visits,
+        we actively addressed questions of biosafety and biosecurity with
+        students, teachers, and members of the public. In doing so, we aimed to
+        spread awareness that synthetic biology can be both powerful and safe,
+        provided that it is conducted responsibly. By including younger
+        generations in these conversations, we hope to inspire a more balanced
+        and positive public perception of biotechnology.</p>
+    <h3>Supporting the iGEM Community</h3>
+    <p>Even though we did not contribute a new safety resource, our project
+        demonstrates that it is possible to conduct meaningful research by fully
+        relying on and implementing the frameworks already available—such as the
+        iGEM White List, national biosafety laws, and international standards.
+        By documenting how we built upon these resources, we want to encourage
+        future iGEM teams to see safety not only as a set of rules but as a
+        guiding principle for their work.</p>
+    <h3>Alignment with iGEM Values</h3>
+    <p>iGEM emphasizes the importance of safe, responsible, and good science.
+        Our project reflects these values by combining careful laboratory
+        practice, transparent communication, and ethical decision-making. By
+        integrating these elements, we ensured that safety was not an
+        afterthought, but the foundation of our entire project.</p>
+    <h3>Looking Forward</h3>
+    <p>If our algae-based antibody production system were ever to reach
+        real-world application, it would need to undergo rigorous containment,
+        purification, and clinical testing. We are aware that innovation cannot
+        succeed without responsibility, and that the acceptance of synthetic
+        biology will depend on its ability to combine safety, ethics, and
+        transparency. By reflecting on these aspects, we believe our project not
+        only advances scientific ideas but also strengthens the culture of
+        responsibility that is essential for the future of synthetic
+        biology.</p>
+    <p>For us, safety was never just a box to tick—it was the foundation of our
+        project and the mindset we will carry into our future as scientists.</p>
+
+</div>
+
+{% endblock %}
+{% block extra_js %}
+<!--<script src="{{ url_for('static', filename='js/some.js') }}"></script>-->
+{% endblock %}

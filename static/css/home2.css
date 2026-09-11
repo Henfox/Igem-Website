@@ -1,0 +1,54 @@
+
+#second-Section{
+    height: 100vh;
+    background-color: var(--darkestpurple);
+    padding: 1.666667vw 5vw; /* 2rem 6rem */
+    color: white;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+    position: relative;
+    contain: paint;
+}
+
+#secondS-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#second-Section h1{
+    margin: 0;
+}
+
+#second-Section h2{
+    margin: 0.416667vw 0; /* .5rem 0 */
+    white-space: nowrap;
+}
+
+#second-Section span{
+    display: inline-block;
+    width: 8ch;
+}
+
+#deaths span{
+    width: 7ch;
+}
+
+.placeholder{
+    height: 0.833333vw; /* 1rem */
+}
+
+#secondS-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+#secondS-right iframe{
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+}
+

@@ -1,0 +1,837 @@
+{% extends "layout.html" %}
+
+{% block extra_css %}
+<link href="{{ url_for('static', filename='css/notebook.css') }}"
+  rel="stylesheet">
+{% endblock %}
+
+{% block title %}Notebook{% endblock %}
+
+{% block page_content %}
+<div class="MainWrapper">
+  <div class="slider-card">
+    <div class="headline">
+      <h1>Choose Week</h1>
+      <div class="value" id="label">Week 1</div>
+    </div>
+    <div class="controls">
+      <button class="nav" id="prev" aria-label="Vorherige Woche">◀</button>
+      <div class="range-wrap">
+        <input id="weekRange" type="range" min="1" max="44" step="1" value="1"
+          data-target="weeksContainer" />
+        <div class="ticks" aria-hidden="true"></div>
+      </div>
+
+      <button class="nav" id="next" aria-label="Nächste Woche">▶</button>
+    </div>
+    <p></p>
+  </div>
+  <div id="weeksContainer">
+    <div id="week1" class="week">
+      <h2>Week 1</h2>
+      <h3>(KW 45, 04.11.24 – 10.11.24)</h3>
+      <p>
+        Existing Lv. 0 parts diluted to 40fmol (pAR, 3HA-Tag, cCA, ARS2, GLE1,
+        RPL23) to perform our first Modular Cloning (MoClo). MoClo of our
+        Contructs cetFv (Cetuximab single cain Fragment variable) and humcetFv
+        (Humanized Cetuximab single cain Fragment variable) and transformation
+        into <i>Escherichia coli (E. coli)</i> and streak out onto LB-plates for
+        blue-white selection. Picked colonies for overnight inoculation in LB
+        media. Miniprep of the cultures for isolation of the MoClo plasmid.
+        Measuring of the DNA concentration using the Nanodrop. Test digest of
+        the isolated plasmid with restriction enzyme Bsa1 and gel
+        electrophoresis of the digested plasmid for visualization. Due to bad
+        results in the sanger sequencing, repeat of the Lv. 0 MoClo and
+        following experiments.
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure1.webp">
+        <figcaption><b>Figure 1:</b> Gel electrophoresis of the isolated plasmid DNA of
+          the Lv. 0 MoClo of cetFv and humcetFv.</figcaption>
+      </figure>
+    </div>
+
+    <div id="week2" class="week">
+      <h2>Week 2</h2>
+      <h3>(KW 46, 11.11.24 – 17.11.24)</h3>
+      <p>
+        Analysis of the Lv. 0 MoClo. Gel electrophoresis and sanger sequencing
+        show the right sequence of nucleotides in the plasmid DNA of
+        respectively three cetFv transformants and two humcetFv transformants.
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure2.webp">
+        <figcaption><b>Figure 2:</b> Test digest Gel electrophoresis of the isolated
+          plasmid DNA of the Lv. 0 MoClo of cetFv and humcetFv.</figcaption>
+      </figure>
+    </div>
+
+    <div id="week3" class="week">
+      <h2>Week 3</h2>
+      <h3>(KW 47, 18.11.24 – 24.11.24)</h3>
+      <p>
+        LB inoculation of <i>E. coli</i> from DMSO stock for the DNA isolation
+        of
+        missing Lv. 0 part 514 (SP20). Miniprep of the culture for the isolation
+        of the part SP20. Preparation for the Lv. 2 MoClo. Design of two
+        cytosolic constructs with the cetFv and humcetFv parts with no secretion
+        signal and six constructs with a secretion signal, respectively cetFv
+        and humcetFv with the secretion signals Carbonic Anhydrase (cCA),
+        Arylsulfatase (ARS2) and Gametolytic Enzyme 1 (GLE1) for the secretion
+        of the single chain Fragment variables (scFv). Transformation of the Lv.
+        2 constructs into <i>E. coli</i> for red-with selection. Miniprep
+        Plasmid DNA
+        isolation of the transformants and test digest of several colonies.
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure3.webp">
+        <figcaption><b>Figure 3:</b> Test digest and gel electrophoresis of the isolated
+          plasmid DNA of the Lv. 2 MoClo of cetFv and humcetFv.
+          Analysis of cytosolic and cCA secretion signal plasmids of the cetFv
+          and humcetFv MoClo.</figcaption>
+      </figure>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure4.webp">
+        <figcaption><b>Figure 4:</b> Test digest and gel electrophoresis of the isolated
+          plasmid DNA of the Lv. 2 MoClo of cetFv and humcetFv.
+          Analysis of ARS and GLE secretion signal plasmids of the cetFv and
+          humcetFv MoClo</figcaption>
+      </figure>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure5.webp">
+        <figcaption><b>Figure 5:</b> Test digest and gel electrophoresis of the isolated
+          plasmid DNA of the Lv. 2 MoClo of cetFv and humcetFv.
+          Analysis of GLE secretion signal plasmids of the humcetFv
+          MoClo.</figcaption>
+      </figure>
+    </div>
+
+    <div id="week4" class="week">
+      <h2>Week 4</h2>
+      <h3>(KW 48, 25.11.24 – 01.12.24)</h3>
+      <p>
+        Sanger sequencing of the cytosolic and secretory constructs. Due to bad
+        results of the sequencing, repetition of the Lv. 2 MoClo and
+        transformation into <i>E. coli</i>. Miniprep plasmid DNA isolation from
+        the
+        transformed <i>E. coli</i> cultures. Gel electrophoresis and sequencing
+        of the
+        plasmid DNA. Inoculation of <i>Chlamydomonas reinhardtii</i> strain
+        UVM4-Nit in
+        flasks for transformation next week.
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure6.webp">
+        <figcaption><b>Figure 6:</b> Test digest and gel electrophoresis of the isolated
+          plasmid DNA of the Lv. 2 MoClo of cetFv and humcetFv.
+          Analysis of all L2 plasmids of the cetFv and humcetFv
+          MoClo.</figcaption>
+      </figure>
+
+    </div>
+
+    <div id="week5" class="week">
+      <h2>Week 5</h2>
+      <h3>(KW 48, 02.11.24 – 08.12.24)</h3>
+      <p>
+        Preparation for the first <i>Chlamydomonas reinhardtii</i>
+        transformation via
+        glass beads. Autoclaving of the glass beads and pouring of the TAP
+        culture plates. Linearization of the Lv. 2 MoClo plasmids and subsequent
+        transformation into <i>C. reinhardtii</i>. Preparation for a new Lv. 0
+        MoClo,
+        design of the same constructs with an added octa His-Tag behind the
+        HA-Tag. Creation of a HA-Tag version with added mTFP as florescent
+        marker. MoClo of the Lv. 0 and transformation into <i>E. coli</i>.
+        Miniprep of
+        the cultures and gel electrophoresis with sanger sequencing for
+        conformation. Lv. 2 MoClo and transformation into <i>E. coli</i>.
+        Miniprep and
+        sanger sequencing. Inoculation of <i>C. reinhardtii</i> in flasks for a
+        new
+        transformation.
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure7.webp">
+        <figcaption><b>Figure 7:</b> Gel electrophoresis of the isolated plasmid DNA of
+          the Lv. 2 MoClo of cetFv and humcetFv. Analysis of all L2
+          plasmids of the cetFv and humcetFv MoClo</figcaption>
+      </figure>
+    </div>
+
+    <div id="week6" class="week">
+      <h2>Week 6</h2>
+      <h3>(KW 49, 09.12.24 – 15.12.24)</h3>
+      <p>
+        Transformation of the linearized His-Tag and mTFP Lv. 2 MoClo into <i>C.
+          reinhardtii</i> via glass bead transformation. Team internal
+        organization
+        events on basic laboratory practice like “how to pour TAP-plates, how to
+        read sanger sequcencing results with A plasmid Editor (ApE)”.
+        Inoculation of the HA-Taged <i>C. reinhardtii</i> transformants in
+        flasks.
+        Pouring of SDS-gels for SDS-PAGE. <br> Harvest of the cytosolic <i>C.
+          reinhardtii</i> cultures with no secretion signal from flasks for
+        screening
+        via Western Blot. SDS-PAGE and Western Blot of the cytosolic HA-Taged
+        <i>C.
+          reinhardtii</i> culture. SDS-PAGE failed therefore new inoculation of
+        <i>C.
+          reinhardtii</i> culture.
+      </p>
+    </div>
+
+    <div id="week7" class="week">
+      <h2>Week 7</h2>
+      <h3>(16.12.24 – 22.12.24)</h3>
+      <p>
+        Pouring of SDS-gels for SDS-PAGE. Harvest of the cytosolic <i>C.
+          reinhardtii</i> cultures (cetFv and humcetFv) with no secretion signal
+        from
+        flasks for screening via Western Blot. SDS-PAGE and Western Blot of the
+        cytosolic HA-Taged <i>C. reinhardtii</i> culture. Inoculation of the
+        mTFP-HA-Tagged <i>Chlamydomonas</i> in flasks for florescence screening.
+        Screening of the mTFP tagged <i>Chlamydomonas</i> cultures in the
+        fluences
+        microscope for conformation that the scFv (cetFv and humcetFv) is
+        produced. Experiment was successful due to confirmed florescence in
+        <i>Chlamydomonas</i> which was ruled out to be autofluorescence.
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure8.webp">
+        <figcaption><b>Figure 8:</b> Western Blot analysis of nine cytosolic cetFv
+          transformants of Chlamydomonas reinhardtii, UVM4 is the
+          negative control while PKL5 is the positive control.</figcaption>
+      </figure>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure9.webp">
+        <figcaption><b>Figure 9:</b> Western Blot analysis of nine cytosolic humcetFv
+          transformants of Chlamydomonas reinhardtii, UVM4 is the
+          negative control while PKL5 is the positive control.</figcaption>
+      </figure>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure10.webp">
+        <figcaption><b>Figure 10:</b> Fluorescence analysis of the mTFP construct. mTFP
+          and autofluorescence was screened independently and
+          subsequently overlayed. UVM4 was used as the negative control with a
+          cytosolic version and an version without the
+          scFv as the postive controle.</figcaption>
+      </figure>
+    </div>
+
+    <div id="week8" class="week">
+      <h2>Week 8</h2>
+      <h3>(KW51, 16.12.24 – 22.12.24)</h3>
+      <p>
+        Christmas Break – no Lab work
+      </p>
+    </div>
+
+    <div id="week9" class="week">
+      <h2>Week 9</h2>
+      <h3>(KW52, 23.12.24 – 29.12.24)</h3>
+      <p>
+        Christmas Break – no lab work
+      </p>
+    </div>
+
+    <div id="week10" class="week">
+      <h2>Week 10</h2>
+      <h3>(KW1, 30.12.24 – 05.01.25)</h3>
+      <p>
+        Christmas Break – no lab work
+      </p>
+    </div>
+
+    <div id="week11" class="week">
+      <h2>Week 11</h2>
+      <h3>(KW 2, 06.01.25 – 12.01.25)</h3>
+      <p>
+        Organizational lab week after the long break, basic lab routine like
+        replenishing the agar- and TAP plates and cleaning the sterile hood,
+        preparation of new antibiotic stocks of the common used antibiotics.
+        Organization of the -20-degree freezer.
+      </p>
+    </div>
+
+    <div id="week12" class="week">
+      <h2>Week 12</h2>
+      <h3>(KW 3, 13.01.25 – 19.01.25)</h3>
+      <p>
+        Most of the Team was sick at home – no lab work
+      </p>
+    </div>
+
+    <div id="week13" class="week">
+      <h2>Week 13</h2>
+      <h3>(KW 4, 20.01.25 – 26.01.25)</h3>
+      <p>
+        First try of screening the secretory humcetFv and cetFv constructs. Due
+        to organizational diﬀiculties, we could not perform a TCA precipitation
+        from the media of the secretory transformants, which is routinely
+        utilized for secretory proteins. We opted to use another approach where
+        we grew <i>Chlamydomonas</i> transformants directly on a nitrocellulose
+        membrane in hope that the secreted scFv sticks to the membrane. We
+        called this approach a pseudo-Dot-Blot. This Method was quickly
+        abandoned due to rapid growth of mold on the agar plates (this was due
+        to the non-sterile nitrocellulose membrane).
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure11.webp">
+        <figcaption><b>Figure 11:</b> Pseudo-Dot-Blot method, Chlamydomonas could not
+          reach the nutrients on the 1% TAP Agar. The positve
+          controls did grew on 0.8% TAP Agar.</figcaption>
+      </figure>
+    </div>
+
+    <div id="week14" class="week">
+      <h2>Week 14</h2>
+      <h3>(KW 5, 27.01.25 – 02.02.25)</h3>
+      <p>
+        Preparation for the TCA precipitation of the media from the diﬀerent
+        constructs with secretory signal. Inoculation of cCA-HA, ARS-HA and
+        GLE-HA in flasks. Preparation of the negative and positive control,
+        inoculation in flasks. Set cell number to 2 x 10<sup>5</sup> so that the
+        signal strength is comparable. Pouring SDS-Gels and preparing stock
+        solutions for Western Blotting.
+      </p>
+    </div>
+
+    <div id="week15" class="week">
+      <h2>Week 15</h2>
+      <h3>(KW 6, 03.02.25 – 09.02.25)</h3>
+      <p>
+        TCA precipitation of the media from the <i>Chlamydomonas</i> cultures
+        (cCA, ARS
+        and GLE) and freezing overnight. Loading of SDS gels with the
+        precipitated proteins and performing SDS-PAGE and subsequent Western
+        Blot. Results show that we can successfully detect the HA-Tag and
+        therefore the scFv from the Media, making it the first time that a scFv
+        of an Antibody is produced in <i>Chlamydomonas</i>. Positive control did
+        not
+        show up on test Western Blot. Inoculation of new positive control.
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure12.webp">
+        <figcaption><b>Figure 12:</b> Western Blot analysis of the TCA precipitated
+          proteins from the different secretory signal cultures.</figcaption>
+      </figure>
+    </div>
+
+    <div id="week16" class="week">
+      <h2>Week 16</h2>
+      <h3>(KW 7, 10.02.25 – 16.02.25)</h3>
+      <p>
+        Performed TCA precipitation of two positive controls used regularly in
+        the department. Positive controls tested are Fast PETase and
+        Nanoluciferase. Performed SDS-PAGE and Western Blot of the precipitated
+        protein. Both positive controls did successfully show up during Western
+        Blot screening. Inoculation of more secretory cultures to screen for the
+        most transformant that produces the highest amount of scFv.
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure13.webp">
+        <figcaption><b>Figure 13:</b> Western Blot analysis of two positive controls,
+          Fast PETase and Nanoluciferase.</figcaption>
+      </figure>
+    </div>
+
+    <div id="week17" class="week">
+      <h2>Week 17</h2>
+      <h3>(KW 8, 17.02.25 – 23.02.25)</h3>
+      <p>
+        Screening of more secretory Cultures. TCA precipitation of the Media and
+        SDS-PAGE with continued Western Blot. Design and ordering of new MoClo
+        part where we inserted a cleavage site after the scFv (of both cetFv and
+        humcetFv) to cleave oﬀ the SP20 and HA-Tag. Inoculation of more
+        <i>Chlamydomonas</i> culture.
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure14.webp">
+        <figcaption><b>Figure 14:</b> Western Blot analysis of the TCA precipitated
+          proteins from the different secretory signal cultures.</figcaption>
+      </figure>
+    </div>
+
+    <div id="week18" class="week">
+      <h2>Week 18</h2>
+      <h3>(KW 9, 24.02.25 – 02.03.25)</h3>
+      <p>
+        Lv. 0 Moclo of the new HRV constructs. TWIST could only synthetize one
+        of the four designed HRV constructs. Sequencing of the Lv.0 part and
+        Lv.2 MoClo. Inoculation of <i>Chlamydomonas</i> for a comparison Western
+        Blot
+        of the diﬀerent secretion signals.
+      </p>
+    </div>
+
+    <div id="week19" class="week">
+      <h2>Week 19</h2>
+      <h3>(KW 10, 03.03.25 – 09.03.25)</h3>
+      <p>
+        TCA precipitation of the media from the diﬀerent secretory signals.
+        Performed SDS-PAGE and Western Blot of the precipitated proteins.
+        Western Blot shows that cCA secretory signal show the highest signal.
+        Unanimously decided that we will continue with the cCA cultures for
+        future experiments. Lv. 2 MoClo of the HRV did not work.
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure15.webp">
+        <figcaption><b>Figure 15:</b> comparison Western Blot analysis of the different
+          secretory signals, cCA produces the highest signal of
+          scFv.</figcaption>
+      </figure>
+    </div>
+
+    <div id="week20" class="week">
+      <h2>Week 20</h2>
+      <h3>(KW 11, 10.03.25 – 16.03.25)</h3>
+      <p>
+        Inoculated new flasks for a second comparison Western Blot of the
+        secretory signals. Lv. 2 Moclo has continued problems as the transformed
+        <i>E. coli</i> did not grow on the Kanamycin LB plates. Pouring of new
+        LB
+        plates and testing out if the problem is caused by the TOP10 strain that
+        was used. Testing out other strains like DH5alpha. Set cell number of
+        the <i>Chlamydomonas</i> to 2 x 10<sup>5</sup> so that the signal
+        strength is
+        comparable.
+      </p>
+    </div>
+
+    <div id="week21" class="week">
+      <h2>Week 21</h2>
+      <h3>(KW 12, 17.03.25 – 23.03.25)</h3>
+      <p>
+        TCA precipitation of the media from the diﬀerent secretory signals for
+        the comparison Western Blot 2. Performed SDS-PAGE and Western Blot of
+        the precipitated proteins.
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure16.webp">
+        <figcaption><b>Figure 16:</b> second comparison Western Blot analysis of the
+          different secretory signals.</figcaption>
+      </figure>
+    </div>
+
+    <div id="week22" class="week">
+      <h2>Week 22</h2>
+      <h3>(KW 13, 24.03.25 – 30.03.25)</h3>
+      <p>
+        Brainstormed new experiment ideas, decided on a volumetric experiment.
+        RPTU iGEM 2019 could show that protein accumulation stopped after
+        <i>Chlamydomonas</i> grew in more than 35 ml TAP media. Experiment was
+        set up
+        to 1 L TAP media. Inoculation of the cCA <i>Chlamydomonas</i> culture in
+        flask.
+      </p>
+    </div>
+
+    <div id="week23" class="week">
+      <h2>Week 23</h2>
+      <h3>(KW 14, 31.03.25 – 06.04.25)</h3>
+      <p>
+        Inoculation of <i>Chlamydomonas</i> cCA-HA-Tag cultures with a cell
+        density of
+        2 x 10<sup>5</sup> in Flasks of a volume ranging from 6 ml to 1 L.
+        Preparation to perform a PCR to remove the mNeonGreen from the HRV part
+        that we ordered from TWIST.
+      </p>
+    </div>
+
+    <div id="week24" class="week">
+      <h2>Week 24</h2>
+      <h3>(KW 15, 07.04.25 – 13.04.25)</h3>
+      <p>
+        Harvest of the Volumetric experiment media. Performed SDS-PAGE and
+        Western Blot of the precipitated proteins. We showed that our protein
+        accumulates at 1 L media which is a record in our department. Original
+        PCR failed, repeat with optimized parameters.
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure17.webp">
+        <figcaption><b>Figure 17:</b> volumetric Western Blot analysis to test the
+          accumulation of the scFv in higher amounts of TAP media.</figcaption>
+      </figure>
+    </div>
+
+    <div id="week25" class="week">
+      <h2>Week 25</h2>
+      <h3>(KW 16, 14.04.25 – 20.04.25)</h3>
+      <p>
+        Inoculation of <i>Chlamydomonas</i> for a third comparison Western Blot
+        of the
+        secretory signals. Setting the cell density to 2 x 10<sup>5</sup>.
+        Creation of a DMSO <i>E. coli</i> stock of all to this point created
+        parts,
+        storage in the -80-degree freezer and registration of the parts in the
+        oﬀicial department lists. Repeat of the PCR failed once again, second
+        repeat of the PCR.
+      </p>
+    </div>
+
+    <div id="week26" class="week">
+      <h2>Week 26</h2>
+      <h3>(KW 17, 21.04.25 – 27.04.25)</h3>
+      <p>
+        TCA precipitation of <i>Chlamydomonas</i> culture for third secretory
+        signal
+        comparison Western Blot. Performed SDS-PAGE and Western Blot of the
+        precipitated proteins. Third repeat of the PCR. Experiment was
+        successful this time. Send oﬀ PCR part for sanger sequencing.
+        Inoculation of <i>Chlamydomonas</i> culture for a second volumetric
+        accumulation experiment. Inoculation of <i>Chlamydomonas</i>
+        transformant with
+        HRV-mNG for fluorescent screening.
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure18.webp">
+        <figcaption><b>Figure 18:</b> third comparison Western Blot analysis of the
+          different secretory signals.</figcaption>
+      </figure>
+    </div>
+
+    <div id="week27" class="week">
+      <h2>Week 27</h2>
+      <h3>(KW 18, 28.04.25 – 04.05.25)</h3>
+      <p>
+        TCA precipitation of <i>Chlamydomonas</i> culture for second volumetric
+        accumulation Western Blot. Performed SDS-PAGE and Western Blot of the
+        precipitated proteins. In addition to the TCA precipitation, we
+        conducted another approach where the proteins from the Media were
+        precipitated by 80% acetone. This approach would spare us to use the
+        highly dangerous TCA. PCR sanger sequencing showed a successful removal
+        of the mNG form the part. Lv. 2 MoClo was conducted and transformed into
+        <i>Chlamydomonas</i>.
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure19.webp">
+        <figcaption><b>Figure 19:</b> Western Blot analysis of the TCA precipitation
+          form three transformants from the cetFv and humcetFv
+          cultures.</figcaption>
+      </figure>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure20.webp">
+        <figcaption><b>Figure 20:</b> Western Blot analysis of the acetone precipitation
+          form three transformants from the cetFv and humcetFv
+          cultures.</figcaption>
+      </figure>
+    </div>
+
+    <div id="week28" class="week">
+      <h2>Week 28</h2>
+      <h3>(KW 19, 05.11.25 – 11.05.25)</h3>
+      <p>
+        Screening of the HRV constructs for fluorescence. Assembly of a 10 L
+        batch bioreactor originally used for fermenting filamentous fungi.
+        Thoroughly cleaning of the bioreactor and autoclaving. Inoculation of
+        the bioreactor with <i>Chlamydomonas</i> UVM4.
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure21.webp">
+        <figcaption><b>Figure 21:</b> Fluorescence analysis of the mTFP construct. mTFP
+          and autofluorescence was screened independently
+          and subsequently overlayed. UVM4 was used as the negative
+          control.</figcaption>
+      </figure>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure22.webp" style="width: 40%; height: auto">
+        <figcaption><b>Figure 22:</b> 10L batch bioreactor previously used to ferment
+          filamentous fungi.</figcaption>
+      </figure>
+    </div>
+
+    <div id="week29" class="week">
+      <h2>Week 29</h2>
+      <h3>(KW 20, 12.05.25 – 18.05.25)</h3>
+      <p>
+        Planning of new experiment where we test at what timepoint we can detect
+        the accumulation of the protein in the media. This experiment was called
+        ST-test (secretion-time-test). Inoculation of <i>Chlamydomonas</i> for
+        ST-test.
+        Disassembly of the 10 L batch bioreactor, the experiment shows that
+        <i>Chlamydomonas</i> does grow in this system. Discontinued use of the
+        bioreactor due to continued contamination. Assembly of another
+        bioreactor called BIOSTREAM2 – flatpanel bioreactor 1.8 L. Inoculation
+        of cCA-humcetFv <i>Chlamydomonas</i> cultures. Inoculation of
+        <i>Chlamydomonas</i>
+        cultures for third volumetric test.
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure23.webp" style="width: 50%; height: auto">
+        <figcaption><b>Figure 23:</b> assembly of the called BIOSTREAM 2 – flatpanel
+          bioreactor 1.8 L.</figcaption>
+      </figure>
+    </div>
+
+    <div id="week30" class="week">
+      <h2>Week 30</h2>
+      <h3>(KW 21, 19.05.25 – 25.05.25)</h3>
+      <p>
+        Daily acetone protein precipitation for ST-test. Aceton precipitation of
+        <i>Chlamydomonas</i> culture for third volumetric accumulation Western
+        Blot.
+        Performed SDS-PAGE and Western Blot of the precipitated proteins.
+        Flatpanel bioreactor got contaminated, removal of contents and
+        autoclaving for second try. Preparations to start work in the toxicology
+        lab.
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure24.webp">
+        <figcaption><b>Figure 24:</b> Western Blot analysis of the second volumetric
+          experiment to test the accumulation of the scFv in higher
+          amounts of TAP media.</figcaption>
+      </figure>
+    </div>
+
+    <div id="week31" class="week">
+      <h2>Week 31</h2>
+      <h3>(KW 22, 26.05.25 – 01.06.25)</h3>
+      <p>
+        Aceton precipitation of <i>Chlamydomonas</i> culture for ST-test.
+        Performed
+        SDS-PAGE and Western Blot of the precipitated proteins. Second try for
+        the BIOSTREAM 2 bioreactor. Starting to isolate and purify the secreted
+        protein with IMAC using the His-Tag transformants. Started to work in
+        the toxicology lab to verify the function of the humcetFv in Vivo
+        utilizing cell culture, learned the basics of cell culture like how to
+        passage cells.
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure25.webp">
+        <figcaption><b>Figure 25:</b> Western Blot analysis of the ST-test from
+          cCA-cetfv and cCA-humcetFv culture, showing protein
+          accumulation starts as early as day 2.</figcaption>
+      </figure>
+    </div>
+
+    <div id="week32" class="week">
+      <h2>Week 32</h2>
+      <h3>(KW 23, 02.06.25 – 08.06.25)</h3>
+      <p>
+        BIOSTREAM 2 biorector got contaminated again, removal of contents and
+        autoclaving for third try. SDS-PAGE and Coomassie staining of the
+        isolated and purified proteins from <i>Chlamydomonas</i> culture with
+        His-Tag
+        using IMAC.
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure26.webp">
+        <figcaption><b>Figure 26:</b> Coomassie gel and corresponding Western Blot
+          analysis of the protein purification.</figcaption>
+      </figure>
+    </div>
+
+    <div id="week33" class="week">
+      <h2>Week 33</h2>
+      <h3>(KW 24, 09.06.25 – 15.06.25)</h3>
+      <p>
+        Designed new scFv parts: Pantitumumab, Matuzumab, Trastuzumab. Ordered
+        the new designed parts on Twist. Continued with protein purification
+        using IMAC. Third BIOSTREAM 2 approach did work out, culture stayed
+        sterile. Taking media from the bioreactor on day 7, 8 and 9 to test via
+        Western Blot if protein accumulates in 1.8 L TAP media.
+      </p>
+    </div>
+
+    <div id="week34" class="week">
+      <h2>Week 34</h2>
+      <h3>(KW 25, 16.06.25 – 22.06.25)</h3>
+      <p>
+        SDS-PAGE and Western Blot of the Aceton precipitated media from day 7, 8
+        and 9 of the BIOSTREAM 2 bioreator culture. Two bioreactors were running
+        simultaneously; one filled with TAP media and the other with HMP Media.
+        Continued with protein purification using IMAC. Planning of the
+        resazurin reduction assay in the toxicology lab to test the scFv.
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure27.webp">
+        <figcaption><b>Figure 27:</b> BIOSTREAM 2 bioreator protein precipitation from
+          cCA-humcetFv culture, day 7, 8 and 9 using TAP and HMP
+          media.</figcaption>
+      </figure>
+    </div>
+
+    <div id="week35" class="week">
+      <h2>Week 35</h2>
+      <h3>(KW 26, 23.06.25 – 29.06.25)</h3>
+      <p>
+        First attempted to test our purified scFv in vitro using cell culture.
+        SW48 cells should react to a treatment with the scFv whereas the
+        negative control HT29 should not show any reaction. First attempted of
+        the resazurin reduction assay did not show any eﬀects. Protein
+        purification is continued to treat the cells with a higher dosage.
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure28.webp">
+        <figcaption><b>Figure 28:</b> 400x zoom of the HT29 cells (left) and SW48 cells
+          (right)</figcaption>
+      </figure>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure29.webp">
+        <figcaption><b>Figure 29:</b> schematic overview of the treatment plan of the
+          HT29 and SW48 cells.</figcaption>
+      </figure>
+    </div>
+
+    <div id="week36" class="week">
+      <h2>Week 36</h2>
+      <h3>(KW 27, 30.06.25 – 06.07.25)</h3>
+      <p>
+        Continued with protein purification using IMAC. Planning of an
+        experiment doubt pulldown-assay where we can show that the scFv can bind
+        the target protein by using the target protein, EGFR with an added
+        His-Tag which will bind during IMAC.
+      </p>
+    </div>
+
+    <div id="week37" class="week">
+      <h2>Week 37</h2>
+      <h3>(KW 28, 07.07.25 – 13.07.25)</h3>
+      <p>
+        Continued with protein purification using IMAC. Archived the highest
+        protein yield thus far with 49 µg/ml.
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure30.webp">
+        <figcaption><b>Figure 30:</b> Coomassie gel and corresponding Western Blot
+          analysis of the protein purification.</figcaption>
+      </figure>
+    </div>
+
+    <div id="week38" class="week">
+      <h2>Week 38</h2>
+      <h3>(KW29, 14.07.25 – 20.07.25)</h3>
+      <p>
+        Lv. 0 MoClo of the new scFv Pantitumumab, Matuzumab, Trastuzumab failed.
+        First attempts of the pulldown assay to test the binding capacity of the
+        scFv (humcetFv), experiment was not successful as the negative control
+        showed a signal. Continued with protein purification using IMAC.
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure31.webp">
+        <figcaption><b>Figure 31:</b> Western Blot analysis of the first attempt from
+          the pulldown assay to show that the produced scFv can bind
+          its target protein (EGFR)</figcaption>
+      </figure>
+    </div>
+
+    <div id="week39" class="week">
+      <h2>Week 39</h2>
+      <h3>(KW 30, 21.07.25 – 27.07.25)</h3>
+      <p>
+        Continued with protein purification using IMAC. Lv. 0 MoClo of scFv
+        Pantitumumab, Matuzumab, Trastuzumab failed again, after careful
+        inspection it was discovered that there was a mistake that happened
+        during the ordering of the parts. Parts were ordered again.
+      </p>
+    </div>
+
+    <div id="week40" class="week">
+      <h2>Week 40</h2>
+      <h3>(KW 31, 28.07.25 – 03.08.25)</h3>
+      <p>
+        Continued with protein purification using IMAC. Optimization of the
+        pulldown assay to show that the scFv binds the target protein. Lv. 0
+        MoClo of scFv Pantitumumab, Matuzumab, Trastuzumab was successful. Lv 2.
+        MoClo of scFv Pantitumumab, Matuzumab, Trastuzumab.
+      </p>
+    </div>
+
+    <div id="week41" class="week">
+      <h2>Week 41</h2>
+      <h3>(KW 32, 04.08.25 – 10.08.25)</h3>
+      <p>
+        Continued with protein purification using IMAC. Second attempt for the
+        pulldown assay with optimized variables. Planning of the remaining time
+        in the iGEM competition, it was decided that some experiments should be
+        redone to achieve cleaner results that we can showcase.
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure32.webp">
+        <figcaption><b>Figure 32:</b> Western Blot analysis of the second attempt from
+          the pulldown assay to show that the produced scFv can
+          bind its target protein (EGFR). The negative control Luciferase was
+          positive.</figcaption>
+      </figure>
+    </div>
+
+    <div id="week42" class="week">
+      <h2>Week 42</h2>
+      <h3>(KW 33, 11.08.25 – 17.08.25)</h3>
+      <p>
+        Final pulldown assay with improved parameters, the negative control was
+        changed to fastPETase as luciferase showed aﬀinity to the nickel beads.
+        Results of the pulldown assay confirm a binding capacity of the scFv to
+        the target protein EGFR. Transformation of cCA-cetFv and cCA-humcetFv
+        construct into <i>Chlamydomonas</i> strain UVM11CW and ClipUVM. Reapeat
+        of the
+        TCA vs. Aceton Western Blot and comparison Blot of the secretory
+        signals. Transformation of Lv. 2 MoClo scFv Pantitumumab, Matuzumab,
+        Trastuzumab into <i>Chlamydomonas</i>.
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure33.webp">
+        <figcaption><b>Figure 33:</b> Western Blot analysis of the pulldown assay,
+          showing that our cetFv and humcetFv binds the EGFR target
+          protein, whereas the negative control PETase does not.</figcaption>
+      </figure>
+    </div>
+
+    <div id="week43" class="week">
+      <h2>Week 43</h2>
+      <h3>(KW 34, 18.08.25 – 24.08.25)</h3>
+      <p>
+        Last attempt in the toxicology lab to test the in vitro capacity of the
+        produced and purified scFv. Resazurin reduction assay did not give any
+        valuable data, even when the scFv dose was increased. The in vitro
+        assays did not deliver negative results because the positive control
+        (commercial cetuximab) also did not show any eﬀects on the cells.
+        Pharmacological inhibitor did show slight eﬀects at the highest dosage.
+        The in vitro experiments are deemed improvable. SDS-PAGE and Western
+        Blot of TCA vs. Aceton Western Blot and comparison Blot of the secretory
+        signals.
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure34.webp">
+        <figcaption><b>Figure 34:</b> final comparison of the secretory signals, Western
+          Blot analysis for the WIKI</figcaption>
+      </figure>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure35.webp">
+        <figcaption><b>Figure 35:</b> Final Western Blot analysis of the TCA vs. acetone
+          precipitation for the WIKI</figcaption>
+      </figure>
+    </div>
+
+    <div id="week44" class="week">
+      <h2>Week 44</h2>
+      <h3>(KW 35, 25.08.25 – 31.08.25)</h3>
+      <p>
+        Final Week in the Lab. SDS-PAGE and Western Blot of the Aceton
+        precipitation from the scFv Pantitumumab, Matuzumab, Trastuzumab
+        <i>Chlamydomonas</i> transformants. Pantitumumab and Matuzumab did not
+        show a
+        signal on the Western Blot. SDS-PAGE and Western Blot of the cCA-cetFv
+        and cCA-humcetFv <i>Chlamydomonas</i> strain UVM11CW and ClipUVM
+        transformants.
+      </p>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure36.webp">
+        <figcaption><b>Figure 36:</b> Western Blot analysis of the Trastuzumab
+          transformants, confirming that the protein gets secreted into the
+          medium.</figcaption>
+      </figure>
+      <figure>
+        <img src="https://static.igem.wiki/teams/5758/notebook/figure37.webp">
+        <figcaption><b>Figure 37:</b> Western Blot analysis of the CLiPUVM transformants
+          with cetFv and humcetFv</figcaption>
+      </figure>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/notebook.js') }}"></script>
+{% endblock %}

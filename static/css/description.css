@@ -1,0 +1,169 @@
+#ccag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60vw;
+}
+.MainWrapper h2{
+    color: var(--lightpurple);
+}
+#ccag>div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+}
+#ccag img{
+    width: 100%;
+}
+
+#ccag>div>div {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    /* 2 Spalten */
+    grid-template-rows: 50% 50%;
+    /* 2 Zeilen */
+    width: 50%;
+    position: relative;
+    padding: 3rem 0;
+}
+#ccag figure{
+    padding: 2rem;
+    width: calc(50% - 4rem);
+}
+
+.item>* {
+    width: 100%;
+}
+
+.item p {
+    max-width: 100%;
+    text-align: left;
+}
+
+figcaption {
+    color: var(--lightpurple);
+    text-align: center;
+}
+
+figure {
+    margin: 0;
+}
+
+#signalweg {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--lightpurple);
+    border-radius: 50px;
+}
+
+#signalweg img {
+    width: 100%;
+}
+
+#signalweg>div {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    margin: 0 4vw;
+}
+
+#signalweg>div p {
+    width: 100%;
+    text-align: justify;
+}
+
+#compare {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    gap: 5rem;
+}
+
+#compare>div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+#compare ul,
+#compare li {
+    width: fit-content;
+}
+
+#moclo {
+    width: 80%;
+    background-color: var(--lightpurple);
+    border-radius: 3vw;
+}
+
+#moclo img {
+    width: 100%;
+    margin-top: -13%;
+    overflow: hidden;
+}
+
+
+
+/*------------CLAMY-----------*/
+#clamy {
+    width: 90vw;
+    height: 90vh;
+}
+#clamy div{
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#clamy img,
+#clamy svg {
+    pointer-events: none;
+  position: absolute;
+  inset: 0;          
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0;
+  z-index: 1;
+}
+
+/* Bild hält Seitenverhältnis (kein Cropping, keine Verzerrung) */
+#clamy img {
+  object-fit: contain;
+  z-index: 0;
+}
+
+/* SVG selbst ignoriert Maus */
+#clamy svg path {
+    pointer-events: visibleFill;
+    /* nur die Füllfläche reagiert */
+    fill: var(--darkestpurple);
+    opacity: .6;
+}
+
+/* Effekte nur wenn man IM PATH ist */
+#clamy svg:has(path:hover) path {
+    opacity: .1;
+    /* macht innen sichtbar beim Hover */
+    stroke-width: 3;
+}
+
+/* Paragraphs per [hidden] ein-/ausblenden */
+#clamyText [hidden] { 
+    display: none;
+ }
+
+/* Optional: aktives SVG optisch markieren */
+#clamy svg.is-active path {
+  fill: transparent;
+}
+
+#cancer2{
+    width: 90vw;
+    background-color: var(--lightpurple);
+    padding: 1vw;
+}

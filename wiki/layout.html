@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://static.igem.wiki/common/icons/favicons/igem-2022.svg"/>
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+
+    <!-- Bootstrap CSS -->
+    <!--<link href="{{ url_for('static', filename = 'css/global/bootstrap.min.css') }}" rel="stylesheet">-->
+
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename = 'css/global/fonts.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'css/global/style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/global/fade.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'css/global/menu.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'css/global/footer.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'css/global/slick.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'css/global/slide.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'css/global/side-nav.css') }}" rel="stylesheet">
+
+
+    {% block extra_css %}{% endblock %}
+
+    <title>{% block title %}{% endblock %} | RPTU-Kaiserslautern - iGEM 2025</title>
+
+</head>
+<body>
+  <!-- Navigation -->
+  {% include 'menu.html' %}
+
+  <!-- Page Content -->
+  <div class="container">
+    {% block page_content %}{% endblock %}
+  </div>
+
+  <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
+  {% include 'footer.html' %}
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="{{ url_for('static', filename = 'js/modules/jquery.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'js/modules/slick.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'js/modules/peertube.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'js/tools.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'js/side-nav.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'js/footer.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'js/fade.js') }}"></script>
+
+  {% block extra_js %}{% endblock %}
+
+</body>
+</html>

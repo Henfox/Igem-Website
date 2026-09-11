@@ -1,0 +1,50 @@
+body{
+    --logo-slider-bg: var(--dropdown-bg)
+}
+
+.footer {
+    background-color: var(--nav-bg);
+    display: inline-block;
+    width: calc(100% - 5vw);         /* 6rem */
+    padding: 0.416667vw 2.5vw;       /* .5rem 3rem */
+    color: white;
+}
+
+.footer a {
+    color: white;
+}
+
+.footer h1 {
+    font-family: roboto-slab-semibold;
+}
+
+.lowerFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#upperFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#socials a{
+    text-decoration: none;
+}
+
+#logo-slider-container{
+    transform-origin: right center;
+    background-color: var(--logo-slider-bg);
+    scale: 1.5;
+}
+
+.footer-icon:hover {
+    color: lightgray;
+}
+
+#sponsor-slides .slick-list {
+    width: 8.333333vw;               /* 10rem */
+}

@@ -1,0 +1,14 @@
+.fade{
+opacity: 0;
+transition: opacity 600ms ease, transform 1s ease;
+will-change: transform,opacity;
+}
+
+.fadeLeft { transform: translate(-200px); }
+.fadeRight{ transform: translate(200px); }
+.fadeBottom{ transform: translate(0,200px); }
+
+.fade.fade-visible{
+transform: none;
+opacity: 1;
+}

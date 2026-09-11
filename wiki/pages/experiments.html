@@ -1,0 +1,1740 @@
+{% extends "layout.html" %}
+
+{% block extra_css %}
+<link href="{{ url_for('static', filename='css/experiments.css') }}"
+  rel="stylesheet">
+{% endblock %}
+
+{% block title %}Experiments{% endblock %}
+
+{% block page_content %}
+<div class="protocol-page">
+  <div class="MainWrapper protocols-container">
+    <h1>Protocols, media and devices we used throughout the iGEM project</h1>
+    <details>
+      <summary><h2>Assays</h2></summary>
+      <div class="conent-wrapper">
+        <h2 class="abstand">TCA vs Acetone Precipitation</h2>
+        <p>This protocol is to test whether Acetone or TCA is a more suitable
+          reagent for precipitating
+          secreted protein.</p>
+        <ol>
+          <li>A preculture of one HA-protein tagged secreting Chlamydomonas
+            culture, a negative
+            control (e.g., UVM4) and a positive control (L5) were prepared in
+            TAP-NH₄ medium.
+            Cultures were incubated under continuous light (70 μmol photons
+            m⁻²s⁻¹) with orbital
+            shaking at 120 rpm for seven days.</li>
+          <li>Cell density was determined and the HA-protein tagged secreting
+            Chlamydomonas strain
+            was diluted into 2 Erlenmeyer flasks to a density of 2×10⁵ cells/ml.
+            Two negative controls
+            and one positive control were included.</li>
+          <li>After six days, the cultures were harvested and 5 technical
+            replicates were precipitated, one
+            half with <a class="normal" href="#acetone">acetone</a> and the other half with <a class="normal"
+              href="#TCA">TCA</a>.</li>
+          <li>20 μl of SDS sample from the acetone-precipitated protein and ~4.1
+            μl from the TCA
+            precipitated protein sample were loaded onto an SDS-PAGE gel to
+            ensure correct ratio of
+            protein concentration.</li>
+          <li><a class="normal" href="#SDS">SDS-PAGE</a> and <a class="normal" href="#westernblot">Western
+              Blotting</a> were performed as described in the standard
+            protocols.</li>
+        </ol>
+        <figure>
+          <img
+            src="https://static.igem.wiki/teams/5758/experiments/experiments-figure1-1.webp">
+          <figcaption><b>Figure 1:</b> SDS-PAGE loading scheme for the TCA vs.
+            Acetone precipitation test. 3.5 μl PageRuler™ Plus Prestained
+            Protein Ladder is used as the marker. For the HA-protein tagged
+            secreting Chlamydomonas strain and negative
+            control (UVM4), 4.1 μl of TCA-precipitated sample and 20 μl of
+            acetone precipitated sample were loaded. PKL5 was
+            included as a positive control. Created with Biorender.</figcaption>
+        </figure>
+        <h2 class="abstand">Volume test</h2>
+        <p>This assay is designed for the initial scale-up of protein-secreting
+          strains. It allows an estimation of
+          the culture volume that yields the highest protein amount.</p>
+        <ol>
+          <li>A preculture of one HA-protein tagged secreting Chlamydomonas
+            culture was prepared in
+            TAP-NH₄ medium. Cultures were incubated under continuous light (70
+            μmol photons
+            m⁻²s⁻¹) with orbital shaking at 120 rpm for seven days.</li>
+          <li>Cell density was determined, and the test strain was diluted into
+            1000 mL adjusting to a
+            final density of 2×10⁵. The flasks from 6 mL to 400 mL were filled
+            with this dilution. Dilution
+            was repeated for the 1000 mL flask. Cultures were incubated again
+            for six more days.</li>
+          <li>After six days, the supernatant was harvested, and proteins were
+            <a class="normal" href="#acetone">precipitated with ice-cold
+              acetone</a>.</li>
+          <li><a class="normal" href="#SDS">SDS-PAGE</a> and <a class="normal" href="#westernblot">Western
+              blotting</a> were performed as described in the standard
+            protocols.</li>
+        </ol>
+        <figure>
+          <img
+            src="https://static.igem.wiki/teams/5758/experiments/figure2.webp">
+          <figcaption><b>Figure 2:</b> Volume test. <b>(A)</b> Erlenmeyer flasks
+            with culture volumes ranging from 6 mL to 100 mL. <b>(B)</b>
+            SDS-PAGE
+            loading scheme for the volume test. 3.5 μl PageRuler™ Plus
+            Prestained Protein Ladder is used as the marker. 10 μl of
+            acetone precipitated sample from each culture volume (6-1000 mL)
+            were loaded. Created with Biorender.</figcaption>
+        </figure>
+        <h2 class="abstand">ST-Test (secretion-time-Test)</h2>
+        <p>This assay is designed to test the required amount of time for the
+          Chlamydomonas cultures to
+          accumulate the secreted scFv in the media. It allows optimization of
+          the incubation time for
+          subsequent experiments by determining when sufficient protein
+          accumulation has occurred.</p>
+        <ol>
+          <li>Liquid Chlamydomonas cultures of CetFv and HumcetFv and a negative
+            control (e.g. UVM4)
+            were prepared. Cultures were incubated under continuous light (70
+            μmol photons m⁻²s⁻¹)
+            with orbital shaking at 120 rpm for several days.</li>
+          <li>Three 25 ml flasks were inoculated with the respective
+            Chlamydomonas cultures, and the
+            final cell density was adjusted to 2 × 10⁵ cells/ml.</li>
+          <li>Samples of the CetFv and HumcetFv cultures were harvested
+            continuously for six days,
+            starting at day zero after inoculation.</li>
+          <li>The proteins were precipitated after each harvest using the <a class="normal"
+              href="#acetone">acetone precipitation method</a> and
+            the acetone-precipitated proteins were frozen at –20°C.</li>
+          <li>The acetone precipitation protocol was continued and <a class="normal"
+              href="#SDS">SDS-PAGE</a> followed by <a class="normal"
+              href="#westernblot">Western
+              blotting</a> was performed according to protocols.</li>
+        </ol>
+        <figure>
+          <img
+            src="https://static.igem.wiki/teams/5758/experiments/figure3-3.webp">
+          <figcaption><b>Figure 3:</b> Schematic overview of the ST-test
+            workflow showing daily sampling from Chlamydomonas cultures over six
+            days, followed by acetone precipitation and protein analysis via
+            SDS-PAGE and Western blotting. Created with
+            Biorender.</figcaption>
+        </figure>
+        <h2 class="abstand">Pulldown-Interaction Assay</h2>
+        <p>This interaction assay is designed to determine whether the
+          single-chain fragment can specifically
+          interact with its corresponding receptor epitope (e.g., EGF
+          receptor).</p>
+        <ol>
+          <li>Liquid cultures of CetFv, HumcetFv and a negative control (e.g.,
+            PETase) were prepared in
+            TAP-NH₄ medium. Cultures were incubated under continuous light (70
+            μmol photons
+            m⁻²s⁻¹) with orbital shaking at 120 rpm for several days.
+            note: test proteins must not carry a His-tag.</li>
+          <li>Cultures were harvested several days after stationary phase in 50
+            ml Falcon tubes.</li>
+          <li>Cultures were centrifuged 2x at 4,000g for 4 min to harvest
+            supernatant.</li>
+          <li>Proteins were concentrated by ammonium sulfate precipitation
+            followed by dialysis in PBS
+            overnight.</li>
+          <li>66 μl Ni-NTA were equilibrated in PBS in a reaction tube.</li>
+          <li>20 μl of the EGFR (50 ng/μl) were mixed with 300 μl of ammonium
+            sulfate-concentrated
+            protein and incubated for 30 min at 37°C.</li>
+          <li>A sample for Western blot analysis was taken, and the volume was
+            adjusted to 1 ml by
+            adding PBS.</li>
+          <li>Storage buffer was removed from Ni-NTA by plugging a white tip
+            into a blue one. The
+            complete sample was loaded into each Ni-NTA reaction tube and 40 μl
+            of cOmplete™
+            protease inhibitor were added.</li>
+          <li>Samples were incubated for 30 min under constant inversion, then
+            placed on ice for 10 min.</li>
+          <li>Samples were centrifuged at 100 g for 30 sec at 4 °C.</li>
+          <li>A sample was collected, the supernatant was discarded, and the
+            beads were washed with
+            PBS and 5 mM imidazole.</li>
+          <li>Samples were centrifuged at 100 g for 30 sec at 4°C.</li>
+          <li>A sample was taken, the wash buffer was discarded, and 50 μl
+            elution buffer with PBS and
+            500 mM imidazole were added. Samples were incubated for 2 min.</li>
+          <li>Samples were centrifuged at 100 g for 30 sec at 4 °C.</li>
+          <li>The supernatant was collected, and all samples were <a class="normal"
+              href="#acetone">precipitated with ice-cold acetone.</a></li>
+          <li><a class="normal" href="#SDS">SDS-PAGE</a> and <a class="normal" href="#westernblot">Western
+              blotting</a> were performed according to standard protocols.</li>
+        </ol>
+        <figure>
+          <img
+            src="https://static.igem.wiki/teams/5758/experiments/figure4-1.webp">
+          <figcaption><b>Figure 4:</b> Pulldown-Interaction Assay. In the first
+            reaction tube, EGFR and scFv interact with each other. After
+            incubation, the mixture is transferred into a new reaction tube with
+            Ni-NTA beads. The His-tagged EGFR binds to Ni-
+            NTA, keeping the scFv from being washed away. Created with
+            BioRender.</figcaption>
+        </figure>
+        <h2 class="abstand">Resazurin Assay</h2>
+        <p>This assay is designed to evaluate the cytotoxic effects of various
+          treatments on cell viability using
+          a resazurin-based metabolic activity indicator.</p>
+        <ol>
+          <li>40,000 cells in triplicates per well in cell culture medium for
+            the 24h incubation period and
+            10,000 cells in triplicates per well in cell culture medium for the
+            72h incubation period were
+            plated. Cells were incubated for 24h.</li>
+          <li>Solutions containing the amount of drug to be tested were
+            prepared. The Cetuximab, scFv,
+            5-FU and saponin solutions were diluted in a volume of 700 μl for
+            both plates.</li>
+          <li>Resazurin stock solution was prepared according to the
+            manufacturer's protocol.</li>
+          <li>After the 24h incubation period, the medium from the wells
+            containing the cells was aspirated
+            and 100 μl of the respective solution were added to the wells in
+            triplicates. Cells were
+            incubated again, and the starting time of the treatment was noted
+            down.</li>
+          <li>600 μl of the prepared resazurin stock solution were mixed with
+            5.4 ml of cell culture medium.</li>
+          <li>The medium from the cells was aspirated and 100 μl of the
+            resazurin mixture were added to
+            the cells. Cells were incubated for exactly 90 minutes.</li>
+          <li>After the incubation, cells were taken out, and the fluorescence
+            intensity was measured at an
+            excitation wavelength of 544 nm and an emission wavelength of 590
+            nm.</li>
+          <li>Steps 5 – 7 were repeated for the 72h incubation plate.</li>
+        </ol>
+        <figure>
+          <img
+            src="https://static.igem.wiki/teams/5758/experiments/figure5.webp">
+          <figcaption><b>Figure 5: (A)</b> 96-well plate after initial treatment
+            with the resazurin mix before the 90-minute incubation period
+            <b>(B)</b> 96-well plate
+            expectations after the 90 minutes incubation period, validating the
+            cytotoxic effects of the commercial cetuximab and
+            the scFv <b>(C)</b> results after the 90 minutes incubation period,
+            validating the survival of the cetuximab and scFv treated
+            cells.</figcaption>
+        </figure>
+      </div>
+    </details>
+    <h2>General Protocols</h2>
+    <details class="sub">
+      <summary>DNA Protocols</summary>
+      <div class="conent-wrapper">
+        <h2 class="abstand">Modular Cloning</h2>
+        <p>Calculate the volume needed for a final concentration of 40 fmol for
+          each part. Knowing the size of the
+          part allows you to calculate the amount of DNA (in ng) equaling 40
+          fmol. (For this you can use online
+          tools.)
+          Mix the components in a small reaction tube, add the enzymes (BsaI and
+          T4 DNA Ligase) last. Place
+          tubes into a thermocycler.</p>
+        <table class="generalTable">
+          <tr>
+            <th>Component</th>
+            <th>Amount</th>
+            <th>Concentration</th>
+            <th>Protocol</th>
+          </tr>
+          <tr>
+            <td>MoClo Parts (n)<br>
+              Part 1<br>
+              Part 2<br>
+              Part 3<br>
+              ...<br>
+              Destiniation vector</td>
+            <td>1 µl</td>
+            <td>40 fmol</td>
+            <td>37°C 2 min<br>
+              16°C 5 min<br>
+              repeat 45 x<br>
+              50°C 5 min<br>
+              80°C 10 min<br>
+              4°C ∞</td>
+          </tr>
+          <tr>
+            <td>T4 DNA Ligase buffer</td>
+            <td>2 µl</td>
+            <td>1x</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>BsaI-HFv2® or BbsI-HF</td>
+            <td>0.5 µl</td>
+            <td>10 U</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>T4 DNA Ligase</td>
+            <td>0.5 µl</td>
+            <td>10 U</td>
+            <td></td>
+          </tr>
+          <tr class="line">
+            <td>Milli-Q</td>
+            <td>To 20 µl</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+        </table>
+        <h2 class="abstand">Transformation in <i>Escherichia coli</i></h2>
+        <ol>
+          <li>Thaw One Shot® TOP10 (NEB) E. coli cells on ice.</li>
+          <li>Carefully pipette 10 µl of your MoClo reaction onto the cells,
+            mix, and incubate for 30 min on
+            ice.<br>
+            → Preheat the thermomixer to 42°C for the subsequent heat
+            shock.</li>
+          <li>Heat shock E. coli cells for 50 s at 42°C. Recover for 5 min on
+            ice.</li>
+          <li>Work sterile: Add 600 µl LB-medium and incubate cells for 45 min
+            at 37°C in the incubator.</li>
+          <li>Work sterile: Spread out 300 µl onto LB-plates containing
+            spectinomycin (level 0) or kanamycin (level 2).
+            Let plates dry under the clean bench.</li>
+          <li>Incubate plates overnight at 37°C.</li>
+        </ol>
+        <h2 class="abstand">Isolation of Plasmids</h2>
+        <ol>
+          <li>Work sterile: Prepare sterile test tubes with 5 ml LB-medium each
+            containing spectinomycin (level 0)
+            or kanamycin (level 2). For each transformation plate, prepare three
+            tubes.</li>
+          <li>Take out your plates and gently pick a single white colony with a
+            yellow pipette tip, which
+            will then be dropped into the respective test tube. Repeat for two
+            more positive colonies of
+            your transformation plate.</li>
+          <li>Incubate test tubes overnight at 37°C.</li>
+          <li>Prepare Eppendorf tubes for harvesting the E. coli cultures and
+            for their respective plasmids,
+            which will be eluted later.</li>
+          <li>Harvest 2 ml by centrifugation at 4000 rpm for two minutes.
+            Discard supernatant.</li>
+          <li>Use the plasmid prep kit provided.</li>
+          <ul>
+            <li>Resuspend pellet in 150 µl Buffer A1, vortex.</li>
+            <li>Add 250 µl Buffer A2 and invert five times. Incubate for 2 min
+              at RT.</li>
+            <li>Add 350 µl Buffer A3, invert until sample turns colorless.</li>
+            <li>Centrifuge at full speed (> 12,000 g) for 3 min. Pipette
+              supernatant (750 µl) onto the column
+              provided with the kit.</li>
+            <li>Centrifuge columns at 2000 g for 30 s. Discard flow
+              through.</li>
+            <li>Add 450 µl Buffer AQ, centrifuge at full speed (> 12,000 g) for
+              1 min.</li>
+            <li>Transfer column to the prepared Eppendorf tube. Add 50 µl Buffer
+              AE onto the column
+              membrane, incubate at least 1 min at RT.</li>
+            <li>Centrifuge 1 min at full speed to elute plasmids from the
+              column.</li>
+          </ul>
+          <li>Measure DNA concentration at the Nanodrop. Pipette 1 µl of Buffer
+            AE onto the sample spot
+            for blank measurement. Then pipette 1 µl of your plasmid and measure
+            the DNA concentration.</li>
+        </ol>
+        <h2 class="abstand">Test Digest</h2>
+        <ol>
+          <li>Mix components in Eppendorf tube and incubate at 37°C for 45
+            min.</li>
+          <li>Prepare 1% agarose gels with 1x TAE buffer. Dissolve 1 g agarose
+            in 100 ml 1x
+            TAE. Heat solution in microwave and let cool down to 60°C. Then add
+            5 µl HD Green. Pour agarose gels.</li>
+          <li>Add 4 µl of 6x loading dye to your test digest samples and load 10
+            µl onto the agarose gel.</li>
+          <li>Separate DNA fragments by gel electrophoresis (110 V, 45 – 55
+            min).</li>
+          <li>Analyze your gels using the Intas device. Compare your observed
+            fragments with the
+            theoretical in silico test digest.</li>
+        </ol>
+        <h2 class="abstand">Nuclear Transformation via Glass Beads</h2>
+        <p>Work sterile! Chlamy clean bench!</p>
+        <ol>
+          <li>For each transformation process:<br>
+            Linearize 1 µg DNA in a final volume of 10 µl (1 µg DNA, 1 µl
+            CutSmart buffer, 0.5 µl enzyme,
+            to 10 µl with MQ)<br>
+            → Use enzyme, which only cuts the backbone of your construct (Check
+            in silico)!</li>
+          <li>Digest/linearize your construct for 45 min at 37°C.</li>
+          <li>Measure cell density with the CoulterCounter</li>
+          <li>For each transformation 5*107 cells are needed, calculate the
+            volume according to the cell
+            density of your culture. Always include a negative control without
+            DNA!</li>
+          <li>Centrifuge cultures at 4000 rpm for 2 minutes (use sterile 50 ml
+            Falcon tubes).</li>
+          <li>Discard supernatant and resuspend cells in 330 µl fresh TAP
+            medium.</li>
+          <li>Add 330 µl of your cell suspension to the sterile reaction tubes
+            filled with glass beads, pipette
+            10 µl of the linearized DNA to the side of the tube → for the
+            negative control, do not add any DNA.</li>
+          <li>Take two tubes and vortex for 15 s</li>
+          <li>Plate out 330 µl onto your plates containing the appropriate
+            antibiotic (avoid glass beads on your plates!)<br>
+            → This works best if you pipette at the bottom of the tube and
+            remove the remaining beads on the lid.</li>
+          <li>Let plates dry under the hood, seal with Parafilm and place into
+            the dark overnight.</li>
+          <li>Place plates into the light in the next morning.</li>
+          <li>Wait several days until single colonies appear. Transfer single
+            colonies to fresh agar plates. </li>
+        </ol>
+        <h2 class="abstand">Site-Directed Mutagenisis</h2>
+        <ol>
+          <li>Pipette the following reagents into PCR tubes:</li>
+          <table class="generalTable">
+            <tr>
+              <th>Reagent</th>
+              <th>Volume</th>
+            </tr>
+            <tr>
+              <td>Q5 Buffer</td>
+              <td>10 µl</td>
+            </tr>
+            <tr>
+              <td>dNTPs</td>
+              <td>1 µl</td>
+            </tr>
+            <tr>
+              <td>Primer forward</td>
+              <td>2.5 µl</td>
+            </tr>
+            <tr>
+              <td>Primer reversed</td>
+              <td>2.5 µl</td>
+            </tr>
+            <tr>
+              <td>Template DNA</td>
+              <td>10 µl</td>
+            </tr>
+            <tr>
+              <td>Q5 Polymerase</td>
+              <td>0.5 µl</td>
+            </tr>
+            <tr>
+              <td>GC Enhancer</td>
+              <td>10 µl</td>
+            </tr>
+            <tr class="line">
+              <td>MQ</td>
+              <td>13.5 µl</td>
+            </tr>
+          </table>
+          <li>Start the PCR with the following cycles</li>
+          <table class="generalTable">
+            <tr>
+              <th>STEP</th>
+              <th>TEMP</th>
+              <th>TIME</th>
+            </tr>
+            <tr>
+              <td>Initial Denaturation</td>
+              <td>98 °C</td>
+              <td>30 sec</td>
+            </tr>
+            <tr>
+              <td>10 Cycles</td>
+              <td>98 °C<br>
+                63°-72° gradient<br>
+                72 °C</td>
+              <td>07 sec<br>
+                25 sec<br>
+                2 min<br></td>
+            </tr>
+            <tr>
+              <td>25 Cycles</td>
+              <td>98 °C<br>
+                72 °C<br>
+                72 °C</td>
+              <td>07 sec<br>
+                25 sec<br>
+                2 min
+              </td>
+            </tr>
+            <tr>
+              <td>Final Extension</td>
+              <td>72 °C</td>
+              <td>2 min</td>
+            </tr>
+            <tr class="line">
+              <td>Hold</td>
+              <td>4 °C</td>
+              <td>∞</td>
+            </tr>
+          </table>
+        </ol>
+        <h2 class="abstand">PCR Clean-Up</h2>
+        <a class="normal"
+          href="https://www.mn-net.com/media/pdf/02/1a/74/Instruction-NucleoSpin-Gel-and-PCR-Clean-up.pdf">NucleoSpin®
+          Gel and PCR Clean-up Kit and protocol by MACHEREY-NAGEL were used</a>
+        <ol>
+          <li>Adjust DNA binding conditions</li>
+          <ul>
+            <li>For very small sample volumes < 30 μL adjust the volume of the
+              reaction mixture to 50–100 μL with water.</li>
+            <li>Mix 1 volume of sample with 2 volumes of Buffer NTI (e.g., mix
+              100 μL PCR reaction and 200 μL Buffer NTI).</li>
+          </ul>
+          <li>Bind DNA</li>
+          <ul>
+            <li>Place a NucleoSpin® Gel and PCR Clean-up Column into a
+              Collection Tube (2 mL) and load up to 700 μL sample.</li>
+            <li>Centrifuge for 30 s at 11,000 x g. Discard flow-through and
+              place the column back into the collection tube.</li>
+            <li>Load remaining sample if necessary and repeat the centrifugation
+              step.</li>
+          </ul>
+          <li>Wash silica membrane</li>
+          <ul>
+            <li>Add 700 μL Buffer NT3 to the NucleoSpin® Gel and PCR Clean-up
+              Column. Centrifuge for 30 s at 11,000 x g. Discard flow-through
+              and place the column back into the collection tube.</li>
+            <li>Recommended: Repeat previous washing step to minimize chaotropic
+              salt carry-over and improve A260/A230 values (see section 2.7 for
+              detailed information).</li>
+          </ul>
+          <li>Dry silica membrane</li>
+          <ul>
+            <li>Centrifuge for 1 min at 11,000 x g to remove Buffer NT3
+              completely. Make sure the spin column does not come in contact
+              with the flow-through while removing it from the centrifuge and
+              the collection tube.</li>
+          </ul>
+          <li>Elute DNA</li>
+          <ul>
+            <li>Place the NucleoSpin® Gel and PCR Clean-up Column into a new 1.5
+              mL microcentrifuge tube (not provided). Add 15–30 μL of hot Buffer NE
+              and incubate at 70 °C for 5 min. Centrifuge for 1 min at 11,000 x
+              g</li>
+          </ul>
+        </ol>
+      </div>
+    </details>
+    <details class="sub">
+      <summary>Protein Analysis & Quantification</summary>
+      <div class="conent-wrapper">
+        <h2 id="TCA" class="abstand">TCA Precipitation of Chlamydomonas Supernatant</h2>
+        <ol>
+          <li>Harvest 1.9 ml liquid culture of the transformants of interest in
+            a reaction vessel. Culture growth time should be at least 3 days (6
+            days would be optimal)</li>
+          <li>Centrifuge at 1,700 g for 4 min, transfer 1.8 ml supernatant into
+            a new reaction vessel</li>
+          <li>Centrifuge again at 4,000 g for 4 min, transfer 1.7 ml supernatant
+            into a new 2 ml reaction tube</li>
+          <li>Add 230 µl ice-cold TCA (be careful TCA is caustic!), mix your
+            samples thoroughly and them on ice for 30 minutes.</li>
+          <li>Cetrifuge all samples at 15,000 g for 15 min at 4 °C</li>
+          <li>Precipitated protein now remains in the sediment. Carefully remove
+            the supernatant using a white tip plugged into a blue one</li>
+          <li>Add 100 µl PBS onto the sediment and vortex the sample
+            thoroughly</li>
+          <li>Add 600 µl ice-cold acetone and vortex samples thoroughly again.
+            Incubate samples overnight at
+            – 20 °C. (Make sure freezer is suitable for storing volatile
+            substances (explosion-proof freezer)!)</li>
+          <li>Centrifuge samples for 5 min at 15,000 g and 4 °C.</li>
+          <li>Remove supernatant using a white tip plugged into a blue one.</li>
+          <li>Dry sediment by incubating the samples with an open lid at 37 °C
+            for about 3 min. Make sure that all acetone is evaporated. Do not
+            overdry the sediment!</li>
+          <li>Add 20 µl 1x SDS loading buffer (make sure that DTT is added to
+            your SDS loading buffer)</li>
+          <li>Repeat the following steps multiple times:</li>
+          <ul>
+            <li>Vortex samples thoroughly</li>
+            <li>Incubate samples at 95 °C for 5 min</li>
+            <li>Vortex samples thoroughly</li>
+            <li>Sonicate samples in water bath for 5 min</li>
+            <li>Inspect if pellet is fully resuspended</li>
+          </ul>
+          <li>Carefully load 10-12 µl onto an SDS gel (high viscosity!) and
+            perform SDS-PAGE usual</li>
+        </ol>
+        <h2 id="acetone" class="abstand">Acetone Precipitation of Chlamydomonas Supernatant</h2>
+        <ol>
+          <li>Harvest 800 µl liquid culture of the transformants of interest in
+            a reaction vessel. Culture growth time should be at least 3 days (6
+            days would be optimal).</li>
+          <li>Centrifuge at 1,700 g for 4 min, transfer 700 µl supernatant into
+            a new reaction vessel.</li>
+          <li>Centrifuge again at 4.000 g for 4 min, transfer 350 µl supernatant
+            into a new 2 ml reaction tube.</li>
+          <li>Add 1575 µl ice cold acetone, mix your samples thoroughly and
+            incubate samples overnight at – 20 °C. (Make sure freezer is
+            suitable for storing volatile substances (explosion-proof
+            freezer)!)</li>
+          <li>Cetrifuge samples for 5 min at 15,000 g and 4 °C.</li>
+          <li>Remove supernatant using a white tip plugged into a blue one.</li>
+          <li>Dry sediment by incubating the samples with an open lid at 37 °C
+            for about 3 min. Make sure that all acetone is evaporated. Do not
+            over dry the sediment!</li>
+          <li>Add 20 µl 1x SDS loading buffer (make sure that DTT is added to
+            your SDS loading buffer)</li>
+          <li>Repeat the following steps multiple times:</li>
+          <ul>
+            <li>Vortex samples thoroughly</li>
+            <li>Incubate samples at 95 °C for 5 min</li>
+            <li>Vortex samples thoroughly</li>
+            <li>Sonicate samples in water bath for 5 min</li>
+            <li>Inspect if pellet is fully resuspended</li>
+          </ul>
+          <li>Carefully load 10-12 µl onto a SDS gel (high viscosity!) and
+            perform SDS-PAGE usual</li>
+        </ol>
+        <h2 id="SDS" class="abstand">SDS-Gel Electrophoresis</h2>
+        <p>Work with gloves (unpolymerized acrylamide is toxic and keratin gives
+          contaminating bands)!</p>
+        <ol>
+          <li>Wash glass plates thoroughly with sponge and soap, rinse well with
+            VE water and wipe with
+            70% ethanol. Assemble glass plates into gel pouring device.</li>
+          <li>Prepare solutions for 4x separation and 4x stacking gels in 50-ml
+            Falcons (<u>don’t add APS and TEMED</u>).</li>
+          <li>Add APS and TEMED to <u>separating gel</u> solution and mix
+            well.</li>
+          <li>Pour gel solution between the glass plates in the pouring device
+            and overlay with isopropanol
+            using a Pasteur pipette. Let the gel polymerize for 45 - 60
+            min.</li>
+          <li>Decant isopropanol and rinse gels thoroughly with distilled water
+            and remove remaining water
+            on top of the gel with Whatman paper (avoid touching the gel while
+            doing this!).</li>
+          <li>Add APS and TEMED to the stacking gel solution and mix well.</li>
+          <li>Pour solution onto the <u>separating gel</u> and slide-in combs;
+            avoid bubbles!</li>
+          <li>Let the gel polymerize for 30 - 45 min. (Optionally seal the gels
+            in a plastic bag/wrap and store
+            at 4° until use (possible for several days).)</li>
+          <li>Carefully remove combs and mark the pockets on the outer glass
+            plate.</li>
+          <li>Assemble glass plates with gels into the running device and place
+            it into the running chamber.</li>
+          <li>Fill-in electrode buffer into the interior chamber until the
+            buffer level is between outer and inner glass plates; pour remaining
+            buffer into the outer chamber.</li>
+          <li>Load 10-12 µl of the samples using a 20-µl pipette and load 3 µl
+            of protein marker (M).</li>
+          <li>Conduct electrophoresis at 150 V for ~60 min;
+            in the meanwhile, prepare Whatman paper and nitrocellulose membranes
+            for blotting.</li>
+        </ol>
+        <h2 id="westernblot" class="abstand">Western Blotting</h2>
+        <p><b>Work with gloves!</b></p>
+        <ol>
+          <li>Cut 10 Whatman papers and one Nitrocellulose membrane to 9 x 6 cm
+            (this stuff is expensive,
+            avoid wasting; never touch the membrane without gloves!); label
+            membrane with a pencil at
+            the upper right corner, this will become the side to which proteins
+            are blotted.</li>
+          <li>In one corner of a large glass plate, soak 3 Whatman papers with
+            buffer T3 and squeeze out
+            bubbles by rolling over the stack with a test tube; add a little
+            more buffer 3 and place the three
+            filter papers onto the anode of a semi-dry blotting device.</li>
+          <li>In another corner of the glass plate, soak 2 Whatman papers with
+            buffer T1 and squeeze out
+            bubbles with a fresh test tube; add a little more buffer T1.</li>
+          <li>Place gel left side right and without bubbles onto the two Whatman
+            papers.</li>
+          <li>Soak Nitrocellulose membrane in buffer T2 and place it onto the
+            gel such that the pencil mark
+            faces the gel.</li>
+          <li>Soak 2 more Whatman papers in buffer T2 and place them onto the
+            membrane; squeeze out
+            bubbles with a test tube starting from the middle into all
+            directions (don’t apply too much
+            pressure!).</li>
+          <li>Take the entire stack, turn it upside-down and place it onto the
+            three Whatman papers soaked
+            with buffer T3 that are already on the anode.</li>
+          <li>In another corner of the glass plate, soak 3 Whatman papers with
+            buffer T1 and squeeze out
+            bubbles with a fresh test tube; then place the three papers onto the
+            sandwich on the anode.</li>
+          <li>Close blotting device by placing the cathode on top and conduct
+            transfer for 60 min by applying
+            a current of 0.8 mA/cm2 per gel surface.</li>
+        </ol>
+        <h2 class="abstand">Ponceau-Staining</h2>
+        <p><b>Work with gloves!</b></p>
+        <ol>
+          <li>Disassemble the sandwich after the transfer and incubate membrane
+            for 1 min in Ponceau–S
+            solution (touch membrane only with forceps! Be careful, it is very
+            fragile!)</li>
+          <li>Pour the Ponceau solution back into its container (it is re-used
+            several times) and wash
+            membrane with distilled water until bands appear brightly without
+            background.</li>
+          <li>Take an image of the membrane using the FUSION device.</li>
+          <li>Allow the membrane to dry on a Whatman paper.</li>
+        </ol>
+        <h2 class="abstand">ECL Detection</h2>
+        <ol>
+          <li>Blocking: Incubate the membrane in a plastic container with 15 ml
+            PBS-TM for 30 min; shake
+            gently and ensure that the membrane is always covered with
+            solution.</li>
+          <li>Remove blocking solution.</li>
+          <li>Primary antibody: Depending on the antibody titer and the
+            abundance of the target protein,
+            dilute primary antibody by 1:1000 to 1:5000 in 15 ml PBS-TM and
+            incubate the membrane with
+            the solution for 1 h with gentle shaking.</li>
+          <li>Collect the primary antibody solution in a Falcon tube.</li>
+          <li>Rinse membrane twice with a little PBS-T and wash membrane 3x 5
+            min with 15 ml PBS-T.</li>
+          <li>Secondary antibody: Dilute secondary antibody (usually goat
+            anti-rabbit coupled to horseradish
+            peroxidase) at a 1:10000 dilution in 15 ml PBS-TM and incubate the
+            membrane with this solution
+            for 1 h with gentle shaking.</li>
+          <li>Discard the secondary antibody solution.</li>
+          <li>Rinse membrane twice with a little PBS-T and wash membrane 3x 5
+            min with 15 ml PBS-T.</li>
+          <li>Cut Whatman paper to a size a little larger than the membrane and
+            place it onto the FUSION
+            detection tray.</li>
+          <li>For each mini-gel blot mix 2 ml of ECL solution I and 2 ml of ECL
+            solution II in a test tube and
+            vortex well (careful: do not cross-contaminate ECL solutions, this
+            will destroy them). Work with
+            gloves.</li>
+          <li>Distribute the mixed ECL solutions evenly across the Whatman
+            filter paper; squeeze out bubbles
+            with a test tube.</li>
+          <li>Place membranes with the protein side up onto the Whatman filter
+            paper.</li>
+          <li>Detect the chemiluminescence signal with the FUSION device.</li>
+        </ol>
+        <h2 class="abstand">Coomassie Staining</h2>
+        <ol>
+          <li>Take the gel out of the glass plates and place it for 2 min in a
+            clean tray in destaining solution on
+            a shaker.</li>
+          <li>Remove the destainer, then add the staining solution covering the
+            gel and place it on a shaker
+            for ca. 1 h.</li>
+          <li>Remove the staining solution and add destainer, shake for 5 min
+            and replace the destainer (you
+            can put some sheets of paper tissue next to the gel into the
+            destainer; this will absorb the
+            Coomassie faster).</li>
+          <li>Stop when the bands are clearly visible, and the background color
+            is faint (takes 1-4 h).</li>
+        </ol>
+      </div>
+    </details>
+    <details class="sub">
+      <summary>Protein Precipitation & Purification</summary>
+      <div class="conent-wrapper">
+        <h2 class="abstand">Ammonium Sulfate Precipitation for Protein Sample Concentration</h2>
+        <p><i>Avanti centrifuge</i></p>
+        <ol>
+          <li>Transfer the supernatant into centrifuge bottles. Use the scale to
+            balance them precisely!</li>
+          <li>Centrifuge using the Avanti centrifuge at 4,000 × g for 5 minutes
+            (Set the centrifuge to “Yes” and ID: 14. Choose the correct rotor.
+            If necessary, remove any liquid from the rotor.)</li>
+          <li>Open the centrifuge using the foot pedal. Transfer the supernatant
+            to a new centrifuge bottle and repeat step 2.</li>
+          <li>4. Transfer the supernatant into a large measuring cylinder.<br>
+            Add 53.3 g of ammonium sulfate per 100 ml of solution and stir for
+            approx. 30 minutes.</li>
+          <li>Fill the liquid into centrifuge bottles (balance carefully!) and
+            centrifuge at 12,000 × g for 15 minutes (Grease the rim of the
+            centrifuge lid to ensure a vacuum seal.)</li>
+          <li>6. After centrifugation, discard the supernatant.
+            Resuspend the pellet in approximately 1% of the original volume
+            using Equilibrator buffer.</li>
+        </ol>
+        <h2 class="abstand">Dialysis</h2>
+        <ol>
+          <li>Prepare 5 liters of Equilibrator (or PBS) buffer in a large
+            measuring cylinder:</li>
+          <ul>
+            <li>12.11 g Tris (0.02 M)</li>
+            <li>87.66 g NaCl (0.3 M)</li>
+            <li>Add 4.5 liters of deionized water, adjust pH to 8 with HCl
+              (32%), then top up to 5 liters<br>
+              <b>(It is recommended to dilute HCl before use (e.g., 1:2).
+                Caution: corrosive fumes –
+                work under a fume hood! Wear lab coat, gloves, and safety
+                goggles!)</b></li>
+          </ul>
+          <li>Fill the resuspended protein pellet into a dialysis tubing (don’t
+            forget to clamp it!).</li>
+          <li>Place 800 ml of Equilibrator buffer into a new beaker.
+            Immerse the sealed dialysis tubing under gentle stirring and
+            incubate for a few hours at 4°C.</li>
+          <li>Afterwards, transfer the dialysis tubing into the remaining ~4.2
+            liters of buffer and incubate overnight at <b>4°C</b> (<i>Very
+              gentle</i> stirring can help.)</li>
+          <li>The next day, open the dialysis tubing, transfer the contents into
+            Falcon tubes, and begin purification if necessary.</li>
+        </ol>
+        <h2 class="abstand">Protein Purification</h2>
+        <ol>
+          <li>Add ~1.5 ml - 2 ml of Nickel-NTA beads to the column (ensure the
+            resin is well resuspended before loading)</li>
+          <li>Prepare the protein sample: either by ammonium sulfate
+            precipitation followed by dialysis, or by harvesting the liquid
+            culture of interest and centrifuging at 4.000 g for 5 min. Transfer
+            the supernatant to a new vessel and repeat this step. Make sure to
+            add NaCl to a final concentration of 300 mM.</li>
+          <li>Remove most of the storage buffer from the Ni-NTA. Add 10 bed
+            volumes (bv) equilibration buffer and allow the majority of the
+            fluid to drip out of the column.</li>
+          <li>Add dialyzed or centrifuged supernatant to the column and allow it
+            to flow through by gravity.</li>
+          <li>Add ~10 bv Wash buffer and allow it to drain by gravity.</li>
+          <li>Elute the bound protein by adding 2 ml Elution buffer. Incubate
+            the resin with the elution buffer for 1-2 min. collect the complete
+            eluate in two 1.5 ml reaction vessels. Repeat the elution step a
+            second time.</li>
+        </ol>
+        <h2 class="abstand">Wash and Regeneration of Nickel-NTA</h2>
+        <p><a class="normal"
+            href="https://cube-biotech.com/media/09/7f/2d/1664969698/His-Washing%20Regeneration%20NTA%20IDA.pdf">protocol
+            from cube-biotech</a></p>
+
+        <ol>
+          <li>Remove the majority of the fluid in the column containing the
+            Ni-NTA or Ni-IDA matrix. Add 10 bv dd water and allow the majority
+            of the volume to drip out of the column.</li>
+          <li>Add 10 bv 100 mM EDTA to the column and allow the entire volume to
+            flow through the matrix.
+            Rinse the column again with 10 bv dd water.</li>
+          <li>Add 10 bv NaOH Wash Buffer to the column and allow the entire
+            volume to flow through the matrix.</li>
+          <li>Rinse the column with 10 bv dd water.</li>
+          <li>Add 10 bv 10m M NiSO4 to recharge the matrix. Allow the volume to
+            drip through the column by gravity.</li>
+          <li>Rinse the column with 5 bv dd water</li>
+          <li>Add 10 bv of 20% (v/v) ethanol and allow the majority of the
+            volume to drip out of the column. The matrix is now ready to be
+            re-used.</li>
+        </ol>
+      </div>
+      </details>
+      <h2>Media</h2>
+      <details class="sub">
+        <summary><i>E. coli</i> Media</summary>
+        <h2 class="abstand">LB Medium</h2>
+        <table class="Ecoli">
+          <tbody>
+            <tr>
+              <th>Ingredient</th>
+              <th>For 1 Liter</th>
+            </tr>
+            <tr>
+              <td>NaCl</td>
+              <td>10 g</td>
+            </tr>
+            <tr>
+              <td>Bacto yeast extract</td>
+              <td>5 g</td>
+            </tr>
+            <tr>
+              <td>Bacto trypton</td>
+              <td>10 g</td>
+            </tr>
+            <tr>
+              <td>ddH<sub>2</sub>O</td>
+              <td>Fill up to 1 L</td>
+            </tr>
+            <tr class="line">
+              <td colspan="2">For Agar plates: add 13 g Agar-Agar (1.3%)</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 class="abstand">Ingredients of LB for Agar Plates for MoClo Transformation</h2>
+        <table class="Ecoli">
+          <tbody>
+            <tr>
+              <th>Level</th>
+              <th>Ingredient</th>
+              <th>Stock concentration</th>
+              <th>Solvent</th>
+              <th>Concentration in medium</th>
+            </tr>
+            <tr class="line">
+              <td><br>L0</td>
+              <td>Spectinomycin<br>IPTG<br>X-Gal</td>
+              <td>100 mg/ml<br>0.5 M<br>40 mg/ml</td>
+              <td>ddH<sub>2</sub>O<br>ddH<sub>2</sub>O<br>Dimethylformamide</td>
+              <td>100 µg/ml<br>0.5 mM<br>40 µg/ml</td>
+            </tr>
+            <tr class="line">
+              <td>L2</td>
+              <td>Kanamycin</td>
+              <td>50 mg/ml</td>
+              <td>ddH<sub>2</sub>O</td>
+              <td>50 µg/ml</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 class="abstand">Antibiotics for <i>E. coli</i> Cuture Medium</h2>
+        <table class="Ecoli">
+          <tr>
+            <th>Level</th>
+            <th>Antibiotic</th>
+            <th>Solvent</th>
+            <th>Stock concentration</th>
+            <th>Concentration in medium</th>
+          </tr>
+          <tr class="line">
+            <td>0</td>
+            <td>Spectinomycin</td>
+            <td>ddH<sub>2</sub>O</td>
+            <td>100 mg/ml</td>
+            <td>100 µg/ml</td>
+          </tr>
+          <tr class="line">
+            <td>2</td>
+            <td>Kanamycin</td>
+            <td>ddH<sub>2</sub>O</td>
+            <td>50 mg/ml</td>
+            <td>50 µg/ml</td>
+          </tr>
+        </table>
+      </details>
+      <details class="sub">
+        <summary><i>Chlamydomonas</i> Medium</summary>
+        <h2 class="abstand">TAP-NH<sub>4</sub> Medium</h2>
+        <table class="chlamyTable">
+          <tbody>
+            <tr>
+              <th>Ingredient</th>
+              <th>For 1 l</th>
+              <th>For 5 l</th>
+            </tr>
+            <tr>
+              <td>Tris</td>
+              <td>2.42 g</td>
+              <td>12.1 g</td>
+            </tr>
+            <tr>
+              <td>4xBeijerinck-NH4</td>
+              <td>25 ml</td>
+              <td>125 ml</td>
+            </tr>
+            <tr>
+              <td>1M posphate-buffer ph7</td>
+              <td>1 ml</td>
+              <td>5 ml</td>
+            </tr>
+            <tr class="line">
+              <td colspan="3">„Special K“ Trace elements:</td>
+              <tr>
+                <td>EDTA-Na<sub>2</sub></td>
+                <td>1 ml</td>
+                <td>5 ml</td>
+              </tr>
+              <tr>
+                <td>(NH<sub>4</sub>)<sub>6</sub>Mo<sub>7</sub>O<sub>24</sub></td>
+                <td>1 ml</td>
+                <td>5 ml</td>
+              </tr>
+              <tr>
+                <td>Na<sub>2</sub>SeO<sub>3</sub></td>
+                <td>1 ml</td>
+                <td>5 ml</td>
+              </tr>
+              <tr>
+                <td>Zn EDTA</td>
+                <td>1 ml</td>
+                <td>5 ml</td>
+              </tr>
+              <tr>
+                <td>Mn EDTA</td>
+                <td>1 ml</td>
+                <td>5 ml</td>
+              </tr>
+              <tr>
+                <td>Fe EDTA</td>
+                <td>1ml </td>
+                <td>5 ml</td>
+              </tr>
+              <tr>
+                <td>Cu EDTA</td>
+                <td>1 ml</td>
+                <td>5 ml</td>
+              </tr>
+              <tr>
+                <td>Acetic acid</td>
+                <td>1 ml</td>
+                <td>5 ml</td>
+              </tr>
+              <tr class="line">
+                <td>ddH<sub>2</sub>O</td>
+                <td>Fill up to 1 l</td>
+                <td>Fill up to 5 l</td>
+              </tr>
+              <tr class="line">
+                <td colspan="3" align="center">Adjust with acetic acid to pH
+                  7</td>
+              </tr>
+              <tr class="line">
+                <td colspan="3" align="center">For Agar plates: add 13 g
+                  Agar-Agar per liter (1,3 %)</td>
+              </tr>
+            </table>
+            <h2 class="abstand">HMP-Medium</h2>
+            <table class="chlamyTable">
+              <tr>
+                <th>Ingredient</th>
+                <th>For 1 l</th>
+                <th>For 5 l</th>
+              </tr>
+              <tr>
+                <td>HEPES</td>
+                <td>4,77 g</td>
+                <td>23.38 g</td>
+              </tr>
+              <tr>
+                <td>4xBeijerinck-NH4</td>
+                <td>25 ml</td>
+                <td>125 ml</td>
+              </tr>
+              <tr>
+                <td>1M posphate-buffer ph7</td>
+                <td>1 ml</td>
+                <td>5 ml</td>
+              </tr>
+              <tr class="line">
+                <td colspan="3">„Special K“ Trace elements:</td>
+                <tr>
+                  <td>EDTA-Na<sub>2</sub></td>
+                  <td>1 ml</td>
+                  <td>5 ml</td>
+                </tr>
+                <tr>
+                  <td>(NH<sub>4</sub>)<sub>6</sub>Mo<sub>7</sub>O<sub>24</sub></td>
+                  <td>1 ml</td>
+                  <td>5 ml</td>
+                </tr>
+                <tr>
+                  <td>Na<sub>2</sub>SeO<sub>3</sub></td>
+                  <td>1 ml</td>
+                  <td>5 ml</td>
+                </tr>
+                <tr>
+                  <td>Zn EDTA</td>
+                  <td>1 ml</td>
+                  <td>5 ml</td>
+                </tr>
+                <tr>
+                  <td>Mn EDTA</td>
+                  <td>1 ml</td>
+                  <td>5 ml</td>
+                </tr>
+                <tr>
+                  <td>Fe EDTA</td>
+                  <td>1ml </td>
+                  <td>5 ml</td>
+                </tr>
+                <tr>
+                  <td>Cu EDTA</td>
+                  <td>1 ml</td>
+                  <td>5 ml</td>
+                </tr>
+                <tr>
+                  <td>Acetic acid</td>
+                  <td>1 ml</td>
+                  <td>5 ml</td>
+                </tr>
+                <tr class="line">
+                  <td>ddH<sub>2</sub>O</td>
+                  <td>Fill up to 1 l</td>
+                  <td>Fill up to 5 l</td>
+                </tr>
+                <tr class="line">
+                  <td colspan="3" align="center">Adjust with KOH to pH 7</td>
+                </tr>
+                <tr class="line">
+                  <td colspan="3" align="center">For Agar plates: add 13 g
+                    Agar-Agar per liter (1,3 %)</td>
+                </tr>
+              </table>
+              <h2 class="abstand">Antibiotics for Chlamydomonas Agar Plates</h2>
+              <table class="chlamyTable">
+                <tr>
+                  <th></th>
+                  <th>Antibiotic</th>
+                  <th>Solvent</th>
+                  <th>Stock concentration</th>
+                  <th>Concentration in medium</th>
+                </tr>
+                <tr>
+                  <td>Spec plates</td>
+                  <td>Spectinomycin</td>
+                  <td>ddH<sub>2</sub>O</td>
+                  <td>100 mg/ml</td>
+                  <td>100 µg/ml</td>
+                </tr>
+                <tr class="line">
+                  <td>Amp plates</td>
+                  <td>Ampicillin</td>
+                  <td>ddH<sub>2</sub>O</td>
+                  <td>100 mg/ml</td>
+                  <td>100 µg/ml</td>
+                </tr>
+                <tr>
+                  <td rowspan="3">Decontamination plates</td>
+                  <td>Ampicillin</td>
+                  <td>ddH<sub>2</sub>O</td>
+                  <td>500 mg/ml</td>
+                  <td>500 µg/ml</td>
+                </tr>
+                <tr>
+                  <td>Cetotaxime</td>
+                  <td>ddH<sub>2</sub>O</td>
+                  <td>100 mg/ml</td>
+                  <td>100 µg/ml</td>
+                </tr>
+                <tr class="line">
+                  <td>Carbendazime</td>
+                  <td>50% Ethanol</td>
+                  <td>40 mg/ml</td>
+                  <td>40 µg/ml</td>
+                </tr>
+              </tbody>
+            </table>
+          </details>
+      <details class="sub">
+            <summary>General Buffers</summary>
+            <div class="conent-wrapper">
+              <table class="generalTable">
+                <tbody>
+                  <h2 class="abstand">Equilibrator</h2>
+                  <tr>
+                    <th>Reagent</th>
+                    <th>Final Concentration</th>
+                    <th>For 500ml</th>
+                  </tr>
+                  <tr>
+                    <td>3 M NaCl</td>
+                    <td>0,3 M</td>
+                    <td>50 ml</td>
+                  </tr>
+                  <tr>
+                    <td>0,1 M Tris pH 8</td>
+                    <td>0,02 M</td>
+                    <td>100 ml</td>
+                  </tr>
+                  <tr class="line">
+                    <td>ddH<sub>2</sub>O</td>
+                    <td>/</td>
+                    <td>350 ml</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2 class="abstand">Wash Buffer</h2>
+              <table class="generalTable">
+                <tr>
+                  <th>Reagent</th>
+                  <th>Final Concentration</th>
+                  <th>For 500 ml</th>
+                </tr>
+                <tr>
+                  <td>3M NaCl</td>
+                  <td>0.3 M</td>
+                  <td>50 ml</td>
+                </tr>
+                <tr>
+                  <td>0.1 M Tris pH 8</td>
+                  <td>0.02 M</td>
+                  <td>100 ml</td>
+                </tr>
+                <tr>
+                  <td>2M Imidazole</td>
+                  <td>0.02 M</td>
+                  <td>5 ml</td>
+                </tr>
+                <tr class="line">
+                  <td>ddH<sub>2</sub>O</td>
+                  <td>/</td>
+                  <td>345 ml</td>
+                </tr>
+              </table>
+              <h2 class="abstand">Elution Buffer</h2>
+              <table class="generalTable">
+                <tr>
+                  <th>Reagent</th>
+                  <th>Final Concentration</th>
+                  <th>For 100 ml</th>
+                </tr>
+                <tr>
+                  <td>3 M NaCl</td>
+                  <td>300 mM</td>
+                  <td>50 ml</td>
+                </tr>
+                <tr>
+                  <td>0,1 M Tris pH 8</td>
+                  <td>20 mM</td>
+                  <td>100 ml</td>
+                </tr>
+                <tr>
+                  <td>2 M Imidazol</td>
+                  <td>500 mM</td>
+                  <td>5 ml</td>
+                </tr>
+                <tr class="line">
+                  <td>ddH<sub>2</sub>O</td>
+                  <td>/</td>
+                  <td>345 ml</td>
+                </tr>
+              </table>
+              <h2 class="abstand">EDTA Buffer</h2>
+              <table class="generalTable">
+                <tr>
+                  <th>Reagent</th>
+                  <th>Final Concentration</th>
+                  <th>For 250 ml</th>
+                </tr>
+                <tr>
+                  <td>Disodium EDTA dihydrate</td>
+                  <td>100 mM</td>
+                  <td>9.3 g</td>
+                </tr>
+                <tr class="line">
+                  <td>ddH<sub>2</sub>O</td>
+                  <td>/</td>
+                  <td>Fill up to 250 ml</td>
+                </tr>
+              </table>
+              <h2 class="abstand">NaOH Wash Buffer</h2>
+              <table class="generalTable">
+                <tr>
+                  <th>Reagent</th>
+                  <th>Final Concentration</th>
+                  <th>For 250 ml</th>
+                </tr>
+                <tr>
+                  <td>5 M NaCl</td>
+                  <td>2 M</td>
+                  <td>100 ml</td>
+                </tr>
+                <tr>
+                  <td>1 M NaOH</td>
+                  <td>500 mM</td>
+                  <td>125 ml</td>
+                </tr>
+                <tr class="line">
+                  <td>ddH<sub>2</sub>O</td>
+                  <td>/</td>
+                  <td>25 ml</td>
+                </tr>
+              </table>
+              <h2 class="abstand">NiSO<sub>4</sub>-Buffer</h2>
+              <table class="generalTable">
+                <tr>
+                  <th>Reagent</th>
+                  <th>Final Concentration</th>
+                  <th>For 250 ml</th>
+                </tr>
+                <tr>
+                  <td>NiSO<sub>4</sub> * 6xddH<sub>2</sub>O</td>
+                  <td>10 mM</td>
+                  <td>0.657 g</td>
+                </tr>
+                <tr class="line">
+                  <td>ddH<sub>2</sub>O</td>
+                  <td>/</td>
+                  <td>Fill up to 250 ml</td>
+                </tr>
+              </table>
+              <h2 class="abstand">TAE Buffer</h2>
+              <table class="generalTable">
+                <tr>
+                  <th>50x TAE buffer</th>
+                  <th>1x TAE buffer</th>
+                </tr>
+                <tr>
+                  <td>242 g Tris<br>
+                    57.1 ml acetic acid<br>
+                    100 ml 0.5 M EDTA pH 8</td>
+                  <td><b>20 ml 50 x TAE</b></td>
+                </tr>
+                <tr class="line">
+                  <td colspan="2">Fill up to 1 l with ddH<sub>2</sub>O</td>
+                </tr>
+              </table>
+              <h2 class="abstand">Stacking & Separation Gels</h2>
+              <table class="generalTable">
+                <tr>
+                  <th>Reagent</th>
+                  <th>Stacking gel</th>
+                  <th>Separation gel</th>
+                </tr>
+                <tr>
+                  <td>1.5 M Tris-HCL pH 8.8</td>
+                  <td>-</td>
+                  <td>5 ml</td>
+                </tr>
+                <tr>
+                  <td>0.5 M Tris-HCL pH 6.8</td>
+                  <td>2.5 ml</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>30% acrylamide</td>
+                  <td>1.1 ml</td>
+                  <td>6.8 ml</td>
+                </tr>
+                <tr>
+                  <td>ddH<sub>2</sub>O</td>
+                  <td>6.1 ml</td>
+                  <td>8 ml</td>
+                </tr>
+                <tr>
+                  <td>20% SDS</td>
+                  <td>50 µl</td>
+                  <td>100 µl</td>
+                </tr>
+                <tr>
+                  <td>0.5 M EDTA pH 8</td>
+                  <td>50 µl</td>
+                  <td>100 µl</td>
+                </tr>
+                <tr>
+                  <td>APS (100 mg/ml)</td>
+                  <td>100 µl</td>
+                  <td>200 µl</td>
+                </tr>
+                <tr>
+                  <td>THEMED</td>
+                  <td>20 µl</td>
+                  <td>12 µl</td>
+                </tr>
+                <tr class="line">
+                  <td><b>final</b></td>
+                  <td><b>10 ml</b></td>
+                  <td><b>20 ml</b></td>
+                </tr>
+              </table>
+              <h2 class="abstand">1x Laemmli Running Buffer</h2>
+              <table class="generalTable">
+                <tr>
+                  <th>Reagent</th>
+                  <th>Final Concentration</th>
+                  <th>For 2 l</th>
+                </tr>
+                <tr>
+                  <td>5x SDS-Page Stock</td>
+                  <td>24.8 mM Tris<br>
+                    134.2 mM Glycin</td>
+                  <td>400 ml</td>
+                </tr>
+                <tr>
+                  <td>20% SDS</td>
+                  <td>0.1 %</td>
+                  <td>10 ml</td>
+                </tr>
+                <tr>
+                  <td>500 mM EDTA</td>
+                  <td>1 mM</td>
+                  <td>4 ml</td>
+                </tr>
+                <tr class="line">
+                  <td>ddH<sub>2</sub>O</td>
+                  <td>/</td>
+                  <td>Fill up to 2 L</td>
+                </tr>
+              </table>
+              <h2 class="abstand">4x Loading buffer</h2>
+              <table class="generalTable">
+                <tr>
+                  <th>Weigh in:</th>
+                  <td><b>0.6 g SDS pellets<br>
+                    4 g sucrose</b></td>
+                </tr>
+                <tr>
+                  <td>Add: 0.5 M Tris-HCl pH 6.8</td>
+                  <td>5 ml</td>
+                </tr>
+                <tr>
+                  <td>Fill up to 8 ml with</td>
+                  <td>ddH<sub>2</sub>O</td>
+                </tr>
+                <tr class="line">
+                  <td colspan="2">Bevor use: add 20% 1M DTT</td>
+                </tr>
+              </table>
+              <h2 class="abstand">Destaining Solutions</h2>
+              <table class="generalTable">
+                <tr>
+                  <th>Reagent</th>
+                  <th>For 1 l</th>
+                </tr>
+                <tr>
+                  <td>40 % Ethanol</td>
+                  <td>400 ml</td>
+                </tr>
+                <tr>
+                  <td>7 % Ac-COOH</td>
+                  <td>70 ml</td>
+                </tr>
+                <tr class="line">
+                  <td colspan="2">Fill up to 1 l</td>
+                </tr>
+              </table>
+              <h2 class="abstand">Staining Solution</h2>
+              <p class="line">Destaining solution + 0.125 % Coomassie brilliant blue
+                R-250</p>
+              <h2>Blotting Solutions</h2>
+              <table class="generalTable">
+                <tr>
+                  <th>Reagent</th>
+                  <th>Buffer T3</th>
+                  <th>Buffer T2</th>
+                </tr>
+                <tr>
+                  <td>ddH<sub>2</sub>O</td>
+                  <td>500 ml</td>
+                  <td>775 ml</td>
+                </tr>
+                <tr>
+                  <td>1 M Tris-HCl pH 10.4</td>
+                  <td>300 ml</td>
+                  <td>25 ml</td>
+                </tr>
+                <tr class="line">
+                  <td>Isopropanol</td>
+                  <td>200 ml</td>
+                  <td>200 ml</td>
+                </tr>
+              </table>
+              <table class="generalTable">
+                <tr>
+                  <th colspan="2">Buffer T1</th>
+                </tr>
+                <tr>
+                  <td>Buffer T2</td>
+                  <td>100 ml</td>
+                </tr>
+                <tr class="line">
+                  <td>&epsilon;-aminocaproic acid</td>
+                  <td>525 mg</td>
+                </tr>
+              </table>
+              <h2 class="abstand">Blocking & Washing Buffer</h2>
+              <table class="generalTable">
+                <tr>
+                  <th>Reagent</th>
+                  <th>10x PBS</th>
+                  <th>PBS-T</th>
+                  <th>PBS-TM</th>
+                </tr>
+                <tr>
+                  <td>NaCl<br>
+                    KCl<br>
+                    Na<sub>2</sub>HPO<sub>4</sub><br>
+                    KH<sub>2</sub>PO<sub>4</sub></td>
+                  <td>80 g<br>
+                    2 g <br>
+                    14.6 g<br>
+                    2 g</td>
+                  <td>100 ml 10x PBS</td>
+                  <td>100 ml PBS-T</td>
+                </tr>
+                <tr>
+                  <td>20% Tween-20</td>
+                  <td>-</td>
+                  <td>5 ml </td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>Milk powder</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>3 g</td>
+                </tr>
+                <tr class="line">
+                  <td>ddH<sub>2</sub>O</td>
+                  <td>Fill up to 1 l</td>
+                  <td>895 ml</td>
+                  <td>-</td>
+                </tr>
+              </table>
+              <h2 class="abstand">ECL Detection Buffer</h2>
+              <table class="generalTable">
+                <tr>
+                  <th>Reagent</th>
+                  <th>ECL solution I</th>
+                  <th>ECL solution II</th>
+                </tr>
+                <tr>
+                  <td>1 M Tris-HCl pH 8.5</td>
+                  <td>5 ml</td>
+                  <td>5 ml</td>
+                </tr>
+                <tr>
+                  <td>250 mM luminol in DMSO</td>
+                  <td>500 µl</td>
+                  <td>/</td>
+                </tr>
+                <tr>
+                  <td>90 mM p-coumaric acid in DMSO</td>
+                  <td>220 µl</td>
+                  <td>/</td>
+                </tr>
+                <tr>
+                  <td>30 % H<sub>2</sub>O</sub></td>
+                <td>/</td>
+                <td>30.5 µl</td>
+              </tr>
+              <tr class="line">
+                <td>Final</td>
+                <td>50 ml</td>
+                <td>50 ml</td>
+              </tr>
+            </table>
+          </div>
+        </details>
+        <hr>
+        <details>
+          <summary><h2>Premixed Buffers, Enzymes, etc.</h2></summary>
+          <div class="conent-wrapper">
+            <table class="generalTable">
+              <tbody>
+                <tr>
+                  <td>HDGreen Plus DNA Stain</td>
+                  <td>INTAS science imaging</td>
+                </tr>
+                <tr>
+                  <td>rCutSmartTM Buffer</td>
+                  <td>New England Biolabs <sub>inc.</sub></td>
+                </tr>
+                <tr>
+                  <td>Gel Loading Dye Purple (6x)</td>
+                  <td>New England Biolabs <sub>inc.</sub></td>
+                </tr>
+                <tr>
+                  <td>Quick-Load® Purple 1kb Plus Ladder</td>
+                  <td>New England Biolabs <sub>inc.</sub></td>
+                </tr>
+                <tr>
+                  <td>EcoRV-HF®</td>
+                  <td>New England Biolabs <sub>inc.</sub></td>
+                </tr>
+                <tr>
+                  <td>BsaI-HFv2®</td>
+                  <td>New England Biolabs <sub>inc.</sub></td>
+                </tr>
+                <tr>
+                  <td>Hi-T4TM DNA Ligase</td>
+                  <td>New England Biolabs <sub>inc.</sub></td>
+                </tr>
+                <tr>
+                  <td>10x Buffer for T4 DNA Ligase with 10 mM ATP</td>
+                  <td>New England Biolabs <sub>inc.</sub></td>
+                </tr>
+                <tr>
+                  <td>BamHI-HF ®</td>
+                  <td>New England Biolabs <sub>inc.</sub></td>
+                </tr>
+                <tr>
+                  <td>BbsI-HF</td>
+                  <td>New England Biolabs <sub>inc.</sub></td>
+                </tr>
+                <tr>
+                  <td>SapI</td>
+                  <td>New England Biolabs <sub>inc.</sub></td>
+                </tr>
+                <tr>
+                  <td>Q5 High GC Enhancer</td>
+                  <td>New England Biolabs <sub>inc.</sub></td>
+                </tr>
+                <tr>
+                  <td>Q5 DNA Polymerase</td>
+                  <td>New England Biolabs <sub>inc.</sub></td>
+                </tr>
+                <tr>
+                  <td>Q5 Reaction Buffer</td>
+                  <td>New England Biolabs <sub>inc.</sub></td>
+                </tr>
+                <tr>
+                  <td>PageRuler™ Plus Prestained Protein Ladder</td>
+                  <td>Thermo Scientific</td>
+                </tr>
+                <tr>
+                  <td>10 mM dNTP Mix</td>
+                  <td>Thermo Scientific</td>
+                </tr>
+                <tr>
+                  <td>KpnI</td>
+                  <td>Fermentas</td>
+                </tr>
+                <tr>
+                  <td>His Epitope Tag Mouse mAB igG1</td>
+                  <td>Dianova</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details>
+          <summary><h2>Devices</h2></summary>
+          <div class="conent-wrapper">
+            <table class="generalTable">
+              <tbody>
+                <tr>
+                  <td>Primus 96 Plus 96-Well PCR Thermocycler</td>
+                  <td>MWG Biotech AG</td>
+                </tr>
+                <tr>
+                  <td>FastGene Ultra Cycler Gradient (96-well)</td>
+                  <td>NIPPON Genetics</td>
+                </tr>
+                <tr>
+                  <td>BX53 microscope</td>
+                  <td>Olympus</td>
+                </tr>
+                <tr>
+                  <td>U-HSCBM</td>
+                  <td>Olympus</td>
+                </tr>
+                <tr>
+                  <td>X-Cite 120PC Q</td>
+                  <td>Lumen Dynamics</td>
+                </tr>
+                <tr>
+                  <td>Ultrospec 2100 pro</td>
+                  <td>Amersham Biosciences</td>
+                </tr>
+                <tr>
+                  <td>PJ3000 scale</td>
+                  <td>Mettler</td>
+                </tr>
+                <tr>
+                  <td>Toledo FE20 pH meter</td>
+                  <td>Mettler</td>
+                </tr>
+                <tr>
+                  <td>AE 160 precision scale</td>
+                  <td>Mettler</td>
+                </tr>
+                <tr>
+                  <td>NanoDrop 2000 Spectrophotometer</td>
+                  <td>Thermo scientific</td>
+                </tr>
+                <tr>
+                  <td>Gelimager Chemostar ECL</td>
+                  <td>Intas</td>
+                </tr>
+                <tr>
+                  <td>Pioneer PX323/E precision scale</td>
+                  <td>Ohaus</td>
+                </tr>
+                <tr>
+                  <td>Transferpette S</td>
+                  <td>Brand</td>
+                </tr>
+                <tr>
+                  <td>Unimax 1010 shaker</td>
+                  <td>heidolph</td>
+                </tr>
+                <tr>
+                  <td>Vortexer VX100</td>
+                  <td>Labnet</td>
+                </tr>
+                <tr>
+                  <td>Small shaker VM3</td>
+                  <td>CAT</td>
+                </tr>
+                <tr>
+                  <td>Centrifuge 5810 R</td>
+                  <td>Eppendorf</td>
+                </tr>
+                <tr>
+                  <td>Centrifuge 5910 R </td>
+                  <td>Eppendorf</td>
+                </tr>
+                <tr>
+                  <td>Dri-Block® FDB03DD</td>
+                  <td>Techne</td>
+                </tr>
+                <tr>
+                  <td>Fusion-FX7 Imaging system</td>
+                  <td>Vilber</td>
+                </tr>
+                <tr>
+                  <td>Electrophoresis Power Supply – EPS 301</td>
+                  <td>GE Healthcare</td>
+                </tr>
+                <tr>
+                  <td>RCT magnetic stirrer</td>
+                  <td>IKA</td>
+                </tr>
+                <tr>
+                  <td>HERAsafe® KSP18</td>
+                  <td>Kendro</td>
+                </tr>
+                <tr>
+                  <td>Sorvall Lynx 6000 Centrifuge</td>
+                  <td>Thermo scientific</td>
+                </tr>
+                <tr>
+                  <td>Avanti J-26S XP Centrifuge</td>
+                  <td>Beckman Coulter</td>
+                </tr>
+                <tr>
+                  <td>Solaris Shaker</td>
+                  <td>Thermo scientific</td>
+                </tr>
+                <tr>
+                  <td>SONOREX Super RK 514 BH</td>
+                  <td>Bandelin</td>
+                </tr>
+                <tr>
+                  <td>CERTOMAT® RM</td>
+                  <td>Sartorius stedim biotech</td>
+                </tr>
+                <tr>
+                  <td>SCANLAF MARS</td>
+                  <td>LaboGene</td>
+                </tr>
+                <tr>
+                  <td>Celldrop FL Fluorescence Cell Counter</td>
+                  <td>DeNovix®</td>
+                </tr>
+                <tr>
+                  <td>Micro centrifuge</td>
+                  <td>Carl Roth</td>
+                </tr>
+                <tr>
+                  <td>Drying oven</td>
+                  <td>memmert</td>
+                </tr>
+              </tbody>
+            </table>
+          </details>
+        </div>
+      </div>
+    </div>
+
+    {% endblock %}

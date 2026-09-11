@@ -1,0 +1,211 @@
+{% extends "layout.html" %}
+
+{% block extra_css %}
+<link href="{{ url_for('static', filename='css/best-plant.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}Best plant synthetic biology{% endblock %}
+{% block lead %}MAIN SUBTITLE{% endblock %}
+
+{% block page_content %}
+<div class="MainWrapper">
+<div class="mw-fixed">
+    <button class="mw-burger" aria-label="Menü öffnen" aria-expanded="false"
+      aria-controls="mw-drawer">
+      <span class="mw-bar"></span>
+      <span class="mw-bar"></span>
+      <span class="mw-bar"></span>
+    </button>
+
+    <nav id="mw-drawer" class="mw-drawer" aria-hidden="true">
+      <ul class="mw-list">
+        <li><h2><a class="normal" href="#problem">The Problem</a></h2></li>
+        <li><h2><a class="normal" href="#chlamy">Meet <i>Chlamydomonas</i></a></h2></li>
+        <li><h2><a class="normal" href="#impact">Impact of our Project</a></h2></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- Vollbild-Overlay getrennt -->
+  <div class="mw-overlay" hidden></div>
+
+    <h1 id="problem">Plant Synthetic Biology</h1>
+    <h2>The Problem</h2>
+    <p>Colorectal cancer ranks among the most common cancer diagnoses worldwide,
+        making the search for innovative and targeted therapies more urgent than
+        ever<a href="https://www.who.int/news-room/fact-sheets/detail/colorectal-cancer" target="_blank">[1]</a>. Monoclonal antibodies have emerged as a promising solution,
+        offering high targeting efficiency and remarkable effectiveness against
+        cancer cells. However, current production methods face significant
+        ecological and economic challenges that limit their accessibility and
+        sustainability <a href="https://doi.org/10.1002/bit.24608" target="_blank">[2]</a>.</p>
+    <figure>
+        <img src="https://static.igem.wiki/teams/5758/best-plant-synthetic-biology/kolben-pics2.webp" class="smaller">
+        <figcaption><b>Figure 1:</b> <i>Chlamydomonas reinhardtii</i> cultures growing in Erlenmeyer
+            flasks with minimal media under light conditions, representing a
+            sustainable alternative to mammalian cell culture systems for
+            biologic production.</figcaption>
+    </figure>
+
+    <p>While antibody therapies set an exciting milestone in the treatment of
+        several different types of cancers, production remains a hurdle to
+        overcome. Several key factors like the use of animal-derived media for
+        mammalian cell culture, the substantial use of water, and the production
+        of large amounts of CO<sub>2</sub>  make the production of these biologics
+        unsustainable and not feasible for a time when ecological production of
+        modern biologics is a key factor for a healthy future of humanity and
+        the planet<a href="https://doi.org/10.1002/bit.24608" target="_blank">[2]</a>. While other organisms have been investigated to produce
+        biopharmaceuticals, they often lack key components which make these
+        systems unsuitable to use. <i>E. coli</i> produces recombinant proteins in high
+        amounts, but due to its prokaryotic nature, it does not possess the
+        capability to properly fold proteins and cannot perform any
+        post-translational modifications <a href="https://doi.org/10.1038/nbt1029" target="_blank">[3]</a>.</p>
+
+    <p>Plant systems show high production of recombinant proteins yet require
+        difficult and expensive downstream purification steps<a href="https://doi.org/10.1016/j.pep.2015.12.018" target="_blank">[4]</a>.
+
+        However, another chassis does not receive much attention in the world of
+        biopharmaceutical production, despite offering a range of beneficial
+        factors for addressing these problems: green algae. This untapped
+        potential led us to explore alternative production systems, with the
+        star of our project: <i>Chlamydomonas reinhardtii</i>.</p>
+
+    <hr><h2>Meet <i>Chlamydomonas</i></h2>
+
+    <h3 id="chlamy">Why <i>Chlamy</i>?</h3>
+
+    <p><i>Chlamydomonas reinhardtii</i> gives us the best of both worlds: the rapid
+        growth
+        and genetic modification flexibility of microorganisms combined with the
+        sophisticated cellular machinery of eukaryotes. Unlike bacteria, <i>Chlamy</i>
+        performs essential post-translational modifications, including
+        glycosylation,
+        ensuring proper protein folding and functionality crucial for
+        therapeutic
+        antibodies<a href="https://doi.org/10.1074/mcp.M113.028191" target="_blank">[5]</a>. Its photoautotrophic nature eliminates the need for
+        carbon
+        sources like acetate, while its ability to grow mixotrophically allows
+        for
+        flexible cultivation strategies<a href="https://doi.org/10.7554/eLife.39233" target="_blank">[6]</a>. The established MoClo toolkit makes
+        genetic engineering straightforward, enabling precise and fast control
+        over
+        its modification capability<a href="https://doi.org/10.1021/acssynbio.8b00251" target="_blank">[7]</a>. Most importantly, <i>Chlamy</i> can be nuclear
+        modified to secrete proteins into the surrounding medium, dramatically
+        simplifying downstream purification compared to intracellular expression
+        systems. This unique combination of features positions <i>Chlamydomonas</i> as
+        an
+        ideal chassis for sustainable, cost-effective antibody production.</p>
+
+    <figure>
+        <img src="https://static.igem.wiki/teams/5758/best-plant-synthetic-biology/blaue-chlamys2.webp">
+        <figcaption><b>Figure 2:</b> Fluorescence microscopy image of <i>Chlamydomonas</i> cells
+            expressing the scFv fused with mTFP (monomeric teal fluorescent
+            protein). The cyan fluorescence indicates successful protein
+            expression into the surrounding medium. Scale bar: 10
+            µm.</figcaption>
+    </figure>
+
+    <h3>What We Build</h3>
+    <p>We successfully engineered <i>Chlamydomonas</i> reinhardtii to produce cetuximab
+        scFv, a single-chain variable fragment targeting the EGFR receptor in
+        colorectal cancer. Our success required using <i>Chlamy</i> specific solutions
+        like codon optimization and integration of <i>Chlamydomonas</i>-specific
+        introns, selection of appropriate secretion signals (cCA, ARS, GLE), and
+        glycosylation tags (SP20) that work specifically in <i>Chlamy</i><a href="https://doi.org/10.1111/pbi.12710" target="_blank">[8]</a>. Through
+        Western blot analysis, we detected our scFv in the culture medium, while
+        fluorescence microscopy confirmed successful production and transport
+        through the cells, proving our expression system works effectively.
+        Crucially, we didn't just produce the protein. We validated its
+        biological activity by demonstrating specific binding to its target EGFR
+        receptor by performing a pulldown assay<a href="https://doi.org/10.3389/fpls.2022.988870" target="_blank">[9]</a>, confirming that our <i>Chlamy</i>
+        produced antibody fragment has its intended binding capacity. </p>
+    <p>To validate real-world applications, we initiated in vitro studies
+        testing our scFv against cancer cell lines that overexpress the EGF
+        Receptor, the same mechanism found in colorectal cancer<a href="https://doi.org/10.1186/s12907-019-0085-8" target="_blank">[10]</a>.
+        Additionally, we've already expanded our therapeutic portfolio by
+        successfully producing trastuzumab scFv targeting HER2 in breast cancer,
+        as confirmed by Western blot analysis. While our cancer cell line
+        experiments are still under optimization, they demonstrate our
+        commitment to translating the results into clinical relevance across
+        multiple cancer types.</p>
+    <p>Beyond proof-of-concept, we have tackled both scalability and commercial
+        viability. Using various bioreactor systems, we demonstrated scFv
+        production even at larger medium volumes, showing the industrial-scale
+        feasibility of <i>Chlamy</i>. Most importantly, by selecting the non-patented
+        CLiP UVM strain of <i>Chlamydomonas</i>, we have positioned us for potential
+        commercial production without intellectual property barriers<a href="https://www.chlamylibrary.org" target="_blank">[11]</a>. This
+        comprehensive approach establishes a complete pipeline for <i>Chlamy</i> based
+        antibody manufacturing from the lab to the market.</p>
+
+    <hr><h2 id="impact">Impact of our Project</h2>
+
+    <p>Our breakthrough with <i>Chlamydomonas</i>-based scFv production directly
+        addresses the mounting sustainability crisis facing today's
+        biopharmaceutical industry. As environmental regulations tighten
+        globally and carbon footprints become critical business factors,
+        biopharmaceutical companies will need to seek sustainable alternatives.
+    </p>
+    <p>Our <i>Chlamy</i> platform offers a revolutionary pathway toward sustainable
+        biologics manufacturing. Unlike energy intensive mammalian systems, our
+        photoautotrophic <i>Chlamydomonas</i> harnesses solar energy and thrives on
+        minimal nutrients. The elimination of animal-derived components reduces
+        costs while addressing ethical concerns. Furthermore, algae naturally
+        absorb CO<sub>2</sub> during growth, potentially making our system carbon negative.
+        The scalability we have demonstrated through bioreactor cultivation
+        proves this is not just a laboratory approach, it's a possible viable
+        industrial solution that could transform how the industry approaches
+        biologics production.</p>
+
+    <p>Our work tackles one of the most significant limitations in plant
+        synthetic biology: the lack of robust platforms for complex therapeutic
+        proteins. By establishing the first functional single chain fragment
+        variable expression system in <i>Chlamydomonas</i>, we have proven that this
+        single-cell photosynthetic organism can keep up with traditional
+        expression systems while maintaining environmental advantages. The
+        successful production and detection of both cetuximab and trastuzumab
+        scFvs demonstrates our platform's versatility across different
+        therapeutic targets, fundamentally changing what's possible with <i>Chlamy</i>
+        based production.</p>
+
+    <p>We have accumulated protocols that dramatically lower barriers for
+        future teams exploring <i>Chlamy</i> based therapeutics production: </p>
+
+    <ul>
+        <li> Integration of <i>Chlamydomonas</i> specific introns into the genetic
+            sequences of our parts to overcome the low productions yields of
+            <i>Chlamydomonas.</i></li>
+        <li>Cultivation protocols to test the production and accumulation of
+            recombinant proteins in flasks and bioreactors.</li>
+        <li>Detection methods including fluorescence microscopy of proteins and
+            Western blot procedures.</li>
+        <li> Removing a highly corrosive reagent from one of the most used
+            precipitation protocols of our project while retaining the same
+            amount of precipitated protein.</li>
+        <li>Functional validation assays for confirming biological activity of
+            the recombinant protein produced in <i>Chlamydomonas.</i></li>
+    </ul>
+
+    <p>These resources represent months of optimization work that future teams
+        won't need to repeat, potentially saving years of development time and
+        accelerating the entire field of <i>Chlamydomonas</i> based therapeutic
+        production.</p>
+
+    <p>The implications extend far beyond colorectal cancer. Our platform
+        demonstrates proof-of-concept for producing any antibody fragment,
+        opening doors to the production of recombinant proteins for countless
+        other diseases. From an industry perspective, our work offers a solution
+        that reduces production costs while improving sustainability metrics, a
+        rare win-win scenario. We firmly believe that <i>Chlamy</i> based platforms
+        will become the backbone of sustainable therapeutic production, helping
+        create a healthier future for both patients and our planet.</p>
+
+    <figure>
+        <img src="https://static.igem.wiki/teams/5758/best-plant-synthetic-biology/team-am-bioreaktor2.webp" alt="">
+        <figcaption><b>Figure 3:</b> Part of the iGEM RPTU team hard at work in the laboratory,
+            developing <i>Chlamydomonas</i>-based platforms for sustainable antibody
+            production and a healthier future for both patients and our
+            planet.</figcaption>
+    </figure>
+</div>
+{% endblock %}
+{% block extra_js %}
+<!--<script src="{{ url_for('static', filename='js/some.js') }}"></script>-->
+{% endblock %}

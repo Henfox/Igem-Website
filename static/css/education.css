@@ -1,0 +1,408 @@
+/* ===== Responsive, screen-wide style for the Education page =====
+   Baseline: 1rem = 16px (as requested)
+   Works great from mobile to 1920×1080+ desktops
+   Uses fluid typography, comfortable reading widths, and robust spacing
+*/
+
+/* ---------- Base + Theme Fallbacks ---------- */
+:root {
+  /* Spacing scale */
+  --space-1: 0.208333vw;
+  --space-2: 0.416667vw;
+  --space-3: 0.625vw;
+  --space-4: 0.833333vw;
+  --space-6: 1.25vw;
+  --space-8: 1.666667vw;
+  --space-10: 2.083333vw;
+  --space-12: 3vw;
+
+  /* Layout widths */
+  --content-max: 78ch;
+  /* ideal reading width for paragraphs */
+  --list-max: 70ch;
+  /* slightly narrower for lists */
+  --card-max: 1200px;
+  /* card hard cap on very wide screens */
+
+  /* Radii + shadow */
+  --radius-xl: 1.666667vw;
+  --shadow-1: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+  /* Color fallbacks (will use team's CSS variables if present) */
+
+  --card-bg: var(--darkerpurple);
+  --text-on-card: white;
+  --muted: #6b6b7a;
+  --border: rgba(0, 0, 0, 0.08);
+}
+
+
+/* ---------- Wrapper ---------- */
+.MainWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(var(--space-4), 2vw, var(--space-8));
+}
+
+/* ---------- Cards ---------- */
+.cardbox {
+  background-color: var(--card-bg);
+  color: var(--text-on-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: var(--radius-xl);
+  margin: 0 clamp(0, 4vw, var(--space-12));
+  width: calc(100%- clamp(0, 4vw, var(--space-12)));
+  /* Fluid padding: tighter on mobile, generous on desktop */
+  padding: clamp(var(--space-1), 4vw, var(--space-12));
+  box-shadow: var(--shadow-1);
+  border: 1px solid var(--border);
+}
+
+/* Headings: fluid sizes with tight leading for big titles */
+.cardbox h1 {
+  margin: 0 0 var(--space-4) 0;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: white;
+}
+
+.cardbox h2 {
+  margin: 0 0 var(--space-6) 0;
+  line-height: 1.2;
+  color: white;
+}
+
+/* Text: comfortable reading width and rhythm */
+.cardbox p {
+  margin: 0 0 var(--space-3) 0;
+  text-align: start;
+  /* better for responsiveness than justify */
+  line-height: 1.6;
+  max-width: var(--content-max);
+  color: var(--text-on-card);
+}
+
+.cardbox p+p {
+  margin-top: var(--space-2);
+}
+
+/* Lists */
+.cardbox ul,
+.cardbox ol {
+  margin: var(--space-4) 0;
+  padding-left: 1.041667vw;
+  max-width: var(--list-max);
+}
+
+.cardbox li {
+  line-height: 1.6;
+  text-align: start;
+  margin: 0 0 var(--space-2) 0;
+}
+
+/* Subtle separators for long cards */
+.cardbox hr {
+  border: none;
+  height: 1px;
+  background: var(--border);
+  margin: var(--space-6) 0;
+}
+
+/* ---------- Media Collections ---------- */
+.images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(var(--space-3), 1.5vw, var(--space-6));
+  margin-top: clamp(var(--space-4), 2vw, var(--space-8));
+  width: 100%;
+}
+
+.images img,
+.images picture,
+.images video,
+.images iframe {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+/* ---------- Download Blocks ---------- */
+.download {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+  margin-top: clamp(var(--space-4), 2vw, var(--space-6));
+}
+
+.download a,
+.download button {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--purple);
+  color: white;
+  padding: 0.520833vw 0.833333vw;
+  border-radius: 0.729167vw;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
+}
+
+.download a:hover,
+.download button:hover {
+  background: var(--purple);
+  transform: translateY(-1px);
+}
+
+.download a:focus-visible,
+.download button:focus-visible {
+  outline: 3px solid color-mix(in oklab, var(--darkpurple) 50%, white 50%);
+  outline-offset: 2px;
+}
+
+/* ---------- Links inside text ---------- */
+.cardbox a {
+  color: white;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
+
+.cardbox a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Responsive Tweaks ---------- */
+
+/* Narrow phones: reduce rounding + gaps */
+@media (max-width: 420px) {
+  .cardbox {
+    border-radius: 1.041667vw;
+  }
+
+  .images {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablets and small laptops */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .cardbox {
+    padding: clamp(var(--space-8), 4vw, var(--space-12));
+  }
+}
+
+/* Desktop ≥1200px (incl. 1920×1080): widen reading area slightly */
+@media (min-width: 1200px) {
+  :root {
+    --content-max: 84ch;
+    --list-max: 76ch;
+  }
+
+  .cardbox {
+    padding: clamp(var(--space-10), 3vw, var(--space-12));
+  }
+}
+
+
+
+/* ---------- Motion + Print ---------- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media print {
+  .MainWrapper {
+    background: #ffffff !important;
+    padding: 0;
+  }
+
+  .cardbox {
+    box-shadow: none;
+    border: 1px solid #ddd;
+    border-radius: 0.416667vw;
+    margin: 0 0 1rem 0;
+    padding: 0.833333vw;
+    width: 100%;
+  }
+
+  .download,
+  .images {
+    break-inside: avoid;
+  }
+}
+
+
+.edu-image-slider {
+  margin-top: 1rem;
+  align-self: flex-start;
+  --width: 20vw;
+  /* 10rem */
+  --height: 20vw;
+  /* 5rem */
+  --background-color: var(--darkerpurple);
+
+}
+
+.edu-image-slider svg {
+  color: black;
+  opacity: 1;
+  background-color: var(--lightpurple);
+  width: 1vw;
+  height: 1vw;
+}
+
+.cardbox .edu-image-slider li {
+  font-size: 1.5vw;
+}
+
+.edu-image-slider .slide img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+
+}
+
+.slider-wrapper {
+  display: block;
+  width: fit-content;
+}
+
+#intro {
+  background-color: transparent;
+  color: white;
+  border: 4px dashed var(--card-bg);
+}
+
+#intro p {
+  color: white;
+}
+
+#intro h1 {
+  color: var(--lightpurple);
+}
+
+#intro span {
+  color: var(--lightpurple);
+}
+
+#mintBanner {
+  width: 40vw;
+}
+
+#min4ubanner {
+  width: 40vw;
+  border-radius: 2vw;
+  margin: 1vw 0;
+}
+
+#utokiobanner {
+  width: 40vw;
+  border-radius: 2vw;
+  margin: 1vw 0;
+}
+
+#utokioLogo {
+  width: 20vw;
+}
+
+
+
+/*CARDS*/
+
+
+/* =========================================
+   Card – 3D Flip
+   ========================================= */
+
+#karten {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  --width: 50vw;
+  --radius-xl: 3px;
+  width: var(--width);
+  
+}
+
+.cardContainer {
+  --card-w: calc(var(--width)/7);
+  --border: white;
+  width: fit-content;
+  display: grid;
+  place-items: center;
+  perspective: 1200px;
+  position: relative;
+}
+
+.card {
+  width: var(--card-w);
+  height: auto;
+  aspect-ratio: 4 / 5.6;
+  /* keeps front/back consistent */
+  transform-style: preserve-3d;
+  transition: transform .8s;
+  background: transparent;
+  position: relative;
+}
+
+/* Flip effect only on hover-capable devices */
+@media (hover: hover) and (pointer: fine) {
+  .cardContainer:hover .card {
+    transform: rotateY(180deg);
+  }
+}
+
+/* Touch devices – no flip to avoid accidental rotations */
+@media (hover: none) {
+  .card {
+    transform: none !important;
+  }
+}
+
+.cardFront,
+.cardBack {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--border);
+  border-radius: var(--radius-xl);
+  backface-visibility: hidden;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.cardFront {
+  background: #000;
+}
+
+.cardBack {
+  background: #000;
+  transform: rotateY(180deg);
+}
+
+/* Images */
+.card img {
+  width: var(--card-w);
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  display: block;
+  margin: 0;
+}

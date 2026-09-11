@@ -1,0 +1,23 @@
+
+.MainWrapper h2{
+    color: var(--lightpurple);
+}
+
+.MainWrapper figure{
+    color: var(--darkestpurple);
+    background-color: rgb(255, 255, 255);
+    border-radius: 1vw;
+    padding-bottom: 10px;
+    text-align: justify;
+}
+
+.MainWrapper figure img{
+    width: 50vw;
+}
+
+.MainWrapper figure img.smaller{
+    width: 20vw;
+}
+
+
+

@@ -1,0 +1,449 @@
+{% extends "layout.html" %}
+
+{% block extra_css %}
+<link href="{{ url_for('static', filename='css/parts.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}Parts{% endblock %}
+
+{% block page_content %}
+<div class="MainWrapper">
+    <h1>Parts</h1>
+    <h2>Introduction:</h2>
+    <p>As part of our project on sustaining antibody production in <i>Chlamydomonas
+        reinhardtii</i>, we've
+        developed new parts and added them to the iGEM Registry. We have
+        designed these parts to
+        make it easier to express, target, and use antibody-related proteins
+        within the algae system.
+        On this page, we'll show you the parts we've created and explain how
+        they work within our
+        project. You will also find a brief description of their functions
+        here.</p>
+
+    <hr><h2>Best Basic Part Special Prize</h2>
+
+    <p>An important highlight of our collection is the humanized Cetuximab
+        single-chain variable
+        fragment (HumcetFv). The humanization of antibody fragments such as
+        HumcetFv is a
+        significant step toward making them suitable for patient-derived
+        applications. Non-human
+        antibodies such as those traditionally produced in mammalian cell
+        cultures (e.g., CHO cells)
+        often contain regions that the human immune system recognizes as
+        foreign. This can lead to
+        immunogenicity, in which the body triggers an immune response against
+        the therapeutic
+        protein. Such reactions can lead to the development of anti-drug
+        antibodies (ADAs), rapid
+        clearance from the bloodstream, lower therapeutic effectiveness, or in
+        severe cases,
+        hypersensitivity and unwanted immune reactions.</p>
+
+    <p>By modifying the original Cetuximab scFv into a humanized sequence,
+        HumcetFv reduces the
+        probability of these immune responses. Humanization involves carefully
+        replacing the non-
+        human framework regions with human antibody framework sequences, while
+        preserving
+        the complementarity-determining regions (CDRs) which are responsible for
+        antigen
+        recognition. In this way, HumcetFv maintains the strong binding
+        specificity and affinity of
+        Cetuximab to EGFR, but in a form that is more compatible with the human
+        immune system.</p>
+
+    <p>That is why we decided to nominate HumcetFv for a Best Basic Part Special
+        Prize. It
+        demonstrates the viability of expressing a clinically relevant,
+        humanized antibody fragment
+        in <i>C. reinhardtii</i> and offers a sustainable and scalable alternative to
+        conventional antibody
+        production in mammalian cells. Furthermore, HumcetFv complements other
+        EGFR-binding
+        fragments in our SUSPACT library by targeting a specific epitope on
+        EGFR, allowing for
+        collaborative studies, combinatorial binding approaches, and potential
+        synergistic applications
+        in cancer research. In contrast, Trastuzumab, which is another
+        therapeutic antibody fragment
+        we reference, does not target EGFR but instead binds to HER2, a
+        different receptor that is
+        overexpressed in certain breast cancers. Including both EGFR- and
+        HER2-targeting fragments
+        in our collection highlights the versatility of our system and
+        demonstrates how <i>Chlamydomonas</i>
+        can be used to produce different clinically relevant antibodies for
+        diverse cancer therapies.
+        To learn more about how we tested these constructs and validated their
+        performance, please
+        visit our <a href="results" class="normal">[Results section]</a>.</p>
+
+    <hr><h2>Standardization with MoClo</h2>
+
+    <p>Beyond the design of individual antibody fragments, we placed strong
+        emphasis
+        on standardization and compatibility. All our antibody-related coding
+        sequences were
+        generated as Level 0 parts following the Modular Cloning (MoClo)
+        standard. MoClo uses Type
+        IIS restriction enzymes and predefined overhangs to enable scarless and
+        modular assembly
+        of multiple genetic elements such as promoters, introns, secretion
+        signals, and terminators in
+        a single reaction. This ensures that our parts can be flexibly combined
+        with other standardized
+        components for rapid construction of expression-ready systems.</p>
+
+    <figure>
+        <img src="https://static.igem.wiki/teams/5758/parts/parts.webp">
+        <figcaption><b>Figure 1:</b> Schematic overview of the hierarchical Modular
+            Cloning
+            (MoClo) system showing
+            Level 0 parts (promoters, 5′UTRs, signal peptides, CDSs,
+            terminators),
+            assembly of Level 1
+            transcription units, and Level 2 multigene constructs. Fusion sites
+            with
+            type IIS restriction
+            enzymes define standardized assembly positions. Source: Weber <i>et
+            al.</i>,
+            2011</figcaption>
+    </figure>
+
+    <hr><h2>Maximizing Expression in <i>Chlamydomonas reinhardtii</i></h2>
+    <p>To maximize expression in <i>Chlamydomonas reinhardtii</i>, we followed the most
+        up-to-date
+        design strategies for nuclear transgenes. This included
+        reverse-translating
+        our antibody
+        fragments with optimal <i>Chlamydomonas</i> codon usage and inserting native
+        RBCS2
+        introns
+        approximately every 150–200 bp to improve transcript stability and mRNA
+        processing.
+        Furthermore, our constructs were built as Level 0 parts in the Modular
+        Cloning (MoClo) system,
+        which enabled us to flexibly assemble them into Level 2 expression
+        cassettes
+        under the control
+        of strong promoters and efficient terminators. By combining codon
+        optimization, intron
+        insertion, and robust regulatory elements, we designed our constructs
+        according to the latest
+        gene architecture principles known to maximize nuclear expression in
+        <i>Chlamydomonas</i>,
+        ensuring that our antibody fragments could be expressed at the highest
+        possible levels.</p>
+    <div>
+        <table class="tabelle">
+            <thead>
+            <tr>
+                <th>Part Name</th>
+                <th>Registry Code</th>
+                <th>Part Type</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+        <tr class="section"><th colspan="4">Level 0</th></tr>
+            <tr>
+                <td>CetFv</td>
+                <td><a href="https://registry.igem.org/parts/bba-25yuvf84" class="normal"> BBa_25YUVF84</a></td>
+                <td>Antibody fragment</td>
+                <td>Singe chain variable fragment of antibody Cetuximab, binds
+                    to the EGFR of colorectal cancer and head and neck
+                    cancer</td>
+            </tr>
+            <tr>
+                <td>HumcetFv</td>
+                <td><a href="https://registry.igem.org/parts/bba-25iakq9o" class="normal">BBa_25IAKQ9O</a></td>
+                <td>Antibody fragment</td>
+                <td>Single chain variable fragment of humanised version of
+                    antibody Cetuximab, binds to the EGFR of colorectal cancer
+                    and head and neck cancer</td>
+            </tr>
+            <tr>
+                <td>SP20_8xHis_1xHA</td>
+                <td><a href="https://registry.igem.org/parts/bba-25vw0b30" class="normal">BBa_25VW0B30</a></td>
+                <td>Protein Domain</td>
+                <td>SP20 glycomodule fused to octahistidine-1xHA-tag</td>
+            </tr>
+            <tr>
+                <td>PreScission_SP20_8xHis_1xHA</td>
+                <td><a href="https://registry.igem.org/parts/bba-25x3jnjp" class="normal">BBa_25X3JNJP</a></td>
+                <td>Protein Domain</td>
+                <td>Designed to enhance protein secretion and facilitate
+                    purification, detection, and controlled tag removal</td>
+            </tr>
+            <tr>
+                <td>PreScission_SP20_mNeonGreen_8xHis_1xHA</td>
+                <td><a href="https://registry.igem.org/parts/bba-251ee9jw" class="normal">BBa_251EE9JW</a></td>
+                <td>Protein Domain</td>
+                <td>Enhances protein secretion and facilitate purification,
+                    detection, fluorescence monitoring, and controlled tag
+                    removal</td>
+            </tr>
+            <tr>
+                <td>mVenus Q69M (MoClo Position B3-B4)</td>
+                <td><a href="https://registry.igem.org/parts/bba-25yyrow6" class="normal">BBa_25YYROW6</a></td>
+                <td>Fluorescent protein </td>
+                <td>Well suited for use in fluorescence microscopy, protein
+                    localization studies, and fusion constructs</td>
+            </tr>
+            <tr>
+                <td>mVenus Q69M (MoClo Position B5)</td>
+                <td><a href="https://registry.igem.org/parts/bba-255o274k" class="normal">BBa_255O274K</a></td>
+                <td>Fluorescent protein </td>
+                <td>Well suited for use in fluorescence microscopy, protein
+                    localization studies, and fusion constructs</td>
+            </tr>
+            <tr>
+                <td>mTFP (MoClo Position B3-B4)</td>
+                <td><a href="https://registry.igem.org/parts/bba-25vvtwxz" class="normal">BBa_25VVTWXZ</a></td>
+                <td>Fluorescent protein</td>
+                <td>Serves as a fluorescent reporter for gene expression,
+                    protein localization, and FRET-based biosensors.</td>
+            </tr>
+            <tr>
+                <td>mTFP (MoClo Position B5)</td>
+                <td><a href="https://registry.igem.org/parts/bba-25dg0bbx" class="normal">BBa_25DG0BBX</a></td>
+                <td>Fluorescent protein</td>
+                <td>Serves as a fluorescent reporter for gene expression,
+                    protein localization, and FRET-based biosensors.</td>
+            </tr>
+            <tr>
+                <td>matFv</td>
+                <td><a href="https://registry.igem.org/parts/bba-25o6kbug" class="normal">BBa_25O6KBUG</a></td>
+                <td>Antibody fragment</td>
+                <td>Single-chain variable fragment (scFv) of the monoclonal
+                    antibody matuzumab</td>
+            </tr>
+            <tr>
+                <td>panFv</td>
+                <td><a href="https://registry.igem.org/parts/bba-2539anhn" class="normal">BBa_2539ANHN</a></td>
+                <td>Antibody fragment</td>
+                <td>Single-chain variable fragment (scFv) of the monoclonal
+                    antibody panitumumab</td>
+            </tr>
+            <tr>
+                <td>trasFv</td>
+                <td><a href="https://registry.igem.org/parts/bba-259137bw" class="normal">BBa_259137BW</a></td>
+                <td>Antibody fragment</td>
+                <td>Single-chain variable fragment (scFv) of the monoclonal
+                    antibody trastuzumab</td>
+            </tr>
+            <tr>
+                <td>P<sub>AR</sub></td>
+                <td><a href="https://registry.igem.org/parts/bba-25xvze3c" class="normal">BBa_25XVZE3C</a></td>
+                <td>Promotor</td>
+                <td>The pAR promoter is a hybrid of HSP70A and RBCS2, widely known as one of the strongest nuclear promoters in Chlamydomonas. 
+                    It ensures robust and reliable transcription, making it ideal for high antibody expression.</td>
+            </tr>
+        <tr class="section"><th colspan="4">Level 2</th></tr>
+            <tr>
+                <td>P<sub>AR</sub>_CetFv_3xHA_<sub>TRPL23</sub></td>
+                <td><a href="https://registry.igem.org/parts/bba-256d3t89" class="normal">BBa_256D3T89</a></td>
+                <td>Lvl2 Construct</td>
+                <td>Expresses CetFv with a C-terminal 3xHA tag under the AR
+                    promoter, terminated by RPL23.</td>
+            </tr>
+            <tr>
+                <td>P<sub>AR</sub>_HumcetFv_3xHA_T<sub>RPL23</sub></td>
+                <td><a href="https://registry.igem.org/parts/bba-25z0bld9" class="normal">BBa_25Z0BLD9</a></td>
+                <td>Lvl2 Construct</td>
+                <td>Expresses HumcetFv with a C-terminal 3xHA tag under the AR
+                    promoter, terminated by RPL23.</td>
+            </tr>
+            <tr>
+                <td>P<sub>AR</sub>_mVenus_mSTOP_T<sub>RPL23</sub> </td>
+                <td><a href="https://registry.igem.org/parts/bba-256f3dp1" class="normal"></a>BBa_256F3DP1</td>
+                <td>Lvl2 Construct</td>
+                <td>Expresses the fluorescent protein mVenus with a stop codon
+                    and RPL23 terminator.</td>
+            </tr>
+            <tr>
+                <td>P<sub>AR</sub>_mTFP_mSTOP_T<sub>RPL23</sub></td>
+                <td><a href="https://registry.igem.org/parts/bba-25khrymk" class="normal">BBa_25KHRYMK</a></td>
+                <td>Lvl2 Construct</td>
+                <td>Expresses the fluorescent protein mTFP with a stop codon and
+                    RPL23 terminator.</td>
+            </tr>
+            <tr>
+                <td>P<sub>AR</sub>_HumcetFv_mTFP_T<sub>RPL23</sub></td>
+                <td><a href="https://registry.igem.org/parts/bba-25u256gl" class="normal">BBa_25U256GL</a></td>
+                <td>Lvl2 Construct</td>
+                <td>Fuses HumcetFv to the fluorescent protein mTFP, terminated
+                    by RPL23.</td>
+            </tr>
+            <tr>
+                <td>P<sub>AR</sub>_HumcetFv_mVenus_T<sub>RPL23</sub></td>
+                <td><a href="https://registry.igem.org/parts/bba-251cy1wx" class="normal">BBa_251CY1WX</a></td>
+                <td>Lvl2 Construct</td>
+                <td>Fuses HumcetFv to the fluorescent protein mVenus, terminated
+                    by RPL23.</td>
+            </tr>
+            <tr>
+                <td>P<sub>AR</sub>_cCA_mTFP_mSTOP_T<sub>RPL23</sub></td>
+                <td><a href="https://registry.igem.org/parts/bba-25y9minm" class="normal">BBa_25Y9MINM</a></td>
+                <td>Lvl2 Construct</td>
+                <td>Expresses mTFP with a cCA secretion signal and stop codon,
+                    terminated by RPL23</td>
+            </tr>
+            <tr>
+                <td>P<sub>AR</sub>_cCA_HumcetFv_mTFP_T<sub>RPL23</sub></td>
+                <td><a href="https://registry.igem.org/parts/bba-255dn67q" class="normal">BBa_255DN67Q</a></td>
+                <td>Lvl2 Construct</td>
+                <td>Expresses HumcetFv fused to mTFP with a cCA secretion
+                    signal, terminated by RPL23.</td>
+            </tr>
+            <tr>
+                <td>P<sub>AR</sub>_cCA_CetFv_SP20_3xHA_T<sub>RPL23</sub></td>
+                <td><a href="https://registry.igem.org/parts/bba-25rmwic1" class="normal">BBa_25RMWIC1</a></td>
+                <td>Lvl2 Construct</td>
+                <td>Expresses CetFv with cCA secretion signal, SP20
+                    glycosylation motif, and C-terminal 3xHA tag, terminated by
+                    RPL23.</td>
+            </tr>
+            <tr>
+                <td>P<sub>AR</sub>_cCA_HumcetFv_SP20_3xHA_T<sub>RPL23</sub></td>
+                <td><a href="https://registry.igem.org/parts/bba-251jqz8g" class="normal">BBa_251JQZ8G</a></td>
+                <td>Lvl2 Construct</td>
+                <td>Expresses HumcetFv with cCA secretion signal, SP20
+                    glycosylation motif, and C-terminal 3xHA tag, terminated by
+                    RPL23. </td>
+            </tr>
+            <tr>
+                <td>P<sub>AR</sub>_ARS2_CetFv_ SP20_3xHA _T<sub>RPL23</sub></td>
+                <td><a href="https://registry.igem.org/parts/bba-25iw5f2p" class="normal">BBa_25IW5F2P</a></td>
+                <td>Lvl2 Construct</td>
+                <td>Expresses CetFv with ARS2 secretion signal, SP20
+                    glycosylation motif, and C-terminal 3xHA tag, terminated by
+                    RPL23.</td>
+            </tr>
+            <tr>
+                <td>P<sub>AR</sub>_ARS2_HumcetFv_ SP20_3xHA _T<sub>RPL23</sub></td>
+                <td><a href="https://registry.igem.org/parts/bba-25zah2mj" class="normal">BBa_25ZAH2MJ</a></td>
+                <td>Lvl2 Construct</td>
+                <td>Expresses HumcetFv with ARS2 secretion signal, SP20
+                    glycosylation motif, and C-terminal 3xHA tag, terminated by
+                    RPL23.</td>
+            </tr>
+            <tr>
+                <td>P<sub>AR</sub>_GLE_CetFv_ SP20_3xHA _T<sub>RPL23</sub></td>
+                <td><a href="https://registry.igem.org/parts/bba-25vhxywb" class="normal">BBa_25VHXYWB</a></td>
+                <td>Lvl2 Construct</td>
+                <td>Expresses CetFv with GLE secretion signal, SP20
+                    glycosylation motif, and C-terminal 3xHA tag, terminated by
+                    RPL23.</td>
+            </tr>
+            <tr>
+                <td>P<sub>AR</sub>_GLE_HumcetFv_ SP20_3xHA _T<sub>RPL23</sub></td>
+                <td><a href="https://registry.igem.org/parts/bba-255ce6n6" class="normal">BBa_255CE6N6</a></td>
+                <td>Lvl2 Construct</td>
+                <td>Expresses HumcetFv with GLE secretion signal, SP20
+                    glycosylation motif, and C-terminal 3xHA tag, terminated by
+                    RPL23.</td>
+            </tr>
+            <tr>
+                <td>P<sub>AR</sub>_cCA_CetFv_ SP20_8xHis_1xHA _T<sub>RPL23</sub></td>
+                <td><a href="https://registry.igem.org/parts/bba-25vf4hua" class="normal">BBa_25VF4HUA</a></td>
+                <td>Lvl2 Construct</td>
+                <td>Expresses CetFv with cCA secretion signal, SP20
+                    glycosylation motif, and dual C-terminal purification tags
+                    (8xHis, 1xHA), terminated by RPL23.</td>
+            </tr>
+            <tr>
+                <td>P<sub>AR</sub>_cCA_HumcetFv_ SP20_8xHis_1xHA _T<sub>RPL23</sub></td>
+                <td><a href="https://registry.igem.org/parts/bba-25bebbv4" class="normal">BBa_25BEBBV4</a></td>
+                <td>Lvl2 Construct</td>
+                <td>Expresses HumcetFv with cCA secretion signal, SP20
+                    glycosylation motif, and dual C-terminal purification tags
+                    (8xHis, 1xHA), terminated by RPL23.</td>
+            </tr>
+            <tr>
+                <td>P<sub>AR</sub>_cCA_CetFv_HRV_ SP20_mNG_8xHis_1xHA_T<sub>RPL23</sub></td>
+                <td><a href="https://registry.igem.org/parts/bba-25gy8sbt" class="normal">BBa_25GY8SBT</a></td>
+                <td>Lvl2 Construct</td>
+                <td>Expresses CetFv with cCA secretion signal, HRV cleavage
+                    site, SP20 glycosylation motif, fluorescent tag mNeonGreen,
+                    and dual purification tags (8xHis, 1xHA), terminated by
+                    RPL23.</td>
+            </tr>
+            <tr>
+                <td>P<sub>AR</sub>_cCA_HumcetFv_HRV_ SP20_mNG_8xHis_1xHA_T<sub>RPL23</sub></td>
+                <td><a href="https://registry.igem.org/parts/bba-251qc5lv" class="normal">BBa_251QC5LV</a></td>
+                <td>Lvl2 Construct</td>
+                <td>Expresses HumcetFv with cCA secretion signal, HRV cleavage
+                    site, SP20 glycosylation motif, fluorescent tag mNeonGreen,
+                    and dual purification tags (8xHis, 1xHA), terminated by
+                    RPL23.</td>
+            </tr>
+            <tr>
+                <td>P<sub>AR</sub>_cCA_CetFv_HRV_ SP20_8xHis_1xHA_<sub>TRPL23</sub></td>
+                <td><a href="https://registry.igem.org/parts/bba-25onqbur" class="normal">BBa_25ONQBUR</a></td>
+                <td>Lvl2 Construct</td>
+                <td>Expresses CetFv with cCA secretion signal, HRV cleavage
+                    site, SP20 glycosylation motif, and dual C-terminal
+                    purification tags (8xHis, 1xHA), terminated by RPL23. </td>
+            </tr>
+            <tr>
+                <td>P<sub>AR</sub>_cCA_HumcetFv_HRV_ SP20_8xHis_1xHA_T<sub>RPL23</sub></td>
+                <td><a href="https://registry.igem.org/parts/bba-256rhlnb" class="normal">BBa_256RHLNB</a></td>
+                <td>Lvl2 Construct</td>
+                <td>Expresses HumcetFv with cCA secretion signal, HRV cleavage
+                    site, SP20 glycosylation motif, and dual C-terminal
+                    purification tags (8xHis, 1xHA), terminated by RPL23.</td>
+            </tr>
+            <tr>
+                <td>P<sub>AR</sub>_cCA_Matuzumab_SP20_3xHA_T<sub>RPL23</sub></td>
+                <td><a href="https://registry.igem.org/parts/bba-25dnhahi" class="normal">BBa_25DNHAHI</a></td>
+                <td>Lvl2 Construct</td>
+                <td>Expresses Matuzumab scFv with secretion signal, SP20 motif,
+                     and triple HA tags, terminated by RPL23. </td>
+            </tr>
+            <tr>
+                <td>P<sub>AR</sub>_cCA_Matuzumab_HRV_ SP20_8xHis_1xHA_T<sub>RPL23</sub></td>
+                <td><a href="https://registry.igem.org/parts/bba-25vxon8p" class="normal">BBa_25VXON8P</a></td>
+                <td>Lvl2 Construct</td>
+                <td>Expresses Matuzumab scFv with secretion signal, PreScission site, 
+                    SP20 motif, and dual purification tags, terminated by RPL23.</td>
+            </tr>
+            <tr>
+                <td>P<sub>AR</sub>_cCA_Panitumumab_SP20_3xHA_T<sub>RPL23</sub></td>
+                <td><a href="https://registry.igem.org/parts/bba-25fiunqj" class="normal">BBa_25FIUNQJ</a></td>
+                <td>Lvl2 Construct</td>
+                <td>Expresses Panitumumab scFv with secretion signal, 
+                    SP20 motif, and triple HA tags, terminated by RPL23.</td>
+            </tr>
+            <tr>
+                <td>P<sub>AR</sub>_cCA_Panitumumab_HRV_ SP20_8xHis_1xHA_T<sub>RPL23</sub></td>
+                <td><a href="https://registry.igem.org/parts/bba-255t8jct" class="normal">BBa_255T8JCT</a></td>
+                <td>Lvl2 Construct</td>
+                <td>Expresses Panitumumab scFv with secretion signal, 
+                    PreScission site, SP20 motif, and dual purification tags, terminated by RPL23.</td>
+            </tr>
+            <tr>
+                <td>P<sub>AR</sub>_cCA_Trastuzumab_SP20_3xHA_T<sub>RPL23</sub></td>
+                <td><a href="https://registry.igem.org/parts/bba-25fdnuez" class="normal">BBa_25FDNUEZ</a></td>
+                <td>Lvl2 Construct</td>
+                <td>Expresses Trastuzumab scFv with secretion signal, SP20 motif, 
+                    and triple HA tags, terminated by RPL23.</td>
+            </tr>
+            <tr>
+                <td>P<sub>AR</sub>_cCA_Trastuzumab_HRV_ SP20_8xHis_1xHA_T<sub>RPL23</sub></td>
+                <td><a href="https://registry.igem.org/parts/bba-25tjp1ub" class="normal">BBa_25TJP1UB</a></td>
+                <td>Lvl2 Construct</td>
+                <td>Expresses Trastuzumab scFv with secretion signal, PreScission site, SP20 motif, 
+                    and dual purification tags, terminated by RPL23.</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}
+{% block extra_js %}
+<!--<script src="{{ url_for('static', filename='js/some.js') }}"></script>-->
+{% endblock %}

@@ -1,0 +1,202 @@
+{% extends "layout.html" %}
+
+{% block extra_css %}
+<!--<link href="{{ url_for('static', filename='css/some.css') }}" rel="stylesheet">-->
+{% endblock %}
+
+{% block title %}Judging{% endblock %}
+
+{% block page_content %}
+
+<style>
+    .MainWrapper h2{
+        color: var(--lightpurple);
+    }
+</style>
+<div class="MainWrapper">
+        <div class="mw-fixed">
+    <button class="mw-burger" aria-label="Menü öffnen" aria-expanded="false"
+      aria-controls="mw-drawer">
+      <span class="mw-bar"></span>
+      <span class="mw-bar"></span>
+      <span class="mw-bar"></span>
+    </button>
+
+    <nav id="mw-drawer" class="mw-drawer" aria-hidden="true">
+      <ul class="mw-list">
+        <li><h2><a class="normal" href="#bronze">Bronze Medal</a></h2></li>
+        <li><h2><a class="normal" href="#silver">Silver Medal</a></h2></li>
+        <li><h2><a class="normal" href="#gold">Gold Medal</a></h2></li>
+        <li><h2><a class="normal" href="#special">Specialisations</a></h2></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- Vollbild-Overlay getrennt -->
+  <div class="mw-overlay" hidden></div>
+
+    <h1>JUDGING</h1>
+
+    <h2 id="bronze">Bronze Medal:</h2>
+
+    <h3>Competition Deliverables</h3>
+
+    <p>To qualify for the bronze medal criteria, we made a timely delivery of
+        the Project Wiki, Presentation and Promotion Videos and the Judging
+        Form. The Judging Session is to be held on the Grand Jamboree. </p>
+
+    <h3>Project Description</h3>
+
+    <p>On our <a class="normal" href="{{ url_for('pages', page='description') }}">Description Page</a>, we provided a detailed description of the
+        SUSPACT project.</p>
+
+    <h3>Project Attributions</h3>
+
+    <p>On our <a class="normal" href="{{ url_for('pages', page='description') }}">Attributions Page</a>, we listed and acknowledged all project
+        attributions both from team members and from outside contributors.</p>
+
+    <h3>Contribution</h3>
+
+    <p>Here, we listed our team’s contributions to the iGEM community, including
+        the following:</p>
+
+    <p>We blazed the trail for future iGEM teams planning to use microalgae as a
+        platform for more sustainable biopharmaceutical production, and for
+        antibody production in particular, by successfully expressing a
+        single-chain fragment variable of the cetuximab antibody in
+        <i>Chlamydomonas reinhardtii</i>.</p>
+
+    <p>Our team provided valuable experimental data for upscaled production
+        volumes of <i>Chlamydomonas</i>, enabling future teams to explore possible
+        industrial applications.</p>
+
+    <p>We tested and verified the efficiency and performance of acetone
+        precipitation in comparison to traditional methods using TCA
+        (trichloroacetic acid), streamlining the process and improving the
+        safety of protein precipitation for future users.</p>
+
+    <p>As part of our collaboration with other teams, we also provided iGEM team
+        Islamabad with a fundraising and sponsorship guide, which may be useful
+        for various future teams, as it helps them gather monetary and material
+        resources and establish lasting partnerships with sponsors.</p>
+
+    <p>For more information, please visit here: <a class="normal"
+            href="{{ url_for('pages', page='contribution') }}">Contributions
+            Page</a></p>
+
+    <hr><h2 id="silver">Silver Medal:</h2>
+    <h3>Engineering Success</h3>
+    <p>Since we undertook a complicated biomanufacturing operation, SUSPACT had
+        to traverse multiple stages of iterative improvement. In order to
+        succeed, we made use of the classic iGEM Engineering Cycle, consisting
+        of the four key steps Design, Build, Test and Learn, in most areas of
+        the project.</p>
+    <p>Read more here: <a class="normal"
+            href="{{ url_for('pages', page='engineering-success') }}">Engineering
+            Page</a></p>
+
+    <h3>Human Practice</h3>
+
+    <p>The multifaceted possible impacts of our project were on our minds since
+        day one. Therefore, we have taken measures to obtain insight from
+        different groups, such as students, various members of the public as
+        well as biological experts. Thus, we were able to assess our project
+        from different perspectives, evaluating medical, environmental and
+        social aspects in the process. This way, we could ensure that our main
+        goals were not only attainable, but also desirable for patients, medical
+        systems and society as a whole.</p>
+
+    <p>For further reading, please visit the <a class="normal"
+            <a href="{{ url_for('pages', page='integrated_hp') }}">Human Practice</a> side.</p>
+
+    <hr><h2 id="gold">Gold Medal:</h2>
+
+    <p>Team SUSPACT has excelled in synthetic biology by going above and beyond
+        the walls of the laboratory. In addition to our original parts and
+        engineering success in the lab, we actively engaged in education and
+        outreach. The focus we laid on our platform organism, <i>Chlamydomonas
+        reinhardtii</i>, led to highly adapted genetic parts that would only
+        perform well in the alga.</p>
+
+    <p>Thus, we believe that SUSPACT qualifies for the special prizes New Basic
+        Part, Education and Plant Synthetic Biotechnology.</p>
+
+    <h3>General Biological Engineering</h3>
+
+    <p>We believe that one of our various original parts stands out
+        particularly. Hence, we decided to select the special prize New Basic
+        Part from this category.</p>
+
+    <p>Our humanized Cetuximab single-chain variable fragment (HumcetFv)
+        facilitates the sustainable production of a humanized EGFR-binding
+        antibody fragment in C. reinhardtii. This fragment exhibits reduced
+        immunogenicity in human patients, but unimpaired binding specificity. It
+        also promises reduced production cost and increased efficiency due to
+        the choice of platform organism.</p>
+
+    <p>Please read more on our <a class="normal"
+            href="{{ url_for('pages', page='parts') }}">Parts Page</a>.</p>
+
+    <hr><h2 id="special">Specialisations</h2>
+
+    <h3>Education:</h3>
+
+    <p>Our team made a series of efforts to educate various groups: The broader
+        public, young students of multiple generations and, finally,
+        ourselves.</p>
+
+    <p>These ventures had some basic goals: To spread awareness of the impact of
+        genetic engineering among the public, to promote the possibilities and
+        benefits of our revolutionary manufacturing approach and to make the
+        field of biotechnology accessible and interesting to new generations of
+        scientists.</p>
+
+    <p>In order to achieve these goals, we took part in educational displays at
+        scientific and industry events, held fundraising events, made school
+        visits, conducted multiple workshops and posted an array of educational
+        social media content. Furthermore, our work was featured in scientific
+        and industry magazines as well as newspapers. We also collaborated with
+        two other iGEM teams to share insight and expertise that we gathered
+        along our way to help them with their respective journeys. As a more
+        playful addition to our educational legacy, the team has also designed a
+        scientific card game.</p>
+
+    <p>Finally, to self-educate and expand our own skills and knowledge, parts
+        of the team participated in different schooling events and meetups,
+        hosted by the iGEM community and other institutions.</p>
+
+    <p>To get an overview of our diverse educational contributions, please
+        visit the <a class="normal" href="{{ url_for('pages', page='education') }}">Education
+            Page</a>.</p>
+
+    <h3>Best Plant Synthetic Biotechnology:</h3>
+
+    <p>Team SUSPACT used <i>Chlamydomonas reinhardtii</i>, a unicellular green alga, as
+        our platform. We successfully designed, transformed and expressed a
+        tailored version of the single-chain fragment variable of the cetuximab
+        antibody in those cells. The protein is not only produced in abundance
+        but also made correctly, as we have proven that it binds to the correct
+        surface protein on colorectal cancer cells.</p>
+
+    <p>To achieve this, we needed to design and create organism-specific DNA
+        parts, adapting them to requirements like the algae’s preferred codon
+        usage, secretion signals and post-translational modifications. Thus, the
+        parts we created would only function in our specific model organism.</p>
+
+    <p>Our parts may also be of use to other teams in the future, as they
+        provide a starting point from which they could go about building
+        constructs for other varieties of antibodies. Even completely different
+        products could be manufactured by future teams using our parts in the
+        sustainable and efficient <i>Chlamy</i> platform. Furthermore, we gathered
+        valuable experience and insight in different methods of protein
+        purification. Building on this information, future teams may be able to
+        take production yields to new heights.</p>
+
+    <p>To read more, please visit the <a class="normal" href="{{ url_for('pages', page='best-plant-synthetic-biology') }}">Best Plant Synthetic Biology Page</a>.</p>
+</div>
+
+{% endblock %}
+{% block extra_js %}
+<!--<script src="{{ url_for('static', filename='js/some.js') }}"></script>-->
+{% endblock %}
+
+{{ url_for('pages', page='judging') }}

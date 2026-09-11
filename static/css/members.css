@@ -1,0 +1,334 @@
+/* =========================================
+   Global tokens
+   ========================================= */
+:root{
+  /* Colors (fallbacks if not defined elsewhere) */
+  --text-on-dark: #ffffff;
+  --border: #ffffff;
+
+  /* Layout + motion */
+  --radius-xl: 1.5625rem;    /* 25px */
+  --radius-lg: 1rem;         /* 16px */
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+
+  /* Fluid space (scales from mobile to desktop) */
+  --space-1: clamp(.25rem, .2rem + .2vw, .5rem);
+  --space-2: clamp(.5rem, .4rem + .4vw, 1rem);
+  --space-3: clamp(1rem, .8rem + .8vw, 2rem);
+  --space-4: clamp(1.5rem, 1rem + 1.5vw, 3rem);
+  --space-5: clamp(2rem, 1.5rem + 2vw, 4rem);
+
+  /* Fluid typography */
+  --fs-h1: clamp(1.5rem, 1.2rem + 1.8vw, 2.75rem);
+  --fs-h2: clamp(1rem, .9rem + .8vw, 1.5rem);
+  --fs-body: clamp(.95rem, .9rem + .3vw, 1.125rem);
+
+  /* Card size */
+  --card-w: clamp(13rem, 35vw, 20rem);
+}
+
+/* =========================================
+   Base
+   ========================================= */
+
+
+
+/* =========================================
+   Section 1 – Video
+   ========================================= */
+.section1{
+  padding: var(--space-3) var(--space-2) var(--space-4);
+  margin-inline: auto;
+  height: fit-content;
+}
+.section1 h1{
+  text-align: center;
+}
+
+.section1 iframe{
+  position: relative;
+  display: block;
+  
+  width: min(90vw, 70rem, calc(75vh * (16 / 9)));
+  aspect-ratio: 16 / 9;
+  height: auto;
+  max-height: 75vh;
+  margin: var(--space-2) auto 0;
+  padding: var(--space-2);
+  border: 3px solid var(--darkerpurple);
+  border-radius: calc(var(--radius-xl) * 2);
+  background-color: var(--darkerpurple);
+  box-shadow: var(--shadow);
+}
+
+/* =========================================
+   Section 2 – Lead + Team
+   ========================================= */
+#section2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#lead,
+#members{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#lead{
+  background-color: var(--darkerpurple);
+  padding: var(--space-4) var(--space-2);
+}
+#members{
+  padding: var(--space-4) var(--space-2);
+}
+
+/* Members grid (responsive) */
+.members{
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;   
+  gap: clamp(1rem, 1vw + .5rem, 2rem);
+  gap: var(--space-3);
+  padding: var(--space-3) 0 0;
+  justify-items: center;
+
+  --card-w: clamp(13rem, 40vw, 18rem);
+}
+
+/* Ab ~640px: 2 Spalten */
+@media (min-width: 40rem){
+  .members{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    --card-w: clamp(13rem, 30vw, 19rem);
+  }
+}
+
+/* Ab ~1024px: 3 Spalten – bleibt 3, nur Größe skaliert weiter */
+@media (min-width: 64rem){
+  .members{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    --card-w: clamp(14rem, 22vw, 20rem);
+  }
+}
+
+/* Größere Screens: Karten werden größer, Spalten bleiben 3 */
+@media (min-width: 90rem){   /* ≥1440px */
+  .members{ --card-w: clamp(16rem, 18vw, 22rem); }
+}
+@media (min-width: 120rem){  /* ≥1920px */
+  .members{ --card-w: clamp(18rem, 16vw, 24rem); }
+}
+
+/* Larger cards for #lead only */
+#lead .members{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.members .cardContainer{
+  width: 100%;
+  max-width: var(--card-w);
+  display: grid;
+  place-items: center;
+}
+/* Karte selbst füllt den Container sauber aus */
+.members .card{
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5.6; /* gleichmäßige Höhe/Flip-Front/Back */
+}
+
+/* =========================================
+   Card – 3D Flip
+   ========================================= */
+.cardContainer{
+  width: fit-content;
+  display: grid;
+  place-items: center;
+  perspective: 1200px;
+  position: relative;
+}
+
+.card{
+  width: var(--card-w);
+  height: auto;
+  aspect-ratio: 4 / 5.6; /* keeps front/back consistent */
+  transform-style: preserve-3d;
+  transition: transform .8s;
+  background: transparent;
+  position: relative;
+}
+
+/* Flip effect only on hover-capable devices */
+@media (hover: hover) and (pointer: fine){
+  .cardContainer:hover .card{
+    transform: rotateY(180deg);
+  }
+}
+
+/* Touch devices – no flip to avoid accidental rotations */
+@media (hover: none){
+  .card{ transform: none !important; }
+}
+
+.cardFront,
+.cardBack{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--border);
+  border-radius: var(--radius-xl);
+  backface-visibility: hidden;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.cardFront{
+  background: #000;
+}
+
+.cardBack{
+  background: #000;
+  transform: rotateY(180deg);
+}
+
+/* Images */
+.card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  display: block;
+}
+
+/* Name + field bar */
+.cardFront > div{
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  align-items: center;
+  background: color-mix(in oklab, var(--darkerpurple) 88%, black);
+  border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+  padding: .35rem 0 .6rem;
+}
+
+.cardFront .cardName{
+  color: var(--text-on-dark);
+  margin: 0;
+  font-size: clamp(1rem, .9rem + .8vw, 1.375rem);
+  text-align: center;
+}
+
+.cardFront .cardFOS{
+  color: var(--text-on-dark);
+  opacity: .9;
+  margin: 0;
+  font-size: clamp(.75rem, .7rem + .4vw, .95rem);
+  text-align: center;
+}
+
+/* Mentors: disable flip but keep layout */
+.disableHover{ pointer-events: none; }
+
+/* =========================================
+   Section 3 – Mascot + Slider
+   ========================================= */
+#section3{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#section3 .wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--darkerpurple);
+  padding: var(--space-4) var(--space-2);
+}
+
+#section3 .wrapper svg{
+  --pad: var(--space-3);
+  width: clamp(12rem, 25vw, 20rem);
+  padding: calc(6.5rem + var(--pad)) var(--pad);
+  height: auto;
+}
+
+#section3 .members{
+  padding:0;
+  display: flex;
+  justify-content: center;
+}
+
+#clamy .cardFront,
+#clamy .cardBack{
+  background-color: var(--darkestpurple);
+}
+
+/* Slider dimensions (kept responsive) */
+#slideImages1{
+  --width: 50vw;
+  --height: 90vh;
+  --background-color: var(--darkestpurple);
+  background-color: var(--background-color);
+  margin: var(--space-4) 0;
+  display: grid;
+  place-items: center;
+  padding: var(--space-2);
+  border-radius: var(--radius-lg);
+}
+#slideImages1 img{
+  max-width: 90%;
+  max-height: 90%;
+  width: auto;
+  height: auto;
+  border-radius: 1rem;
+}
+
+/* =========================================
+   Reduced motion
+   ========================================= */
+@media (prefers-reduced-motion: reduce){
+  .card { transition: none; }
+}
+
+/* =========================================
+   Breakpoints (fine-tune spacing on wide screens)
+   ========================================= */
+@media (min-width: 64rem){ /* ≥1024px */
+  .members{ gap: var(--space-4); }
+  .section1{ padding-bottom: var(--space-5); }
+}
+
+@media (min-width: 90rem){ /* ≥1440px */
+  :root{ --card-w: clamp(16rem, 18vw, 22rem); }
+}
+
+@media (min-width: 120rem){ /* ≥1920px */
+  :root{
+    --card-w: 22rem; /* crisp on 1920×1080 */
+    --fs-h1: 2.5rem;
+    --fs-h2: 1.375rem;
+    --fs-body: 1.0625rem;
+  }
+}
+
+
+#slideImages1 .slick-list::after,
+#slideImages1 .slick-list::before{
+  width: calc(var(--width)/4);
+}

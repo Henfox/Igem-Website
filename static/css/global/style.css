@@ -1,0 +1,196 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5vw;
+}
+
+
+:root {
+  /* Main Colors*/
+  --white: #FFFFFF;
+  --lightgreen: #98D4C1;
+  --green: #30A680;
+  --darkgreen: #197B5C;
+
+  --lightpurple: #CD98D4;
+  --purple: #9830A6;
+  --darkerpurple: #6C1876;
+  --darkpurple: #310637;
+  --darkestpurple: #160019;
+
+
+  --lightBlue: #98C6D4;
+  --blue: #308AA6;
+  --darkerblue: #18537A;
+  --darkblue: #061238;
+
+  font-family: roboto;
+  font-size: 1.111111vw;
+  color: white;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+:root::-webkit-scrollbar {
+  display: none;
+}
+
+/* ========== Basis & Variablen ========== */
+body {
+  margin: 0;
+  overflow-x: visible;
+  --dropdown-bg: var(--purple);
+  --dropdown-delay: .3s;
+  --dropdown-item-delay: .06s;
+  --dropdown-item-hover: rgba(255, 255, 255, .08);
+  --focus-ring: var(--lightgreen);
+  --nav-accent-active: var(--green);
+  --nav-accent-hover: var(--blue);
+  --nav-bg: var(--darkerpurple);
+  --nav-fg: var(--white);
+  --nav-fg-hover: lightgray;
+  --nav-fg-muted: rgba(255, 255, 255, .8);
+  overscroll-behavior: none;
+  padding-top: 0px;
+  min-height: 100vh;
+  contain: paint;
+  display: flex;
+  flex-direction: column;
+}
+
+.container{
+  flex: 1;
+  background-image: linear-gradient(rgba(22,0,25,.97),rgba(22,0,25,.97), rgba(22,0,25,.99)),url("https://static.igem.wiki/teams/5758/main/chlamyster-1.webp");
+  background-color: var(--darkestpurple);
+  background-repeat: repeat;
+  background-size: 30vw;
+  
+}
+
+.colored-text {
+  color: var(--lightpurple);
+}
+
+h1 {
+  font-family: roboto-slab-semibold;
+
+}
+
+h2 {
+  font-family: roboto-slab;
+}
+
+p {
+  font-family: roboto;
+}
+
+h1 { font-size: clamp(32pt, 6vw, 48pt); line-height: 1.1; margin: 0.6em 0 0.4em; }
+h2 { font-size: clamp(18pt, 3.5vw, 24pt); line-height: 1.25; margin: 1.2em 0 0.6em; }
+h3 { font-size: clamp(13pt, 2.8vw, 18pt); line-height: 1.3; margin: 1em 0 0.5em;}
+p, li, td, th { font-size: clamp(12pt, 2.2vw, 16pt); line-height: 1.55; }
+
+.section1 {
+  padding: 3rem 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  height: calc(100vh - 6rem);
+}
+
+.section1 h1 {
+  margin: 0;
+}
+
+.igemVideo {
+  opacity: 0;
+  transition: 1s ease-in-out;
+}
+
+
+
+
+
+
+.MainWrapper {
+  margin: 2rem;
+  background-color: transparent;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.MainWrapper p,
+.MainWrapper figcaption,
+.MainWrapper li {
+  width: 50vw;
+}
+
+.MainWrapper p {
+  text-align: justify;
+}
+
+.MainWrapper h2 {
+  color: var(--purple);
+}
+
+.MainWrapper h3 {
+  color: var(--lightpurple);
+}
+
+a{
+  color: white;
+
+}
+
+.normal{
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
+a.normal:hover {
+  text-decoration: underline;
+}
+
+.MainWrapper a:not(.normal) {
+  font-size: .5vw;
+  color: var(--purple);
+  text-decoration: none;
+}
+
+.MainWrapper img {
+  border-radius: 30px;
+  width: 20vw;
+  margin: 2vw;
+}
+
+.MainWrapper figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.MainWrapper figure {
+  font-size: 1vw;
+}
+
+
+
+
+.banner{
+  font-size: 48pt;
+  font-family: roboto-slab-semibold;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  margin-top: -2rem;
+  padding: 2vh;
+  background-color: var(--green);
+}
+
+hr{
+    width: 60%;
+    margin: 1rem;
+    margin-top: 2rem;
+}

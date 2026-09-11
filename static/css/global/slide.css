@@ -1,0 +1,132 @@
+
+.image-slider-container{
+    border-radius: 1.666667vw; /* 2rem */
+    border: 0.104167vw solid white; /* 2px */
+}
+
+.image-slider {
+    margin: 0.833333vw 2.5vw; /* 1rem 3rem */
+    --width: 9vw;  /* 10rem */
+    --height: 5vw; /* 5rem */
+    --background-color: var(--logo-slider-bg);
+}
+
+.slick-list {
+    width: var(--width);
+}
+
+.slick-track{
+    height: var(--height);
+}
+
+.slick-list a {
+    text-decoration: none;
+}
+
+
+
+.slick-list::after,
+.slick-list::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: calc(var(--width)/2);
+    z-index: 1;
+}
+
+.slick-list::after {
+    right: 0;
+    background: linear-gradient(to left, var(--background-color), rgba(255, 255, 255, 0));
+}
+
+.slick-list::before {
+    left: 0;
+    background: linear-gradient(to right, var(--background-color), rgba(255, 255, 255, 0));
+}
+
+.slide {
+    background-color: white;
+    border-radius: 0.833333vw; /* 1rem */
+    opacity: .7;
+    margin: 0 0.416667vw; /* 0.5rem */
+}
+
+.image-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.image-box a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.slide img{
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.slick-dots {
+    position: relative;
+    font-size: 10%;
+    margin: 0% 0;
+    padding: 3%;
+    display: flex;
+    flex-direction: row;
+    cursor:pointer;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    height: fit-content;
+}
+
+.slick-dots button {
+    pointer-events: none;
+    visibility: hidden;
+    width: 1px;
+}
+
+.slick-dots li{
+    opacity: .5;
+    transform: translateX(100%);
+    margin: -4% 0 -10%;
+    width: fit-content;
+}
+
+.slick-dots li.slick-active{
+    opacity: 1;
+}
+
+.slick-prev,
+.slick-next {
+    transform-origin: center;
+    position: absolute;
+    width: 0.833333vw;  /* 1rem */
+    height: 0.833333vw; /* 1rem */
+    border: none;
+    border-radius: 999px;
+    background: #fff;
+    box-shadow: 0 0.208333vw 0.625vw rgba(0, 0, 0, .12); /* 4px 12px */
+    top: 50%;
+    color: var(--logo-slider-bg);
+    opacity: .5;
+    cursor:pointer;
+}
+
+.slick-prev {
+    left: 0;
+    transform: translate(-150%, -50%);
+}
+
+.slick-next {
+    right: 0;
+    transform: translate(150%, -50%);
+}
+
+.slide.slick-current{
+    opacity: 1;
+}

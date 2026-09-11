@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block extra_css %}
+<link href="{{ url_for('static', filename='css/contribution.css') }}"
+  rel="stylesheet">
+{% endblock %}
+
+{% block title %}Contribution{% endblock %}
+
+{% block page_content %}
+<div id="Main" class="MainWrapper">
+  <h1>Contribution</h1>
+  <p>One of iGEM's central values is sharing knowledge and tools with the
+    community
+    so future teams can build on them. In our project, we identified several
+    opportunities to make tangible contributions on both the technical and
+    educational levels. By documenting our insights and experiences, we aim to
+    make
+    synthetic biology more efficient, safer, and more accessible
+    for future iGEM teams and the broader community.</p>
+  <div class="wrapper">
+    <h2>Acetone vs. TCA Protein Precipitation</h2>
+    <p>Protein precipitation is a crucial step in SDS-PAGE and Western blot
+      analyses. Traditionally, trichloroacetic acid (TCA) is used. However, it
+      is highly corrosive, hazardous, and time-consuming. We tested acetone as
+      an alternative for extracting proteins from <i>Chlamydomonas reinhardtii</i> and
+      found that it performs equally well while being significantly faster and
+      safer to handle.</p>
+    <p>Through careful comparison of the two methods, we demonstrated that
+      acetone
+      precipitation yields protein samples suitable for SDS-PAGE and Western
+      blotting at
+      a loading ratio of ~1:4.85 compared to TCA. This method reduces laboratory
+      hazards,
+      saves time, and can easily be implemented by future iGEM teams <br>(<a class="normal" href="{{ url_for('pages', page='experiments') }}">Read more</a>).</p>
+      
+  </div>
+
+  <div class="wrapper">
+    <h2>Expression of scFv Antibody Fragments<br>in <i>Chlamydomonas</i></h2>
+    <p>For the first time, we successfully expressed a single-chain variable fragment
+      (scFv) derived from cetuximab in <i>C. reinhardtii</i>. Using scFvs
+      instead of full-length antibodies simplifies transformation and protein
+      folding in algae, offering a promising strategy for biopharmaceutical
+      production in sustainable systems. This paves the way for future iGEM
+      teams interested in exploring microalgae as a green alternative for
+      antibody production.</p>
+  </div>
+
+  <div class="wrapper">
+    <h2>Scaling Up <i>Chlamydomonas</i> Cultures</h2>
+    <p>Beyond small-scale laboratory experiments, we have demonstrated that
+      <i>Chlamydomonas</i> cultures can be scaled up to larger volumes while
+      maintaining their growth and protein production capacities. This provides
+      valuable information for teams that want to test their concepts in
+      conditions closer to industrial applications, not only on a micro scale
+      <br>(<a class="normal" href="{{ url_for('pages', page='experiments') }}">Read more</a>).</p>
+  </div>
+
+  <div class="wrapper">
+    <h2>Educational Game Cards</h2>
+    <p>To promote science education, we created game cards for students that
+      explain key biological concepts, such as model organisms and laboratory
+      equipment. These cards are especially useful for beginners and curious
+      learners, making synthetic biology more approachable and engaging <br>(<a class="normal" href="{{ url_for('pages', page='education') }}">Read more</a>).</p>
+      
+  </div>
+
+  <div class="wrapper">
+    <h2>Fundraising and Sponsorship Guide</h2>
+    <p>We collaborated with the iGEM team in Islamabad by sharing our experience
+      in acquiring sponsorships. We prepared a practical fundraising guide that
+      explains strategies for approaching potential sponsors, structuring
+      presentations, and building long-term partnerships (available as a PDF).
+      Although our partner team could not participate this year, the guide
+      remains a valuable resource for any iGEM team in need of financial support
+      <br>(<a class="normal" href="{{ url_for('pages', page='education') }}">Read more</a>).</p>
+  </div>
+
+  <div class="wrapper">
+    <h2>Protein Purification Workshop</h2>
+    <p>As part of our outreach activities, we developed a hands-on workshop on
+      protein purification using green fluorescent protein (GFP). Students
+      performed immobilized metal affinity chromatography (IMAC) and witnessed
+      the striking green fluorescence of purified GFP. By making these complex
+      biochemical techniques accessible to high school students, we created an
+      educational resource that can be adapted and reused by future iGEM teams
+      <br>(<a class="normal" href="{{ url_for('pages', page='education') }}">Read more</a>).</p>
+  </div>
+</div>
+{% endblock %}

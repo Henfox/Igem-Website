@@ -1,0 +1,218 @@
+
+/* rem → vw konvertiert (Basis: 1rem=16px, 1920px → 1vw=19.2px → 1rem ≈ 0.8333vw) */
+
+.home a:not(.normal){
+    color: var(--lightpurple);
+    font-family: roboto;
+    font-size: 7pt;
+}
+
+#introbox{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#introbox::before{
+    content: "";
+    position: absolute;
+    inset: -30px;
+    background-size: cover;
+    background-image: url("https://static.igem.wiki/teams/5758/home/intro-bg.webp");
+    filter: blur(10px);
+}
+
+.intro-bg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -5%;
+    transform-origin: top;
+    scale: 1.1;
+}
+.intro-bg iframe{
+    pointer-events: none;
+    min-height: 100%;
+    min-width: 100%;
+    aspect-ratio: 16/9;
+}
+
+#trenner{
+    z-index: 10;
+    position: absolute;
+    opacity: 0;
+    background-color: white;
+    border-radius: 5px;
+    --delay: .7s;
+    transition: all 1s ease-in-out, opacity .3s ease-in-out var(--delay);
+    width: 0.2083vw;   /* .25rem */
+    height: 0;
+}
+#trenner.animated{
+    --delay: 0s;
+    opacity: 1;
+    width: 0.2083vw;   /* .25rem */
+    height: 10.8333vw; /* 13rem */
+}
+
+#logo{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scale: 1.5;
+    transition: 1s ease-in-out;
+}
+
+#logo.animated{
+    transform: translateX(-2.6042vw); /* -3.125rem */
+}
+
+#logo-left, #logo-right{
+    z-index: 2;
+    position: absolute;
+    height: 5.8333vw;  /* 7rem */
+    transition: 2s ease-in-out;
+}
+
+#logo-left{
+    padding-right: 0.4167vw; /* .5rem */
+    transform: translateX(50%);
+    clip-path: inset(0 100% 0 0);
+}
+
+#logo-left.animated{
+    clip-path: inset(0 0 0 0);
+    transform: translateX(-50%);
+}
+
+#logo-right{
+    padding-left: 0.4167vw; /* .5rem */
+    transform: translateX(-50%);
+    clip-path: inset(0 0 0 100%);
+}
+#logo-right.animated{
+    clip-path: inset(0 0 0 0);
+    transform: translateX(50%);
+}
+
+#logo-subtitle{
+    white-space: nowrap;
+    position: absolute;
+    z-index: 1;
+    color: white;
+    font-size: 0.8317vw;  /* .998rem */
+    width: 21.25vw;       /* 25.5rem */
+    transform: translate(50%, 5vw); /* 6rem */
+}
+
+#typed2-box,#typed3-box{
+    right:0;
+    color: transparent;
+    text-align: end;
+    position: relative;
+    margin-left: auto;
+    width: fit-content;
+}
+
+#typed2, #typed3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    text-align: start;
+}
+
+#typed3{}
+
+.typed-cursor-sub{
+    color: white;
+    font-family: cutivemono-regular;
+    transform: translateX(-0.75vw); /* -.9rem */
+    animation: 1s blink step-end infinite;
+    visibility: hidden;
+}
+
+#circle{
+    opacity: 0;
+    transform-origin: center;
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 3s ease-in-out,opacity 1.5s ease-in-out;
+    scale: 2.1;
+    top: 0;
+    right: 8.125vw;      /* 9.75rem */
+    transform: rotate(-30deg);
+}
+#circle.animated{
+    opacity: 1;
+    top: 0;
+    transform: rotate(0deg);
+}
+
+#circle-circle, #circle-BR, #circle-BL, #circle-T{
+    position: absolute;
+    width: 5.8333vw;     /* 7rem */
+}
+
+#typed{
+    z-index: 1;
+    text-align: center;
+}
+
+#leftcover{
+    left: 0;
+    background-color: green;
+}
+
+#rightcover{
+    background-color: blue;
+    right: 0;
+}
+
+.typed-wrapper{
+    color: white;
+    font-family: cutivemono-regular;
+    font-size: clamp(1.25rem, 3.333vw, 4rem);
+}
+
+.typed-wrapper-sub{
+    color: white;
+    font-family: cutivemono-regular;
+}
+
+.typed-cursor{
+    color: white;
+    font-size: clamp(1.25rem, 3.333vw, 4rem);
+    font-family: cutivemono-regular;
+    animation: 1s blink step-end infinite;
+    transform: translateX(-0.75vw); /* -.9rem */
+    display: inline-block;
+}
+
+@keyframes blink {
+  from, to { color: transparent; }
+  50% { color: white; }
+}
+
+/* SVG STYLE */
+.st0 { fill: #1ca57b; }
+.st1 { fill: #801b85; }
+.st2 { fill: #007f9f; }
+.st4 { fill: #017d9d; }
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+#thirdmost{
+    transition-delay: 6s;
+}
